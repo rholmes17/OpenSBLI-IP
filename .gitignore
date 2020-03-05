@@ -1,3 +1,17 @@
+# OpenSBLI files
+*.h5
+CUDA/
+latex_output/
+MPI_inline/
+MPI_OpenMP/
+OpenACC/
+OpenCL/
+bc_exchanges.h
+opensbli.cpp
+opensbliblock00_kernels.h
+opensbli_mpi
+opensbli_ops.cpp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
