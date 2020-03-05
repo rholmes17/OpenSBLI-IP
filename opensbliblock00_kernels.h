@@ -61,6 +61,26 @@ void opensbliblock00Kernel082(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
 
    rhoE_B0[OPS_ACC0(-2,0,0)] = rhoE_B0[OPS_ACC0(2,0,0)];
 
+   rho_B0[OPS_ACC3(-3,0,0)] = rho_B0[OPS_ACC3(3,0,0)];
+
+   rhou0_B0[OPS_ACC2(-3,0,0)] = -1.0*rhou0_B0[OPS_ACC2(3,0,0)];
+
+   rhou1_B0[OPS_ACC1(-3,0,0)] = rhou1_B0[OPS_ACC1(3,0,0)];
+
+   rhou2_B0[OPS_ACC4(-3,0,0)] = rhou2_B0[OPS_ACC4(3,0,0)];
+
+   rhoE_B0[OPS_ACC0(-3,0,0)] = rhoE_B0[OPS_ACC0(3,0,0)];
+
+   rho_B0[OPS_ACC3(-4,0,0)] = rho_B0[OPS_ACC3(4,0,0)];
+
+   rhou0_B0[OPS_ACC2(-4,0,0)] = -1.0*rhou0_B0[OPS_ACC2(4,0,0)];
+
+   rhou1_B0[OPS_ACC1(-4,0,0)] = rhou1_B0[OPS_ACC1(4,0,0)];
+
+   rhou2_B0[OPS_ACC4(-4,0,0)] = rhou2_B0[OPS_ACC4(4,0,0)];
+
+   rhoE_B0[OPS_ACC0(-4,0,0)] = rhoE_B0[OPS_ACC0(4,0,0)];
+
 }
 
 void opensbliblock00Kernel083(double *rhoE_B0, double *rhou1_B0, double *rhou0_B0, double *rho_B0, double *rhou2_B0)
@@ -84,6 +104,26 @@ void opensbliblock00Kernel083(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
    rhou2_B0[OPS_ACC4(2,0,0)] = rhou2_B0[OPS_ACC4(-2,0,0)];
 
    rhoE_B0[OPS_ACC0(2,0,0)] = rhoE_B0[OPS_ACC0(-2,0,0)];
+
+   rho_B0[OPS_ACC3(3,0,0)] = rho_B0[OPS_ACC3(-3,0,0)];
+
+   rhou0_B0[OPS_ACC2(3,0,0)] = -1.0*rhou0_B0[OPS_ACC2(-3,0,0)];
+
+   rhou1_B0[OPS_ACC1(3,0,0)] = rhou1_B0[OPS_ACC1(-3,0,0)];
+
+   rhou2_B0[OPS_ACC4(3,0,0)] = rhou2_B0[OPS_ACC4(-3,0,0)];
+
+   rhoE_B0[OPS_ACC0(3,0,0)] = rhoE_B0[OPS_ACC0(-3,0,0)];
+
+   rho_B0[OPS_ACC3(4,0,0)] = rho_B0[OPS_ACC3(-4,0,0)];
+
+   rhou0_B0[OPS_ACC2(4,0,0)] = -1.0*rhou0_B0[OPS_ACC2(-4,0,0)];
+
+   rhou1_B0[OPS_ACC1(4,0,0)] = rhou1_B0[OPS_ACC1(-4,0,0)];
+
+   rhou2_B0[OPS_ACC4(4,0,0)] = rhou2_B0[OPS_ACC4(-4,0,0)];
+
+   rhoE_B0[OPS_ACC0(4,0,0)] = rhoE_B0[OPS_ACC0(-4,0,0)];
 
 }
 
@@ -109,6 +149,26 @@ void opensbliblock00Kernel084(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
 
    rhoE_B0[OPS_ACC0(0,-2,0)] = rhoE_B0[OPS_ACC0(0,2,0)];
 
+   rho_B0[OPS_ACC3(0,-3,0)] = rho_B0[OPS_ACC3(0,3,0)];
+
+   rhou0_B0[OPS_ACC2(0,-3,0)] = rhou0_B0[OPS_ACC2(0,3,0)];
+
+   rhou1_B0[OPS_ACC1(0,-3,0)] = -1.0*rhou1_B0[OPS_ACC1(0,3,0)];
+
+   rhou2_B0[OPS_ACC4(0,-3,0)] = rhou2_B0[OPS_ACC4(0,3,0)];
+
+   rhoE_B0[OPS_ACC0(0,-3,0)] = rhoE_B0[OPS_ACC0(0,3,0)];
+
+   rho_B0[OPS_ACC3(0,-4,0)] = rho_B0[OPS_ACC3(0,4,0)];
+
+   rhou0_B0[OPS_ACC2(0,-4,0)] = rhou0_B0[OPS_ACC2(0,4,0)];
+
+   rhou1_B0[OPS_ACC1(0,-4,0)] = -1.0*rhou1_B0[OPS_ACC1(0,4,0)];
+
+   rhou2_B0[OPS_ACC4(0,-4,0)] = rhou2_B0[OPS_ACC4(0,4,0)];
+
+   rhoE_B0[OPS_ACC0(0,-4,0)] = rhoE_B0[OPS_ACC0(0,4,0)];
+
 }
 
 void opensbliblock00Kernel085(double *rhoE_B0, double *rhou1_B0, double *rhou0_B0, double *rho_B0, double *rhou2_B0)
@@ -132,6 +192,26 @@ void opensbliblock00Kernel085(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
    rhou2_B0[OPS_ACC4(0,2,0)] = rhou2_B0[OPS_ACC4(0,-2,0)];
 
    rhoE_B0[OPS_ACC0(0,2,0)] = rhoE_B0[OPS_ACC0(0,-2,0)];
+
+   rho_B0[OPS_ACC3(0,3,0)] = rho_B0[OPS_ACC3(0,-3,0)];
+
+   rhou0_B0[OPS_ACC2(0,3,0)] = rhou0_B0[OPS_ACC2(0,-3,0)];
+
+   rhou1_B0[OPS_ACC1(0,3,0)] = -1.0*rhou1_B0[OPS_ACC1(0,-3,0)];
+
+   rhou2_B0[OPS_ACC4(0,3,0)] = rhou2_B0[OPS_ACC4(0,-3,0)];
+
+   rhoE_B0[OPS_ACC0(0,3,0)] = rhoE_B0[OPS_ACC0(0,-3,0)];
+
+   rho_B0[OPS_ACC3(0,4,0)] = rho_B0[OPS_ACC3(0,-4,0)];
+
+   rhou0_B0[OPS_ACC2(0,4,0)] = rhou0_B0[OPS_ACC2(0,-4,0)];
+
+   rhou1_B0[OPS_ACC1(0,4,0)] = -1.0*rhou1_B0[OPS_ACC1(0,-4,0)];
+
+   rhou2_B0[OPS_ACC4(0,4,0)] = rhou2_B0[OPS_ACC4(0,-4,0)];
+
+   rhoE_B0[OPS_ACC0(0,4,0)] = rhoE_B0[OPS_ACC0(0,-4,0)];
 
 }
 
@@ -157,6 +237,26 @@ void opensbliblock00Kernel086(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
 
    rhoE_B0[OPS_ACC0(0,0,-2)] = rhoE_B0[OPS_ACC0(0,0,2)];
 
+   rho_B0[OPS_ACC3(0,0,-3)] = rho_B0[OPS_ACC3(0,0,3)];
+
+   rhou0_B0[OPS_ACC2(0,0,-3)] = rhou0_B0[OPS_ACC2(0,0,3)];
+
+   rhou1_B0[OPS_ACC1(0,0,-3)] = rhou1_B0[OPS_ACC1(0,0,3)];
+
+   rhou2_B0[OPS_ACC4(0,0,-3)] = -1.0*rhou2_B0[OPS_ACC4(0,0,3)];
+
+   rhoE_B0[OPS_ACC0(0,0,-3)] = rhoE_B0[OPS_ACC0(0,0,3)];
+
+   rho_B0[OPS_ACC3(0,0,-4)] = rho_B0[OPS_ACC3(0,0,4)];
+
+   rhou0_B0[OPS_ACC2(0,0,-4)] = rhou0_B0[OPS_ACC2(0,0,4)];
+
+   rhou1_B0[OPS_ACC1(0,0,-4)] = rhou1_B0[OPS_ACC1(0,0,4)];
+
+   rhou2_B0[OPS_ACC4(0,0,-4)] = -1.0*rhou2_B0[OPS_ACC4(0,0,4)];
+
+   rhoE_B0[OPS_ACC0(0,0,-4)] = rhoE_B0[OPS_ACC0(0,0,4)];
+
 }
 
 void opensbliblock00Kernel087(double *rhoE_B0, double *rhou1_B0, double *rhou0_B0, double *rho_B0, double *rhou2_B0)
@@ -180,6 +280,26 @@ void opensbliblock00Kernel087(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
    rhou2_B0[OPS_ACC4(0,0,2)] = -1.0*rhou2_B0[OPS_ACC4(0,0,-2)];
 
    rhoE_B0[OPS_ACC0(0,0,2)] = rhoE_B0[OPS_ACC0(0,0,-2)];
+
+   rho_B0[OPS_ACC3(0,0,3)] = rho_B0[OPS_ACC3(0,0,-3)];
+
+   rhou0_B0[OPS_ACC2(0,0,3)] = rhou0_B0[OPS_ACC2(0,0,-3)];
+
+   rhou1_B0[OPS_ACC1(0,0,3)] = rhou1_B0[OPS_ACC1(0,0,-3)];
+
+   rhou2_B0[OPS_ACC4(0,0,3)] = -1.0*rhou2_B0[OPS_ACC4(0,0,-3)];
+
+   rhoE_B0[OPS_ACC0(0,0,3)] = rhoE_B0[OPS_ACC0(0,0,-3)];
+
+   rho_B0[OPS_ACC3(0,0,4)] = rho_B0[OPS_ACC3(0,0,-4)];
+
+   rhou0_B0[OPS_ACC2(0,0,4)] = rhou0_B0[OPS_ACC2(0,0,-4)];
+
+   rhou1_B0[OPS_ACC1(0,0,4)] = rhou1_B0[OPS_ACC1(0,0,-4)];
+
+   rhou2_B0[OPS_ACC4(0,0,4)] = -1.0*rhou2_B0[OPS_ACC4(0,0,-4)];
+
+   rhoE_B0[OPS_ACC0(0,0,4)] = rhoE_B0[OPS_ACC0(0,0,-4)];
 
 }
 
@@ -268,92 +388,105 @@ double *wk39_B0, double *wk42_B0, double *wk44_B0)
 
 void opensbliblock00Kernel004(const double *wk39_B0, double *wk0_B0)
 {
-    wk0_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*wk39_B0[OPS_ACC0(2,0,0)] + (rc7)*wk39_B0[OPS_ACC0(-2,0,0)] -
-      rc8*wk39_B0[OPS_ACC0(-1,0,0)] + (rc8)*wk39_B0[OPS_ACC0(1,0,0)]);
+    wk0_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc21*wk39_B0[OPS_ACC0(2,0,0)] + (rc22)*wk39_B0[OPS_ACC0(3,0,0)] -
+      rc23*wk39_B0[OPS_ACC0(4,0,0)] + (rc23)*wk39_B0[OPS_ACC0(-4,0,0)] - rc24*wk39_B0[OPS_ACC0(-1,0,0)] -
+      rc22*wk39_B0[OPS_ACC0(-3,0,0)] + (rc24)*wk39_B0[OPS_ACC0(1,0,0)] + (rc21)*wk39_B0[OPS_ACC0(-2,0,0)]);
 
 }
 
 void opensbliblock00Kernel006(const double *wk40_B0, double *wk1_B0)
 {
-    wk1_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*wk40_B0[OPS_ACC0(2,0,0)] + (rc7)*wk40_B0[OPS_ACC0(-2,0,0)] -
-      rc8*wk40_B0[OPS_ACC0(-1,0,0)] + (rc8)*wk40_B0[OPS_ACC0(1,0,0)]);
+    wk1_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc22*wk40_B0[OPS_ACC0(-3,0,0)] - rc23*wk40_B0[OPS_ACC0(4,0,0)] -
+      rc24*wk40_B0[OPS_ACC0(-1,0,0)] + (rc21)*wk40_B0[OPS_ACC0(-2,0,0)] + (rc24)*wk40_B0[OPS_ACC0(1,0,0)] -
+      rc21*wk40_B0[OPS_ACC0(2,0,0)] + (rc23)*wk40_B0[OPS_ACC0(-4,0,0)] + (rc22)*wk40_B0[OPS_ACC0(3,0,0)]);
 
 }
 
 void opensbliblock00Kernel008(const double *p_B0, double *wk2_B0)
 {
-    wk2_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*p_B0[OPS_ACC0(2,0,0)] - rc8*p_B0[OPS_ACC0(-1,0,0)] +
-      (rc8)*p_B0[OPS_ACC0(1,0,0)] + (rc7)*p_B0[OPS_ACC0(-2,0,0)]);
+    wk2_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc21*p_B0[OPS_ACC0(2,0,0)] + (rc24)*p_B0[OPS_ACC0(1,0,0)] +
+      (rc21)*p_B0[OPS_ACC0(-2,0,0)] - rc23*p_B0[OPS_ACC0(4,0,0)] - rc24*p_B0[OPS_ACC0(-1,0,0)] -
+      rc22*p_B0[OPS_ACC0(-3,0,0)] + (rc22)*p_B0[OPS_ACC0(3,0,0)] + (rc23)*p_B0[OPS_ACC0(-4,0,0)]);
 
 }
 
 void opensbliblock00Kernel009(const double *rhou2_B0, double *wk3_B0)
 {
-    wk3_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*rhou2_B0[OPS_ACC0(2,0,0)] - rc8*rhou2_B0[OPS_ACC0(-1,0,0)] +
-      (rc8)*rhou2_B0[OPS_ACC0(1,0,0)] + (rc7)*rhou2_B0[OPS_ACC0(-2,0,0)]);
+    wk3_B0[OPS_ACC1(0,0,0)] = inv_0*((rc22)*rhou2_B0[OPS_ACC0(3,0,0)] - rc21*rhou2_B0[OPS_ACC0(2,0,0)] +
+      (rc21)*rhou2_B0[OPS_ACC0(-2,0,0)] + (rc24)*rhou2_B0[OPS_ACC0(1,0,0)] - rc24*rhou2_B0[OPS_ACC0(-1,0,0)] -
+      rc22*rhou2_B0[OPS_ACC0(-3,0,0)] + (rc23)*rhou2_B0[OPS_ACC0(-4,0,0)] - rc23*rhou2_B0[OPS_ACC0(4,0,0)]);
 
 }
 
 void opensbliblock00Kernel011(const double *wk41_B0, double *wk4_B0)
 {
-    wk4_B0[OPS_ACC1(0,0,0)] = inv_0*((rc7)*wk41_B0[OPS_ACC0(-2,0,0)] - rc7*wk41_B0[OPS_ACC0(2,0,0)] +
-      (rc8)*wk41_B0[OPS_ACC0(1,0,0)] - rc8*wk41_B0[OPS_ACC0(-1,0,0)]);
+    wk4_B0[OPS_ACC1(0,0,0)] = inv_0*((rc22)*wk41_B0[OPS_ACC0(3,0,0)] - rc21*wk41_B0[OPS_ACC0(2,0,0)] -
+      rc23*wk41_B0[OPS_ACC0(4,0,0)] - rc22*wk41_B0[OPS_ACC0(-3,0,0)] + (rc23)*wk41_B0[OPS_ACC0(-4,0,0)] -
+      rc24*wk41_B0[OPS_ACC0(-1,0,0)] + (rc24)*wk41_B0[OPS_ACC0(1,0,0)] + (rc21)*wk41_B0[OPS_ACC0(-2,0,0)]);
 
 }
 
 void opensbliblock00Kernel013(const double *wk42_B0, double *wk5_B0)
 {
-    wk5_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc8*wk42_B0[OPS_ACC0(-1,0,0)] + (rc7)*wk42_B0[OPS_ACC0(-2,0,0)] +
-      (rc8)*wk42_B0[OPS_ACC0(1,0,0)] - rc7*wk42_B0[OPS_ACC0(2,0,0)]);
+    wk5_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc24*wk42_B0[OPS_ACC0(-1,0,0)] + (rc21)*wk42_B0[OPS_ACC0(-2,0,0)] -
+      rc23*wk42_B0[OPS_ACC0(4,0,0)] + (rc23)*wk42_B0[OPS_ACC0(-4,0,0)] - rc21*wk42_B0[OPS_ACC0(2,0,0)] -
+      rc22*wk42_B0[OPS_ACC0(-3,0,0)] + (rc22)*wk42_B0[OPS_ACC0(3,0,0)] + (rc24)*wk42_B0[OPS_ACC0(1,0,0)]);
 
 }
 
 void opensbliblock00Kernel014(const double *rho_B0, double *wk6_B0)
 {
-    wk6_B0[OPS_ACC1(0,0,0)] = inv_0*((rc8)*rho_B0[OPS_ACC0(1,0,0)] - rc8*rho_B0[OPS_ACC0(-1,0,0)] +
-      (rc7)*rho_B0[OPS_ACC0(-2,0,0)] - rc7*rho_B0[OPS_ACC0(2,0,0)]);
+    wk6_B0[OPS_ACC1(0,0,0)] = inv_0*((rc24)*rho_B0[OPS_ACC0(1,0,0)] - rc21*rho_B0[OPS_ACC0(2,0,0)] -
+      rc23*rho_B0[OPS_ACC0(4,0,0)] + (rc22)*rho_B0[OPS_ACC0(3,0,0)] + (rc23)*rho_B0[OPS_ACC0(-4,0,0)] -
+      rc22*rho_B0[OPS_ACC0(-3,0,0)] - rc24*rho_B0[OPS_ACC0(-1,0,0)] + (rc21)*rho_B0[OPS_ACC0(-2,0,0)]);
 
 }
 
 void opensbliblock00Kernel015(const double *u0_B0, double *wk7_B0)
 {
-    wk7_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*u0_B0[OPS_ACC0(2,0,0)] - rc8*u0_B0[OPS_ACC0(-1,0,0)] +
-      (rc8)*u0_B0[OPS_ACC0(1,0,0)] + (rc7)*u0_B0[OPS_ACC0(-2,0,0)]);
+    wk7_B0[OPS_ACC1(0,0,0)] = inv_0*((rc22)*u0_B0[OPS_ACC0(3,0,0)] - rc21*u0_B0[OPS_ACC0(2,0,0)] -
+      rc24*u0_B0[OPS_ACC0(-1,0,0)] + (rc24)*u0_B0[OPS_ACC0(1,0,0)] + (rc21)*u0_B0[OPS_ACC0(-2,0,0)] -
+      rc22*u0_B0[OPS_ACC0(-3,0,0)] + (rc23)*u0_B0[OPS_ACC0(-4,0,0)] - rc23*u0_B0[OPS_ACC0(4,0,0)]);
 
 }
 
 void opensbliblock00Kernel016(const double *rhou1_B0, double *wk8_B0)
 {
-    wk8_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*rhou1_B0[OPS_ACC0(2,0,0)] + (rc7)*rhou1_B0[OPS_ACC0(-2,0,0)] -
-      rc8*rhou1_B0[OPS_ACC0(-1,0,0)] + (rc8)*rhou1_B0[OPS_ACC0(1,0,0)]);
+    wk8_B0[OPS_ACC1(0,0,0)] = inv_0*((rc23)*rhou1_B0[OPS_ACC0(-4,0,0)] - rc22*rhou1_B0[OPS_ACC0(-3,0,0)] +
+      (rc24)*rhou1_B0[OPS_ACC0(1,0,0)] + (rc21)*rhou1_B0[OPS_ACC0(-2,0,0)] - rc21*rhou1_B0[OPS_ACC0(2,0,0)] -
+      rc24*rhou1_B0[OPS_ACC0(-1,0,0)] + (rc22)*rhou1_B0[OPS_ACC0(3,0,0)] - rc23*rhou1_B0[OPS_ACC0(4,0,0)]);
 
 }
 
 void opensbliblock00Kernel018(const double *wk43_B0, double *wk9_B0)
 {
-    wk9_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc8*wk43_B0[OPS_ACC0(-1,0,0)] + (rc8)*wk43_B0[OPS_ACC0(1,0,0)] -
-      rc7*wk43_B0[OPS_ACC0(2,0,0)] + (rc7)*wk43_B0[OPS_ACC0(-2,0,0)]);
+    wk9_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc24*wk43_B0[OPS_ACC0(-1,0,0)] - rc22*wk43_B0[OPS_ACC0(-3,0,0)] +
+      (rc21)*wk43_B0[OPS_ACC0(-2,0,0)] + (rc23)*wk43_B0[OPS_ACC0(-4,0,0)] + (rc22)*wk43_B0[OPS_ACC0(3,0,0)] -
+      rc23*wk43_B0[OPS_ACC0(4,0,0)] - rc21*wk43_B0[OPS_ACC0(2,0,0)] + (rc24)*wk43_B0[OPS_ACC0(1,0,0)]);
 
 }
 
 void opensbliblock00Kernel019(const double *rhou0_B0, double *wk10_B0)
 {
-    wk10_B0[OPS_ACC1(0,0,0)] = inv_0*((rc7)*rhou0_B0[OPS_ACC0(-2,0,0)] - rc7*rhou0_B0[OPS_ACC0(2,0,0)] +
-      (rc8)*rhou0_B0[OPS_ACC0(1,0,0)] - rc8*rhou0_B0[OPS_ACC0(-1,0,0)]);
+    wk10_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc21*rhou0_B0[OPS_ACC0(2,0,0)] - rc23*rhou0_B0[OPS_ACC0(4,0,0)] +
+      (rc21)*rhou0_B0[OPS_ACC0(-2,0,0)] - rc24*rhou0_B0[OPS_ACC0(-1,0,0)] + (rc24)*rhou0_B0[OPS_ACC0(1,0,0)] -
+      rc22*rhou0_B0[OPS_ACC0(-3,0,0)] + (rc23)*rhou0_B0[OPS_ACC0(-4,0,0)] + (rc22)*rhou0_B0[OPS_ACC0(3,0,0)]);
 
 }
 
 void opensbliblock00Kernel020(const double *rhoE_B0, double *wk11_B0)
 {
-    wk11_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*rhoE_B0[OPS_ACC0(2,0,0)] + (rc7)*rhoE_B0[OPS_ACC0(-2,0,0)] -
-      rc8*rhoE_B0[OPS_ACC0(-1,0,0)] + (rc8)*rhoE_B0[OPS_ACC0(1,0,0)]);
+    wk11_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc24*rhoE_B0[OPS_ACC0(-1,0,0)] - rc21*rhoE_B0[OPS_ACC0(2,0,0)] +
+      (rc23)*rhoE_B0[OPS_ACC0(-4,0,0)] + (rc22)*rhoE_B0[OPS_ACC0(3,0,0)] - rc22*rhoE_B0[OPS_ACC0(-3,0,0)] -
+      rc23*rhoE_B0[OPS_ACC0(4,0,0)] + (rc21)*rhoE_B0[OPS_ACC0(-2,0,0)] + (rc24)*rhoE_B0[OPS_ACC0(1,0,0)]);
 
 }
 
 void opensbliblock00Kernel021(const double *wk44_B0, double *wk12_B0)
 {
-    wk12_B0[OPS_ACC1(0,0,0)] = inv_0*((rc8)*wk44_B0[OPS_ACC0(1,0,0)] - rc8*wk44_B0[OPS_ACC0(-1,0,0)] +
-      (rc7)*wk44_B0[OPS_ACC0(-2,0,0)] - rc7*wk44_B0[OPS_ACC0(2,0,0)]);
+    wk12_B0[OPS_ACC1(0,0,0)] = inv_0*((rc23)*wk44_B0[OPS_ACC0(-4,0,0)] + (rc24)*wk44_B0[OPS_ACC0(1,0,0)] -
+      rc24*wk44_B0[OPS_ACC0(-1,0,0)] - rc21*wk44_B0[OPS_ACC0(2,0,0)] - rc22*wk44_B0[OPS_ACC0(-3,0,0)] -
+      rc23*wk44_B0[OPS_ACC0(4,0,0)] + (rc21)*wk44_B0[OPS_ACC0(-2,0,0)] + (rc22)*wk44_B0[OPS_ACC0(3,0,0)]);
 
 }
 
@@ -377,92 +510,105 @@ double *wk39_B0, double *wk42_B0, double *wk44_B0)
 
 void opensbliblock00Kernel024(const double *u1_B0, double *wk13_B0)
 {
-    wk13_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc8*u1_B0[OPS_ACC0(0,-1,0)] + (rc7)*u1_B0[OPS_ACC0(0,-2,0)] +
-      (rc8)*u1_B0[OPS_ACC0(0,1,0)] - rc7*u1_B0[OPS_ACC0(0,2,0)]);
+    wk13_B0[OPS_ACC1(0,0,0)] = inv_1*((rc21)*u1_B0[OPS_ACC0(0,-2,0)] + (rc22)*u1_B0[OPS_ACC0(0,3,0)] +
+      (rc24)*u1_B0[OPS_ACC0(0,1,0)] - rc24*u1_B0[OPS_ACC0(0,-1,0)] - rc23*u1_B0[OPS_ACC0(0,4,0)] +
+      (rc23)*u1_B0[OPS_ACC0(0,-4,0)] - rc21*u1_B0[OPS_ACC0(0,2,0)] - rc22*u1_B0[OPS_ACC0(0,-3,0)]);
 
 }
 
 void opensbliblock00Kernel025(const double *rhoE_B0, double *wk14_B0)
 {
-    wk14_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*rhoE_B0[OPS_ACC0(0,2,0)] + (rc7)*rhoE_B0[OPS_ACC0(0,-2,0)] -
-      rc8*rhoE_B0[OPS_ACC0(0,-1,0)] + (rc8)*rhoE_B0[OPS_ACC0(0,1,0)]);
+    wk14_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc24*rhoE_B0[OPS_ACC0(0,-1,0)] - rc21*rhoE_B0[OPS_ACC0(0,2,0)] +
+      (rc23)*rhoE_B0[OPS_ACC0(0,-4,0)] + (rc22)*rhoE_B0[OPS_ACC0(0,3,0)] - rc22*rhoE_B0[OPS_ACC0(0,-3,0)] -
+      rc23*rhoE_B0[OPS_ACC0(0,4,0)] + (rc21)*rhoE_B0[OPS_ACC0(0,-2,0)] + (rc24)*rhoE_B0[OPS_ACC0(0,1,0)]);
 
 }
 
 void opensbliblock00Kernel026(const double *wk39_B0, double *wk15_B0)
 {
-    wk15_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*wk39_B0[OPS_ACC0(0,2,0)] + (rc7)*wk39_B0[OPS_ACC0(0,-2,0)] -
-      rc8*wk39_B0[OPS_ACC0(0,-1,0)] + (rc8)*wk39_B0[OPS_ACC0(0,1,0)]);
+    wk15_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc21*wk39_B0[OPS_ACC0(0,2,0)] + (rc22)*wk39_B0[OPS_ACC0(0,3,0)] -
+      rc23*wk39_B0[OPS_ACC0(0,4,0)] + (rc23)*wk39_B0[OPS_ACC0(0,-4,0)] - rc24*wk39_B0[OPS_ACC0(0,-1,0)] -
+      rc22*wk39_B0[OPS_ACC0(0,-3,0)] + (rc24)*wk39_B0[OPS_ACC0(0,1,0)] + (rc21)*wk39_B0[OPS_ACC0(0,-2,0)]);
 
 }
 
 void opensbliblock00Kernel027(const double *rhou2_B0, double *wk16_B0)
 {
-    wk16_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*rhou2_B0[OPS_ACC0(0,2,0)] - rc8*rhou2_B0[OPS_ACC0(0,-1,0)] +
-      (rc8)*rhou2_B0[OPS_ACC0(0,1,0)] + (rc7)*rhou2_B0[OPS_ACC0(0,-2,0)]);
+    wk16_B0[OPS_ACC1(0,0,0)] = inv_1*((rc22)*rhou2_B0[OPS_ACC0(0,3,0)] - rc21*rhou2_B0[OPS_ACC0(0,2,0)] +
+      (rc21)*rhou2_B0[OPS_ACC0(0,-2,0)] + (rc24)*rhou2_B0[OPS_ACC0(0,1,0)] - rc24*rhou2_B0[OPS_ACC0(0,-1,0)] -
+      rc22*rhou2_B0[OPS_ACC0(0,-3,0)] + (rc23)*rhou2_B0[OPS_ACC0(0,-4,0)] - rc23*rhou2_B0[OPS_ACC0(0,4,0)]);
 
 }
 
 void opensbliblock00Kernel028(const double *wk40_B0, double *wk17_B0)
 {
-    wk17_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*wk40_B0[OPS_ACC0(0,2,0)] + (rc7)*wk40_B0[OPS_ACC0(0,-2,0)] -
-      rc8*wk40_B0[OPS_ACC0(0,-1,0)] + (rc8)*wk40_B0[OPS_ACC0(0,1,0)]);
+    wk17_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc22*wk40_B0[OPS_ACC0(0,-3,0)] - rc23*wk40_B0[OPS_ACC0(0,4,0)] -
+      rc24*wk40_B0[OPS_ACC0(0,-1,0)] + (rc21)*wk40_B0[OPS_ACC0(0,-2,0)] + (rc24)*wk40_B0[OPS_ACC0(0,1,0)] -
+      rc21*wk40_B0[OPS_ACC0(0,2,0)] + (rc23)*wk40_B0[OPS_ACC0(0,-4,0)] + (rc22)*wk40_B0[OPS_ACC0(0,3,0)]);
 
 }
 
 void opensbliblock00Kernel029(const double *wk41_B0, double *wk18_B0)
 {
-    wk18_B0[OPS_ACC1(0,0,0)] = inv_1*((rc7)*wk41_B0[OPS_ACC0(0,-2,0)] - rc7*wk41_B0[OPS_ACC0(0,2,0)] +
-      (rc8)*wk41_B0[OPS_ACC0(0,1,0)] - rc8*wk41_B0[OPS_ACC0(0,-1,0)]);
+    wk18_B0[OPS_ACC1(0,0,0)] = inv_1*((rc22)*wk41_B0[OPS_ACC0(0,3,0)] - rc21*wk41_B0[OPS_ACC0(0,2,0)] -
+      rc23*wk41_B0[OPS_ACC0(0,4,0)] - rc22*wk41_B0[OPS_ACC0(0,-3,0)] + (rc23)*wk41_B0[OPS_ACC0(0,-4,0)] -
+      rc24*wk41_B0[OPS_ACC0(0,-1,0)] + (rc24)*wk41_B0[OPS_ACC0(0,1,0)] + (rc21)*wk41_B0[OPS_ACC0(0,-2,0)]);
 
 }
 
 void opensbliblock00Kernel030(const double *wk42_B0, double *wk19_B0)
 {
-    wk19_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc8*wk42_B0[OPS_ACC0(0,-1,0)] + (rc7)*wk42_B0[OPS_ACC0(0,-2,0)] +
-      (rc8)*wk42_B0[OPS_ACC0(0,1,0)] - rc7*wk42_B0[OPS_ACC0(0,2,0)]);
+    wk19_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc24*wk42_B0[OPS_ACC0(0,-1,0)] + (rc21)*wk42_B0[OPS_ACC0(0,-2,0)] -
+      rc23*wk42_B0[OPS_ACC0(0,4,0)] + (rc23)*wk42_B0[OPS_ACC0(0,-4,0)] - rc21*wk42_B0[OPS_ACC0(0,2,0)] -
+      rc22*wk42_B0[OPS_ACC0(0,-3,0)] + (rc22)*wk42_B0[OPS_ACC0(0,3,0)] + (rc24)*wk42_B0[OPS_ACC0(0,1,0)]);
 
 }
 
 void opensbliblock00Kernel031(const double *p_B0, double *wk20_B0)
 {
-    wk20_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*p_B0[OPS_ACC0(0,2,0)] - rc8*p_B0[OPS_ACC0(0,-1,0)] +
-      (rc8)*p_B0[OPS_ACC0(0,1,0)] + (rc7)*p_B0[OPS_ACC0(0,-2,0)]);
+    wk20_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc21*p_B0[OPS_ACC0(0,2,0)] + (rc24)*p_B0[OPS_ACC0(0,1,0)] -
+      rc24*p_B0[OPS_ACC0(0,-1,0)] + (rc21)*p_B0[OPS_ACC0(0,-2,0)] - rc23*p_B0[OPS_ACC0(0,4,0)] -
+      rc22*p_B0[OPS_ACC0(0,-3,0)] + (rc22)*p_B0[OPS_ACC0(0,3,0)] + (rc23)*p_B0[OPS_ACC0(0,-4,0)]);
 
 }
 
 void opensbliblock00Kernel032(const double *rhou1_B0, double *wk21_B0)
 {
-    wk21_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*rhou1_B0[OPS_ACC0(0,2,0)] + (rc7)*rhou1_B0[OPS_ACC0(0,-2,0)] -
-      rc8*rhou1_B0[OPS_ACC0(0,-1,0)] + (rc8)*rhou1_B0[OPS_ACC0(0,1,0)]);
+    wk21_B0[OPS_ACC1(0,0,0)] = inv_1*((rc23)*rhou1_B0[OPS_ACC0(0,-4,0)] - rc22*rhou1_B0[OPS_ACC0(0,-3,0)] +
+      (rc24)*rhou1_B0[OPS_ACC0(0,1,0)] + (rc21)*rhou1_B0[OPS_ACC0(0,-2,0)] - rc21*rhou1_B0[OPS_ACC0(0,2,0)] -
+      rc24*rhou1_B0[OPS_ACC0(0,-1,0)] + (rc22)*rhou1_B0[OPS_ACC0(0,3,0)] - rc23*rhou1_B0[OPS_ACC0(0,4,0)]);
 
 }
 
 void opensbliblock00Kernel033(const double *rhou0_B0, double *wk22_B0)
 {
-    wk22_B0[OPS_ACC1(0,0,0)] = inv_1*((rc7)*rhou0_B0[OPS_ACC0(0,-2,0)] - rc7*rhou0_B0[OPS_ACC0(0,2,0)] +
-      (rc8)*rhou0_B0[OPS_ACC0(0,1,0)] - rc8*rhou0_B0[OPS_ACC0(0,-1,0)]);
+    wk22_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc21*rhou0_B0[OPS_ACC0(0,2,0)] - rc23*rhou0_B0[OPS_ACC0(0,4,0)] +
+      (rc21)*rhou0_B0[OPS_ACC0(0,-2,0)] - rc24*rhou0_B0[OPS_ACC0(0,-1,0)] + (rc24)*rhou0_B0[OPS_ACC0(0,1,0)] -
+      rc22*rhou0_B0[OPS_ACC0(0,-3,0)] + (rc23)*rhou0_B0[OPS_ACC0(0,-4,0)] + (rc22)*rhou0_B0[OPS_ACC0(0,3,0)]);
 
 }
 
 void opensbliblock00Kernel034(const double *rho_B0, double *wk23_B0)
 {
-    wk23_B0[OPS_ACC1(0,0,0)] = inv_1*((rc8)*rho_B0[OPS_ACC0(0,1,0)] - rc8*rho_B0[OPS_ACC0(0,-1,0)] +
-      (rc7)*rho_B0[OPS_ACC0(0,-2,0)] - rc7*rho_B0[OPS_ACC0(0,2,0)]);
+    wk23_B0[OPS_ACC1(0,0,0)] = inv_1*((rc24)*rho_B0[OPS_ACC0(0,1,0)] - rc21*rho_B0[OPS_ACC0(0,2,0)] -
+      rc23*rho_B0[OPS_ACC0(0,4,0)] + (rc22)*rho_B0[OPS_ACC0(0,3,0)] + (rc23)*rho_B0[OPS_ACC0(0,-4,0)] -
+      rc22*rho_B0[OPS_ACC0(0,-3,0)] - rc24*rho_B0[OPS_ACC0(0,-1,0)] + (rc21)*rho_B0[OPS_ACC0(0,-2,0)]);
 
 }
 
 void opensbliblock00Kernel035(const double *wk43_B0, double *wk24_B0)
 {
-    wk24_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc8*wk43_B0[OPS_ACC0(0,-1,0)] + (rc8)*wk43_B0[OPS_ACC0(0,1,0)] -
-      rc7*wk43_B0[OPS_ACC0(0,2,0)] + (rc7)*wk43_B0[OPS_ACC0(0,-2,0)]);
+    wk24_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc24*wk43_B0[OPS_ACC0(0,-1,0)] - rc22*wk43_B0[OPS_ACC0(0,-3,0)] +
+      (rc21)*wk43_B0[OPS_ACC0(0,-2,0)] + (rc23)*wk43_B0[OPS_ACC0(0,-4,0)] + (rc22)*wk43_B0[OPS_ACC0(0,3,0)] -
+      rc23*wk43_B0[OPS_ACC0(0,4,0)] - rc21*wk43_B0[OPS_ACC0(0,2,0)] + (rc24)*wk43_B0[OPS_ACC0(0,1,0)]);
 
 }
 
 void opensbliblock00Kernel036(const double *wk44_B0, double *wk25_B0)
 {
-    wk25_B0[OPS_ACC1(0,0,0)] = inv_1*((rc8)*wk44_B0[OPS_ACC0(0,1,0)] - rc8*wk44_B0[OPS_ACC0(0,-1,0)] +
-      (rc7)*wk44_B0[OPS_ACC0(0,-2,0)] - rc7*wk44_B0[OPS_ACC0(0,2,0)]);
+    wk25_B0[OPS_ACC1(0,0,0)] = inv_1*((rc23)*wk44_B0[OPS_ACC0(0,-4,0)] + (rc24)*wk44_B0[OPS_ACC0(0,1,0)] -
+      rc24*wk44_B0[OPS_ACC0(0,-1,0)] - rc21*wk44_B0[OPS_ACC0(0,2,0)] - rc22*wk44_B0[OPS_ACC0(0,-3,0)] -
+      rc23*wk44_B0[OPS_ACC0(0,4,0)] + (rc21)*wk44_B0[OPS_ACC0(0,-2,0)] + (rc22)*wk44_B0[OPS_ACC0(0,3,0)]);
 
 }
 
@@ -486,92 +632,105 @@ const double *rhou1_B0, const double *rhou0_B0, const double *rhou2_B0, double *
 
 void opensbliblock00Kernel038(const double *rhou1_B0, double *wk26_B0)
 {
-    wk26_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*rhou1_B0[OPS_ACC0(0,0,1)] - rc7*rhou1_B0[OPS_ACC0(0,0,2)] +
-      (rc7)*rhou1_B0[OPS_ACC0(0,0,-2)] - rc8*rhou1_B0[OPS_ACC0(0,0,-1)]);
+    wk26_B0[OPS_ACC1(0,0,0)] = inv_2*((rc22)*rhou1_B0[OPS_ACC0(0,0,3)] - rc23*rhou1_B0[OPS_ACC0(0,0,4)] -
+      rc22*rhou1_B0[OPS_ACC0(0,0,-3)] - rc24*rhou1_B0[OPS_ACC0(0,0,-1)] + (rc24)*rhou1_B0[OPS_ACC0(0,0,1)] +
+      (rc21)*rhou1_B0[OPS_ACC0(0,0,-2)] - rc21*rhou1_B0[OPS_ACC0(0,0,2)] + (rc23)*rhou1_B0[OPS_ACC0(0,0,-4)]);
 
 }
 
 void opensbliblock00Kernel039(const double *p_B0, double *wk27_B0)
 {
-    wk27_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc7*p_B0[OPS_ACC0(0,0,2)] + (rc8)*p_B0[OPS_ACC0(0,0,1)] -
-      rc8*p_B0[OPS_ACC0(0,0,-1)] + (rc7)*p_B0[OPS_ACC0(0,0,-2)]);
+    wk27_B0[OPS_ACC1(0,0,0)] = inv_2*((rc24)*p_B0[OPS_ACC0(0,0,1)] - rc24*p_B0[OPS_ACC0(0,0,-1)] -
+      rc22*p_B0[OPS_ACC0(0,0,-3)] - rc23*p_B0[OPS_ACC0(0,0,4)] + (rc23)*p_B0[OPS_ACC0(0,0,-4)] +
+      (rc22)*p_B0[OPS_ACC0(0,0,3)] - rc21*p_B0[OPS_ACC0(0,0,2)] + (rc21)*p_B0[OPS_ACC0(0,0,-2)]);
 
 }
 
 void opensbliblock00Kernel040(const double *rho_B0, double *wk28_B0)
 {
-    wk28_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*rho_B0[OPS_ACC0(0,0,-1)] + (rc7)*rho_B0[OPS_ACC0(0,0,-2)] -
-      rc7*rho_B0[OPS_ACC0(0,0,2)] + (rc8)*rho_B0[OPS_ACC0(0,0,1)]);
+    wk28_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc23*rho_B0[OPS_ACC0(0,0,4)] + (rc24)*rho_B0[OPS_ACC0(0,0,1)] +
+      (rc23)*rho_B0[OPS_ACC0(0,0,-4)] - rc21*rho_B0[OPS_ACC0(0,0,2)] - rc22*rho_B0[OPS_ACC0(0,0,-3)] +
+      (rc22)*rho_B0[OPS_ACC0(0,0,3)] - rc24*rho_B0[OPS_ACC0(0,0,-1)] + (rc21)*rho_B0[OPS_ACC0(0,0,-2)]);
 
 }
 
 void opensbliblock00Kernel042(const double *wk39_B0, double *wk29_B0)
 {
-    wk29_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*wk39_B0[OPS_ACC0(0,0,1)] - rc7*wk39_B0[OPS_ACC0(0,0,2)] +
-      (rc7)*wk39_B0[OPS_ACC0(0,0,-2)] - rc8*wk39_B0[OPS_ACC0(0,0,-1)]);
+    wk29_B0[OPS_ACC1(0,0,0)] = inv_2*((rc24)*wk39_B0[OPS_ACC0(0,0,1)] - rc21*wk39_B0[OPS_ACC0(0,0,2)] +
+      (rc23)*wk39_B0[OPS_ACC0(0,0,-4)] + (rc22)*wk39_B0[OPS_ACC0(0,0,3)] - rc23*wk39_B0[OPS_ACC0(0,0,4)] -
+      rc22*wk39_B0[OPS_ACC0(0,0,-3)] - rc24*wk39_B0[OPS_ACC0(0,0,-1)] + (rc21)*wk39_B0[OPS_ACC0(0,0,-2)]);
 
 }
 
 void opensbliblock00Kernel043(const double *rhoE_B0, double *wk30_B0)
 {
-    wk30_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*rhoE_B0[OPS_ACC0(0,0,1)] - rc7*rhoE_B0[OPS_ACC0(0,0,2)] +
-      (rc7)*rhoE_B0[OPS_ACC0(0,0,-2)] - rc8*rhoE_B0[OPS_ACC0(0,0,-1)]);
+    wk30_B0[OPS_ACC1(0,0,0)] = inv_2*((rc23)*rhoE_B0[OPS_ACC0(0,0,-4)] - rc24*rhoE_B0[OPS_ACC0(0,0,-1)] +
+      (rc24)*rhoE_B0[OPS_ACC0(0,0,1)] - rc22*rhoE_B0[OPS_ACC0(0,0,-3)] - rc21*rhoE_B0[OPS_ACC0(0,0,2)] +
+      (rc21)*rhoE_B0[OPS_ACC0(0,0,-2)] + (rc22)*rhoE_B0[OPS_ACC0(0,0,3)] - rc23*rhoE_B0[OPS_ACC0(0,0,4)]);
 
 }
 
 void opensbliblock00Kernel044(const double *rhou2_B0, double *wk31_B0)
 {
-    wk31_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc7*rhou2_B0[OPS_ACC0(0,0,2)] + (rc8)*rhou2_B0[OPS_ACC0(0,0,1)] -
-      rc8*rhou2_B0[OPS_ACC0(0,0,-1)] + (rc7)*rhou2_B0[OPS_ACC0(0,0,-2)]);
+    wk31_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc21*rhou2_B0[OPS_ACC0(0,0,2)] + (rc23)*rhou2_B0[OPS_ACC0(0,0,-4)] +
+      (rc24)*rhou2_B0[OPS_ACC0(0,0,1)] - rc23*rhou2_B0[OPS_ACC0(0,0,4)] + (rc21)*rhou2_B0[OPS_ACC0(0,0,-2)] +
+      (rc22)*rhou2_B0[OPS_ACC0(0,0,3)] - rc22*rhou2_B0[OPS_ACC0(0,0,-3)] - rc24*rhou2_B0[OPS_ACC0(0,0,-1)]);
 
 }
 
 void opensbliblock00Kernel045(const double *wk40_B0, double *wk32_B0)
 {
-    wk32_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*wk40_B0[OPS_ACC0(0,0,1)] - rc7*wk40_B0[OPS_ACC0(0,0,2)] +
-      (rc7)*wk40_B0[OPS_ACC0(0,0,-2)] - rc8*wk40_B0[OPS_ACC0(0,0,-1)]);
+    wk32_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc21*wk40_B0[OPS_ACC0(0,0,2)] - rc24*wk40_B0[OPS_ACC0(0,0,-1)] +
+      (rc21)*wk40_B0[OPS_ACC0(0,0,-2)] + (rc22)*wk40_B0[OPS_ACC0(0,0,3)] - rc23*wk40_B0[OPS_ACC0(0,0,4)] +
+      (rc23)*wk40_B0[OPS_ACC0(0,0,-4)] + (rc24)*wk40_B0[OPS_ACC0(0,0,1)] - rc22*wk40_B0[OPS_ACC0(0,0,-3)]);
 
 }
 
 void opensbliblock00Kernel046(const double *wk41_B0, double *wk33_B0)
 {
-    wk33_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*wk41_B0[OPS_ACC0(0,0,1)] - rc7*wk41_B0[OPS_ACC0(0,0,2)] +
-      (rc7)*wk41_B0[OPS_ACC0(0,0,-2)] - rc8*wk41_B0[OPS_ACC0(0,0,-1)]);
+    wk33_B0[OPS_ACC1(0,0,0)] = inv_2*((rc21)*wk41_B0[OPS_ACC0(0,0,-2)] + (rc22)*wk41_B0[OPS_ACC0(0,0,3)] -
+      rc24*wk41_B0[OPS_ACC0(0,0,-1)] - rc22*wk41_B0[OPS_ACC0(0,0,-3)] - rc21*wk41_B0[OPS_ACC0(0,0,2)] +
+      (rc23)*wk41_B0[OPS_ACC0(0,0,-4)] + (rc24)*wk41_B0[OPS_ACC0(0,0,1)] - rc23*wk41_B0[OPS_ACC0(0,0,4)]);
 
 }
 
 void opensbliblock00Kernel047(const double *wk42_B0, double *wk34_B0)
 {
-    wk34_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*wk42_B0[OPS_ACC0(0,0,-1)] + (rc7)*wk42_B0[OPS_ACC0(0,0,-2)] -
-      rc7*wk42_B0[OPS_ACC0(0,0,2)] + (rc8)*wk42_B0[OPS_ACC0(0,0,1)]);
+    wk34_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc24*wk42_B0[OPS_ACC0(0,0,-1)] + (rc21)*wk42_B0[OPS_ACC0(0,0,-2)] -
+      rc21*wk42_B0[OPS_ACC0(0,0,2)] + (rc22)*wk42_B0[OPS_ACC0(0,0,3)] + (rc23)*wk42_B0[OPS_ACC0(0,0,-4)] -
+      rc23*wk42_B0[OPS_ACC0(0,0,4)] - rc22*wk42_B0[OPS_ACC0(0,0,-3)] + (rc24)*wk42_B0[OPS_ACC0(0,0,1)]);
 
 }
 
 void opensbliblock00Kernel048(const double *rhou0_B0, double *wk35_B0)
 {
-    wk35_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*rhou0_B0[OPS_ACC0(0,0,1)] - rc7*rhou0_B0[OPS_ACC0(0,0,2)] +
-      (rc7)*rhou0_B0[OPS_ACC0(0,0,-2)] - rc8*rhou0_B0[OPS_ACC0(0,0,-1)]);
+    wk35_B0[OPS_ACC1(0,0,0)] = inv_2*((rc22)*rhou0_B0[OPS_ACC0(0,0,3)] - rc21*rhou0_B0[OPS_ACC0(0,0,2)] +
+      (rc21)*rhou0_B0[OPS_ACC0(0,0,-2)] + (rc24)*rhou0_B0[OPS_ACC0(0,0,1)] - rc22*rhou0_B0[OPS_ACC0(0,0,-3)] -
+      rc23*rhou0_B0[OPS_ACC0(0,0,4)] - rc24*rhou0_B0[OPS_ACC0(0,0,-1)] + (rc23)*rhou0_B0[OPS_ACC0(0,0,-4)]);
 
 }
 
 void opensbliblock00Kernel049(const double *wk43_B0, double *wk36_B0)
 {
-    wk36_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*wk43_B0[OPS_ACC0(0,0,-1)] - rc7*wk43_B0[OPS_ACC0(0,0,2)] +
-      (rc8)*wk43_B0[OPS_ACC0(0,0,1)] + (rc7)*wk43_B0[OPS_ACC0(0,0,-2)]);
+    wk36_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc23*wk43_B0[OPS_ACC0(0,0,4)] + (rc22)*wk43_B0[OPS_ACC0(0,0,3)] -
+      rc24*wk43_B0[OPS_ACC0(0,0,-1)] - rc21*wk43_B0[OPS_ACC0(0,0,2)] - rc22*wk43_B0[OPS_ACC0(0,0,-3)] +
+      (rc24)*wk43_B0[OPS_ACC0(0,0,1)] + (rc21)*wk43_B0[OPS_ACC0(0,0,-2)] + (rc23)*wk43_B0[OPS_ACC0(0,0,-4)]);
 
 }
 
 void opensbliblock00Kernel050(const double *wk44_B0, double *wk37_B0)
 {
-    wk37_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*wk44_B0[OPS_ACC0(0,0,-1)] + (rc7)*wk44_B0[OPS_ACC0(0,0,-2)] -
-      rc7*wk44_B0[OPS_ACC0(0,0,2)] + (rc8)*wk44_B0[OPS_ACC0(0,0,1)]);
+    wk37_B0[OPS_ACC1(0,0,0)] = inv_2*((rc23)*wk44_B0[OPS_ACC0(0,0,-4)] - rc23*wk44_B0[OPS_ACC0(0,0,4)] -
+      rc22*wk44_B0[OPS_ACC0(0,0,-3)] + (rc21)*wk44_B0[OPS_ACC0(0,0,-2)] + (rc24)*wk44_B0[OPS_ACC0(0,0,1)] -
+      rc24*wk44_B0[OPS_ACC0(0,0,-1)] - rc21*wk44_B0[OPS_ACC0(0,0,2)] + (rc22)*wk44_B0[OPS_ACC0(0,0,3)]);
 
 }
 
 void opensbliblock00Kernel051(const double *u2_B0, double *wk38_B0)
 {
-    wk38_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*u2_B0[OPS_ACC0(0,0,-1)] + (rc8)*u2_B0[OPS_ACC0(0,0,1)] +
-      (rc7)*u2_B0[OPS_ACC0(0,0,-2)] - rc7*u2_B0[OPS_ACC0(0,0,2)]);
+    wk38_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc24*u2_B0[OPS_ACC0(0,0,-1)] - rc22*u2_B0[OPS_ACC0(0,0,-3)] -
+      rc23*u2_B0[OPS_ACC0(0,0,4)] + (rc22)*u2_B0[OPS_ACC0(0,0,3)] + (rc23)*u2_B0[OPS_ACC0(0,0,-4)] +
+      (rc21)*u2_B0[OPS_ACC0(0,0,-2)] - rc21*u2_B0[OPS_ACC0(0,0,2)] + (rc24)*u2_B0[OPS_ACC0(0,0,1)]);
 
 }
 
@@ -622,190 +781,229 @@ double *Residual2_B0, double *Residual1_B0)
 
 void opensbliblock00Kernel053(const double *u1_B0, double *wk0_B0)
 {
-    wk0_B0[OPS_ACC1(0,0,0)] = inv_3*(-rc7*u1_B0[OPS_ACC0(-2,0,0)] + (rc9)*u1_B0[OPS_ACC0(-1,0,0)] +
-      (rc9)*u1_B0[OPS_ACC0(1,0,0)] - rc7*u1_B0[OPS_ACC0(2,0,0)] - rc10*u1_B0[OPS_ACC0(0,0,0)]);
+    wk0_B0[OPS_ACC1(0,0,0)] = inv_3*((rc25)*u1_B0[OPS_ACC0(-1,0,0)] - rc26*u1_B0[OPS_ACC0(0,0,0)] +
+      (rc27)*u1_B0[OPS_ACC0(3,0,0)] + (rc25)*u1_B0[OPS_ACC0(1,0,0)] - rc21*u1_B0[OPS_ACC0(-2,0,0)] -
+      rc28*u1_B0[OPS_ACC0(4,0,0)] - rc28*u1_B0[OPS_ACC0(-4,0,0)] - rc21*u1_B0[OPS_ACC0(2,0,0)] +
+      (rc27)*u1_B0[OPS_ACC0(-3,0,0)]);
 
 }
 
 void opensbliblock00Kernel054(const double *T_B0, double *wk1_B0)
 {
-    wk1_B0[OPS_ACC1(0,0,0)] = inv_4*(-rc7*T_B0[OPS_ACC0(0,-2,0)] + (rc9)*T_B0[OPS_ACC0(0,1,0)] -
-      rc7*T_B0[OPS_ACC0(0,2,0)] + (rc9)*T_B0[OPS_ACC0(0,-1,0)] - rc10*T_B0[OPS_ACC0(0,0,0)]);
+    wk1_B0[OPS_ACC1(0,0,0)] = inv_4*(-rc21*T_B0[OPS_ACC0(0,-2,0)] + (rc27)*T_B0[OPS_ACC0(0,-3,0)] +
+      (rc25)*T_B0[OPS_ACC0(0,-1,0)] - rc28*T_B0[OPS_ACC0(0,-4,0)] + (rc27)*T_B0[OPS_ACC0(0,3,0)] -
+      rc28*T_B0[OPS_ACC0(0,4,0)] - rc21*T_B0[OPS_ACC0(0,2,0)] + (rc25)*T_B0[OPS_ACC0(0,1,0)] -
+      rc26*T_B0[OPS_ACC0(0,0,0)]);
 
 }
 
 void opensbliblock00Kernel055(const double *u1_B0, double *wk2_B0)
 {
-    wk2_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc8*u1_B0[OPS_ACC0(0,-1,0)] + (rc7)*u1_B0[OPS_ACC0(0,-2,0)] +
-      (rc8)*u1_B0[OPS_ACC0(0,1,0)] - rc7*u1_B0[OPS_ACC0(0,2,0)]);
+    wk2_B0[OPS_ACC1(0,0,0)] = inv_1*((rc21)*u1_B0[OPS_ACC0(0,-2,0)] + (rc22)*u1_B0[OPS_ACC0(0,3,0)] +
+      (rc24)*u1_B0[OPS_ACC0(0,1,0)] - rc24*u1_B0[OPS_ACC0(0,-1,0)] - rc23*u1_B0[OPS_ACC0(0,4,0)] +
+      (rc23)*u1_B0[OPS_ACC0(0,-4,0)] - rc21*u1_B0[OPS_ACC0(0,2,0)] - rc22*u1_B0[OPS_ACC0(0,-3,0)]);
 
 }
 
 void opensbliblock00Kernel057(const double *u1_B0, double *wk4_B0)
 {
-    wk4_B0[OPS_ACC1(0,0,0)] = inv_5*(-rc7*u1_B0[OPS_ACC0(0,0,-2)] + (rc9)*u1_B0[OPS_ACC0(0,0,-1)] -
-      rc7*u1_B0[OPS_ACC0(0,0,2)] - rc10*u1_B0[OPS_ACC0(0,0,0)] + (rc9)*u1_B0[OPS_ACC0(0,0,1)]);
+    wk4_B0[OPS_ACC1(0,0,0)] = inv_5*((rc25)*u1_B0[OPS_ACC0(0,0,-1)] - rc28*u1_B0[OPS_ACC0(0,0,-4)] -
+      rc26*u1_B0[OPS_ACC0(0,0,0)] - rc28*u1_B0[OPS_ACC0(0,0,4)] + (rc27)*u1_B0[OPS_ACC0(0,0,-3)] +
+      (rc25)*u1_B0[OPS_ACC0(0,0,1)] - rc21*u1_B0[OPS_ACC0(0,0,-2)] - rc21*u1_B0[OPS_ACC0(0,0,2)] +
+      (rc27)*u1_B0[OPS_ACC0(0,0,3)]);
 
 }
 
 void opensbliblock00Kernel058(const double *u0_B0, double *wk5_B0)
 {
-    wk5_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc7*u0_B0[OPS_ACC0(0,0,2)] + (rc8)*u0_B0[OPS_ACC0(0,0,1)] -
-      rc8*u0_B0[OPS_ACC0(0,0,-1)] + (rc7)*u0_B0[OPS_ACC0(0,0,-2)]);
+    wk5_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc21*u0_B0[OPS_ACC0(0,0,2)] + (rc23)*u0_B0[OPS_ACC0(0,0,-4)] +
+      (rc24)*u0_B0[OPS_ACC0(0,0,1)] - rc23*u0_B0[OPS_ACC0(0,0,4)] + (rc21)*u0_B0[OPS_ACC0(0,0,-2)] +
+      (rc22)*u0_B0[OPS_ACC0(0,0,3)] - rc22*u0_B0[OPS_ACC0(0,0,-3)] - rc24*u0_B0[OPS_ACC0(0,0,-1)]);
 
 }
 
 void opensbliblock00Kernel059(const double *u2_B0, double *wk6_B0)
 {
-    wk6_B0[OPS_ACC1(0,0,0)] = inv_0*((rc8)*u2_B0[OPS_ACC0(1,0,0)] + (rc7)*u2_B0[OPS_ACC0(-2,0,0)] -
-      rc8*u2_B0[OPS_ACC0(-1,0,0)] - rc7*u2_B0[OPS_ACC0(2,0,0)]);
+    wk6_B0[OPS_ACC1(0,0,0)] = inv_0*((rc24)*u2_B0[OPS_ACC0(1,0,0)] - rc24*u2_B0[OPS_ACC0(-1,0,0)] +
+      (rc22)*u2_B0[OPS_ACC0(3,0,0)] - rc22*u2_B0[OPS_ACC0(-3,0,0)] - rc21*u2_B0[OPS_ACC0(2,0,0)] +
+      (rc23)*u2_B0[OPS_ACC0(-4,0,0)] - rc23*u2_B0[OPS_ACC0(4,0,0)] + (rc21)*u2_B0[OPS_ACC0(-2,0,0)]);
 
 }
 
 void opensbliblock00Kernel060(const double *u1_B0, double *wk7_B0)
 {
-    wk7_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*u1_B0[OPS_ACC0(0,0,-1)] + (rc7)*u1_B0[OPS_ACC0(0,0,-2)] -
-      rc7*u1_B0[OPS_ACC0(0,0,2)] + (rc8)*u1_B0[OPS_ACC0(0,0,1)]);
+    wk7_B0[OPS_ACC1(0,0,0)] = inv_2*((rc21)*u1_B0[OPS_ACC0(0,0,-2)] + (rc23)*u1_B0[OPS_ACC0(0,0,-4)] -
+      rc23*u1_B0[OPS_ACC0(0,0,4)] - rc22*u1_B0[OPS_ACC0(0,0,-3)] + (rc24)*u1_B0[OPS_ACC0(0,0,1)] -
+      rc24*u1_B0[OPS_ACC0(0,0,-1)] - rc21*u1_B0[OPS_ACC0(0,0,2)] + (rc22)*u1_B0[OPS_ACC0(0,0,3)]);
 
 }
 
 void opensbliblock00Kernel061(const double *u0_B0, double *wk8_B0)
 {
-    wk8_B0[OPS_ACC1(0,0,0)] = inv_4*(-rc7*u0_B0[OPS_ACC0(0,2,0)] - rc10*u0_B0[OPS_ACC0(0,0,0)] -
-      rc7*u0_B0[OPS_ACC0(0,-2,0)] + (rc9)*u0_B0[OPS_ACC0(0,1,0)] + (rc9)*u0_B0[OPS_ACC0(0,-1,0)]);
+    wk8_B0[OPS_ACC1(0,0,0)] = inv_4*((rc27)*u0_B0[OPS_ACC0(0,3,0)] - rc21*u0_B0[OPS_ACC0(0,2,0)] -
+      rc21*u0_B0[OPS_ACC0(0,-2,0)] + (rc25)*u0_B0[OPS_ACC0(0,1,0)] + (rc25)*u0_B0[OPS_ACC0(0,-1,0)] +
+      (rc27)*u0_B0[OPS_ACC0(0,-3,0)] - rc26*u0_B0[OPS_ACC0(0,0,0)] - rc28*u0_B0[OPS_ACC0(0,-4,0)] -
+      rc28*u0_B0[OPS_ACC0(0,4,0)]);
 
 }
 
 void opensbliblock00Kernel063(const double *u2_B0, double *wk10_B0)
 {
-    wk10_B0[OPS_ACC1(0,0,0)] = inv_1*((rc8)*u2_B0[OPS_ACC0(0,1,0)] + (rc7)*u2_B0[OPS_ACC0(0,-2,0)] -
-      rc8*u2_B0[OPS_ACC0(0,-1,0)] - rc7*u2_B0[OPS_ACC0(0,2,0)]);
+    wk10_B0[OPS_ACC1(0,0,0)] = inv_1*((rc24)*u2_B0[OPS_ACC0(0,1,0)] - rc24*u2_B0[OPS_ACC0(0,-1,0)] +
+      (rc22)*u2_B0[OPS_ACC0(0,3,0)] - rc22*u2_B0[OPS_ACC0(0,-3,0)] - rc21*u2_B0[OPS_ACC0(0,2,0)] +
+      (rc23)*u2_B0[OPS_ACC0(0,-4,0)] - rc23*u2_B0[OPS_ACC0(0,4,0)] + (rc21)*u2_B0[OPS_ACC0(0,-2,0)]);
 
 }
 
 void opensbliblock00Kernel064(const double *u2_B0, double *wk11_B0)
 {
-    wk11_B0[OPS_ACC1(0,0,0)] = inv_4*((rc9)*u2_B0[OPS_ACC0(0,1,0)] + (rc9)*u2_B0[OPS_ACC0(0,-1,0)] -
-      rc7*u2_B0[OPS_ACC0(0,-2,0)] - rc10*u2_B0[OPS_ACC0(0,0,0)] - rc7*u2_B0[OPS_ACC0(0,2,0)]);
+    wk11_B0[OPS_ACC1(0,0,0)] = inv_4*((rc25)*u2_B0[OPS_ACC0(0,1,0)] + (rc25)*u2_B0[OPS_ACC0(0,-1,0)] -
+      rc26*u2_B0[OPS_ACC0(0,0,0)] + (rc27)*u2_B0[OPS_ACC0(0,3,0)] + (rc27)*u2_B0[OPS_ACC0(0,-3,0)] -
+      rc21*u2_B0[OPS_ACC0(0,2,0)] - rc28*u2_B0[OPS_ACC0(0,-4,0)] - rc28*u2_B0[OPS_ACC0(0,4,0)] -
+      rc21*u2_B0[OPS_ACC0(0,-2,0)]);
 
 }
 
 void opensbliblock00Kernel066(const double *u0_B0, double *wk13_B0)
 {
-    wk13_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc7*u0_B0[OPS_ACC0(2,0,0)] - rc8*u0_B0[OPS_ACC0(-1,0,0)] +
-      (rc8)*u0_B0[OPS_ACC0(1,0,0)] + (rc7)*u0_B0[OPS_ACC0(-2,0,0)]);
+    wk13_B0[OPS_ACC1(0,0,0)] = inv_0*((rc22)*u0_B0[OPS_ACC0(3,0,0)] - rc21*u0_B0[OPS_ACC0(2,0,0)] -
+      rc24*u0_B0[OPS_ACC0(-1,0,0)] + (rc24)*u0_B0[OPS_ACC0(1,0,0)] + (rc21)*u0_B0[OPS_ACC0(-2,0,0)] -
+      rc22*u0_B0[OPS_ACC0(-3,0,0)] + (rc23)*u0_B0[OPS_ACC0(-4,0,0)] - rc23*u0_B0[OPS_ACC0(4,0,0)]);
 
 }
 
 void opensbliblock00Kernel067(const double *u2_B0, double *wk14_B0)
 {
-    wk14_B0[OPS_ACC1(0,0,0)] = inv_5*(-rc7*u2_B0[OPS_ACC0(0,0,-2)] + (rc9)*u2_B0[OPS_ACC0(0,0,1)] -
-      rc10*u2_B0[OPS_ACC0(0,0,0)] + (rc9)*u2_B0[OPS_ACC0(0,0,-1)] - rc7*u2_B0[OPS_ACC0(0,0,2)]);
+    wk14_B0[OPS_ACC1(0,0,0)] = inv_5*(-rc21*u2_B0[OPS_ACC0(0,0,-2)] - rc26*u2_B0[OPS_ACC0(0,0,0)] +
+      (rc27)*u2_B0[OPS_ACC0(0,0,-3)] - rc28*u2_B0[OPS_ACC0(0,0,4)] + (rc27)*u2_B0[OPS_ACC0(0,0,3)] -
+      rc28*u2_B0[OPS_ACC0(0,0,-4)] + (rc25)*u2_B0[OPS_ACC0(0,0,-1)] - rc21*u2_B0[OPS_ACC0(0,0,2)] +
+      (rc25)*u2_B0[OPS_ACC0(0,0,1)]);
 
 }
 
 void opensbliblock00Kernel068(const double *u1_B0, double *wk15_B0)
 {
-    wk15_B0[OPS_ACC1(0,0,0)] = inv_0*(-rc8*u1_B0[OPS_ACC0(-1,0,0)] + (rc7)*u1_B0[OPS_ACC0(-2,0,0)] +
-      (rc8)*u1_B0[OPS_ACC0(1,0,0)] - rc7*u1_B0[OPS_ACC0(2,0,0)]);
+    wk15_B0[OPS_ACC1(0,0,0)] = inv_0*((rc21)*u1_B0[OPS_ACC0(-2,0,0)] + (rc22)*u1_B0[OPS_ACC0(3,0,0)] +
+      (rc24)*u1_B0[OPS_ACC0(1,0,0)] - rc24*u1_B0[OPS_ACC0(-1,0,0)] - rc23*u1_B0[OPS_ACC0(4,0,0)] +
+      (rc23)*u1_B0[OPS_ACC0(-4,0,0)] - rc21*u1_B0[OPS_ACC0(2,0,0)] - rc22*u1_B0[OPS_ACC0(-3,0,0)]);
 
 }
 
 void opensbliblock00Kernel070(const double *u0_B0, double *wk17_B0)
 {
-    wk17_B0[OPS_ACC1(0,0,0)] = inv_3*(-rc7*u0_B0[OPS_ACC0(2,0,0)] - rc10*u0_B0[OPS_ACC0(0,0,0)] -
-      rc7*u0_B0[OPS_ACC0(-2,0,0)] + (rc9)*u0_B0[OPS_ACC0(1,0,0)] + (rc9)*u0_B0[OPS_ACC0(-1,0,0)]);
+    wk17_B0[OPS_ACC1(0,0,0)] = inv_3*((rc27)*u0_B0[OPS_ACC0(3,0,0)] - rc21*u0_B0[OPS_ACC0(2,0,0)] -
+      rc21*u0_B0[OPS_ACC0(-2,0,0)] + (rc25)*u0_B0[OPS_ACC0(1,0,0)] + (rc25)*u0_B0[OPS_ACC0(-1,0,0)] +
+      (rc27)*u0_B0[OPS_ACC0(-3,0,0)] - rc26*u0_B0[OPS_ACC0(0,0,0)] - rc28*u0_B0[OPS_ACC0(-4,0,0)] -
+      rc28*u0_B0[OPS_ACC0(4,0,0)]);
 
 }
 
 void opensbliblock00Kernel071(const double *u2_B0, double *wk18_B0)
 {
-    wk18_B0[OPS_ACC1(0,0,0)] = inv_3*((rc9)*u2_B0[OPS_ACC0(1,0,0)] + (rc9)*u2_B0[OPS_ACC0(-1,0,0)] -
-      rc7*u2_B0[OPS_ACC0(-2,0,0)] - rc10*u2_B0[OPS_ACC0(0,0,0)] - rc7*u2_B0[OPS_ACC0(2,0,0)]);
+    wk18_B0[OPS_ACC1(0,0,0)] = inv_3*((rc25)*u2_B0[OPS_ACC0(1,0,0)] + (rc25)*u2_B0[OPS_ACC0(-1,0,0)] -
+      rc26*u2_B0[OPS_ACC0(0,0,0)] + (rc27)*u2_B0[OPS_ACC0(3,0,0)] + (rc27)*u2_B0[OPS_ACC0(-3,0,0)] -
+      rc21*u2_B0[OPS_ACC0(2,0,0)] - rc28*u2_B0[OPS_ACC0(-4,0,0)] - rc28*u2_B0[OPS_ACC0(4,0,0)] -
+      rc21*u2_B0[OPS_ACC0(-2,0,0)]);
 
 }
 
 void opensbliblock00Kernel072(const double *T_B0, double *wk19_B0)
 {
-    wk19_B0[OPS_ACC1(0,0,0)] = inv_3*(-rc7*T_B0[OPS_ACC0(-2,0,0)] + (rc9)*T_B0[OPS_ACC0(1,0,0)] -
-      rc7*T_B0[OPS_ACC0(2,0,0)] + (rc9)*T_B0[OPS_ACC0(-1,0,0)] - rc10*T_B0[OPS_ACC0(0,0,0)]);
+    wk19_B0[OPS_ACC1(0,0,0)] = inv_3*(-rc21*T_B0[OPS_ACC0(-2,0,0)] + (rc27)*T_B0[OPS_ACC0(-3,0,0)] +
+      (rc25)*T_B0[OPS_ACC0(-1,0,0)] - rc28*T_B0[OPS_ACC0(-4,0,0)] + (rc27)*T_B0[OPS_ACC0(3,0,0)] -
+      rc28*T_B0[OPS_ACC0(4,0,0)] - rc21*T_B0[OPS_ACC0(2,0,0)] + (rc25)*T_B0[OPS_ACC0(1,0,0)] -
+      rc26*T_B0[OPS_ACC0(0,0,0)]);
 
 }
 
 void opensbliblock00Kernel073(const double *u1_B0, double *wk20_B0)
 {
-    wk20_B0[OPS_ACC1(0,0,0)] = inv_4*(-rc7*u1_B0[OPS_ACC0(0,-2,0)] + (rc9)*u1_B0[OPS_ACC0(0,-1,0)] +
-      (rc9)*u1_B0[OPS_ACC0(0,1,0)] - rc7*u1_B0[OPS_ACC0(0,2,0)] - rc10*u1_B0[OPS_ACC0(0,0,0)]);
+    wk20_B0[OPS_ACC1(0,0,0)] = inv_4*((rc25)*u1_B0[OPS_ACC0(0,-1,0)] - rc26*u1_B0[OPS_ACC0(0,0,0)] +
+      (rc27)*u1_B0[OPS_ACC0(0,3,0)] + (rc25)*u1_B0[OPS_ACC0(0,1,0)] - rc21*u1_B0[OPS_ACC0(0,-2,0)] -
+      rc28*u1_B0[OPS_ACC0(0,4,0)] - rc28*u1_B0[OPS_ACC0(0,-4,0)] - rc21*u1_B0[OPS_ACC0(0,2,0)] +
+      (rc27)*u1_B0[OPS_ACC0(0,-3,0)]);
 
 }
 
 void opensbliblock00Kernel075(const double *u0_B0, double *wk22_B0)
 {
-    wk22_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*u0_B0[OPS_ACC0(0,2,0)] - rc8*u0_B0[OPS_ACC0(0,-1,0)] +
-      (rc8)*u0_B0[OPS_ACC0(0,1,0)] + (rc7)*u0_B0[OPS_ACC0(0,-2,0)]);
+    wk22_B0[OPS_ACC1(0,0,0)] = inv_1*((rc22)*u0_B0[OPS_ACC0(0,3,0)] - rc21*u0_B0[OPS_ACC0(0,2,0)] -
+      rc24*u0_B0[OPS_ACC0(0,-1,0)] + (rc24)*u0_B0[OPS_ACC0(0,1,0)] + (rc21)*u0_B0[OPS_ACC0(0,-2,0)] -
+      rc22*u0_B0[OPS_ACC0(0,-3,0)] + (rc23)*u0_B0[OPS_ACC0(0,-4,0)] - rc23*u0_B0[OPS_ACC0(0,4,0)]);
 
 }
 
 void opensbliblock00Kernel065(const double *T_B0, double *wk12_B0)
 {
-    wk12_B0[OPS_ACC1(0,0,0)] = inv_5*(-rc7*T_B0[OPS_ACC0(0,0,-2)] + (rc9)*T_B0[OPS_ACC0(0,0,-1)] -
-      rc7*T_B0[OPS_ACC0(0,0,2)] + (rc9)*T_B0[OPS_ACC0(0,0,1)] - rc10*T_B0[OPS_ACC0(0,0,0)]);
+    wk12_B0[OPS_ACC1(0,0,0)] = inv_5*(-rc28*T_B0[OPS_ACC0(0,0,4)] + (rc27)*T_B0[OPS_ACC0(0,0,3)] -
+      rc21*T_B0[OPS_ACC0(0,0,-2)] - rc21*T_B0[OPS_ACC0(0,0,2)] + (rc27)*T_B0[OPS_ACC0(0,0,-3)] +
+      (rc25)*T_B0[OPS_ACC0(0,0,1)] + (rc25)*T_B0[OPS_ACC0(0,0,-1)] - rc28*T_B0[OPS_ACC0(0,0,-4)] -
+      rc26*T_B0[OPS_ACC0(0,0,0)]);
 
 }
 
 void opensbliblock00Kernel078(const double *u0_B0, double *wk25_B0)
 {
-    wk25_B0[OPS_ACC1(0,0,0)] = inv_5*(-rc7*u0_B0[OPS_ACC0(0,0,2)] + (rc9)*u0_B0[OPS_ACC0(0,0,1)] -
-      rc10*u0_B0[OPS_ACC0(0,0,0)] - rc7*u0_B0[OPS_ACC0(0,0,-2)] + (rc9)*u0_B0[OPS_ACC0(0,0,-1)]);
+    wk25_B0[OPS_ACC1(0,0,0)] = inv_5*(-rc21*u0_B0[OPS_ACC0(0,0,2)] - rc28*u0_B0[OPS_ACC0(0,0,-4)] +
+      (rc25)*u0_B0[OPS_ACC0(0,0,1)] - rc28*u0_B0[OPS_ACC0(0,0,4)] - rc26*u0_B0[OPS_ACC0(0,0,0)] -
+      rc21*u0_B0[OPS_ACC0(0,0,-2)] + (rc27)*u0_B0[OPS_ACC0(0,0,3)] + (rc27)*u0_B0[OPS_ACC0(0,0,-3)] +
+      (rc25)*u0_B0[OPS_ACC0(0,0,-1)]);
 
 }
 
 void opensbliblock00Kernel079(const double *u2_B0, double *wk26_B0)
 {
-    wk26_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*u2_B0[OPS_ACC0(0,0,-1)] + (rc8)*u2_B0[OPS_ACC0(0,0,1)] +
-      (rc7)*u2_B0[OPS_ACC0(0,0,-2)] - rc7*u2_B0[OPS_ACC0(0,0,2)]);
+    wk26_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc24*u2_B0[OPS_ACC0(0,0,-1)] - rc22*u2_B0[OPS_ACC0(0,0,-3)] -
+      rc23*u2_B0[OPS_ACC0(0,0,4)] + (rc22)*u2_B0[OPS_ACC0(0,0,3)] + (rc23)*u2_B0[OPS_ACC0(0,0,-4)] +
+      (rc21)*u2_B0[OPS_ACC0(0,0,-2)] - rc21*u2_B0[OPS_ACC0(0,0,2)] + (rc24)*u2_B0[OPS_ACC0(0,0,1)]);
 
 }
 
 void opensbliblock00Kernel056(const double *wk15_B0, double *wk3_B0)
 {
-    wk3_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*wk15_B0[OPS_ACC0(0,2,0)] + (rc7)*wk15_B0[OPS_ACC0(0,-2,0)] -
-      rc8*wk15_B0[OPS_ACC0(0,-1,0)] + (rc8)*wk15_B0[OPS_ACC0(0,1,0)]);
+    wk3_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc22*wk15_B0[OPS_ACC0(0,-3,0)] + (rc24)*wk15_B0[OPS_ACC0(0,1,0)] +
+      (rc21)*wk15_B0[OPS_ACC0(0,-2,0)] - rc23*wk15_B0[OPS_ACC0(0,4,0)] - rc21*wk15_B0[OPS_ACC0(0,2,0)] -
+      rc24*wk15_B0[OPS_ACC0(0,-1,0)] + (rc22)*wk15_B0[OPS_ACC0(0,3,0)] + (rc23)*wk15_B0[OPS_ACC0(0,-4,0)]);
 
 }
 
 void opensbliblock00Kernel062(const double *wk13_B0, double *wk9_B0)
 {
-    wk9_B0[OPS_ACC1(0,0,0)] = inv_1*(-rc7*wk13_B0[OPS_ACC0(0,2,0)] + (rc7)*wk13_B0[OPS_ACC0(0,-2,0)] -
-      rc8*wk13_B0[OPS_ACC0(0,-1,0)] + (rc8)*wk13_B0[OPS_ACC0(0,1,0)]);
+    wk9_B0[OPS_ACC1(0,0,0)] = inv_1*((rc23)*wk13_B0[OPS_ACC0(0,-4,0)] - rc22*wk13_B0[OPS_ACC0(0,-3,0)] +
+      (rc24)*wk13_B0[OPS_ACC0(0,1,0)] + (rc21)*wk13_B0[OPS_ACC0(0,-2,0)] - rc21*wk13_B0[OPS_ACC0(0,2,0)] -
+      rc24*wk13_B0[OPS_ACC0(0,-1,0)] + (rc22)*wk13_B0[OPS_ACC0(0,3,0)] - rc23*wk13_B0[OPS_ACC0(0,4,0)]);
 
 }
 
 void opensbliblock00Kernel069(const double *wk13_B0, double *wk16_B0)
 {
-    wk16_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*wk13_B0[OPS_ACC0(0,0,1)] - rc7*wk13_B0[OPS_ACC0(0,0,2)] +
-      (rc7)*wk13_B0[OPS_ACC0(0,0,-2)] - rc8*wk13_B0[OPS_ACC0(0,0,-1)]);
+    wk16_B0[OPS_ACC1(0,0,0)] = inv_2*((rc22)*wk13_B0[OPS_ACC0(0,0,3)] - rc23*wk13_B0[OPS_ACC0(0,0,4)] -
+      rc22*wk13_B0[OPS_ACC0(0,0,-3)] + (rc21)*wk13_B0[OPS_ACC0(0,0,-2)] + (rc24)*wk13_B0[OPS_ACC0(0,0,1)] -
+      rc24*wk13_B0[OPS_ACC0(0,0,-1)] - rc21*wk13_B0[OPS_ACC0(0,0,2)] + (rc23)*wk13_B0[OPS_ACC0(0,0,-4)]);
 
 }
 
 void opensbliblock00Kernel077(const double *wk6_B0, double *wk24_B0)
 {
-    wk24_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*wk6_B0[OPS_ACC0(0,0,1)] + (rc7)*wk6_B0[OPS_ACC0(0,0,-2)] -
-      rc7*wk6_B0[OPS_ACC0(0,0,2)] - rc8*wk6_B0[OPS_ACC0(0,0,-1)]);
+    wk24_B0[OPS_ACC1(0,0,0)] = inv_2*((rc24)*wk6_B0[OPS_ACC0(0,0,1)] - rc22*wk6_B0[OPS_ACC0(0,0,-3)] -
+      rc23*wk6_B0[OPS_ACC0(0,0,4)] + (rc23)*wk6_B0[OPS_ACC0(0,0,-4)] - rc24*wk6_B0[OPS_ACC0(0,0,-1)] +
+      (rc22)*wk6_B0[OPS_ACC0(0,0,3)] - rc21*wk6_B0[OPS_ACC0(0,0,2)] + (rc21)*wk6_B0[OPS_ACC0(0,0,-2)]);
 
 }
 
 void opensbliblock00Kernel074(const double *wk10_B0, double *wk21_B0)
 {
-    wk21_B0[OPS_ACC1(0,0,0)] = inv_2*(-rc8*wk10_B0[OPS_ACC0(0,0,-1)] - rc7*wk10_B0[OPS_ACC0(0,0,2)] +
-      (rc8)*wk10_B0[OPS_ACC0(0,0,1)] + (rc7)*wk10_B0[OPS_ACC0(0,0,-2)]);
+    wk21_B0[OPS_ACC1(0,0,0)] = inv_2*((rc23)*wk10_B0[OPS_ACC0(0,0,-4)] - rc21*wk10_B0[OPS_ACC0(0,0,2)] +
+      (rc21)*wk10_B0[OPS_ACC0(0,0,-2)] + (rc24)*wk10_B0[OPS_ACC0(0,0,1)] - rc24*wk10_B0[OPS_ACC0(0,0,-1)] -
+      rc22*wk10_B0[OPS_ACC0(0,0,-3)] - rc23*wk10_B0[OPS_ACC0(0,0,4)] + (rc22)*wk10_B0[OPS_ACC0(0,0,3)]);
 
 }
 
 void opensbliblock00Kernel076(const double *wk2_B0, double *wk23_B0)
 {
-    wk23_B0[OPS_ACC1(0,0,0)] = inv_2*((rc8)*wk2_B0[OPS_ACC0(0,0,1)] - rc8*wk2_B0[OPS_ACC0(0,0,-1)] +
-      (rc7)*wk2_B0[OPS_ACC0(0,0,-2)] - rc7*wk2_B0[OPS_ACC0(0,0,2)]);
+    wk23_B0[OPS_ACC1(0,0,0)] = inv_2*((rc23)*wk2_B0[OPS_ACC0(0,0,-4)] - rc21*wk2_B0[OPS_ACC0(0,0,2)] +
+      (rc24)*wk2_B0[OPS_ACC0(0,0,1)] - rc24*wk2_B0[OPS_ACC0(0,0,-1)] - rc22*wk2_B0[OPS_ACC0(0,0,-3)] -
+      rc23*wk2_B0[OPS_ACC0(0,0,4)] + (rc21)*wk2_B0[OPS_ACC0(0,0,-2)] + (rc22)*wk2_B0[OPS_ACC0(0,0,3)]);
 
 }
 
@@ -817,36 +1015,36 @@ const double *wk19_B0, const double *wk25_B0, const double *wk20_B0, const doubl
 double *wk6_B0, const double *wk4_B0, const double *wk15_B0, const double *wk7_B0, const double *wk2_B0, double
 *Residual4_B0, double *Residual3_B0, double *Residual2_B0, double *Residual1_B0)
 {
-    Residual1_B0[OPS_ACC33(0,0,0)] = 1.0*rcinv11*((rc9)*wk17_B0[OPS_ACC4(0,0,0)] + (rc12)*wk24_B0[OPS_ACC16(0,0,0)] +
-      wk25_B0[OPS_ACC21(0,0,0)] + (rc12)*wk3_B0[OPS_ACC18(0,0,0)] + wk8_B0[OPS_ACC0(0,0,0)]) +
+    Residual1_B0[OPS_ACC33(0,0,0)] = 1.0*rcinv7*((rc8)*wk17_B0[OPS_ACC4(0,0,0)] + (rc9)*wk24_B0[OPS_ACC16(0,0,0)] +
+      wk25_B0[OPS_ACC21(0,0,0)] + (rc9)*wk3_B0[OPS_ACC18(0,0,0)] + wk8_B0[OPS_ACC0(0,0,0)]) +
       Residual1_B0[OPS_ACC33(0,0,0)];
 
-    Residual2_B0[OPS_ACC32(0,0,0)] = 1.0*rcinv11*(wk0_B0[OPS_ACC19(0,0,0)] + (rc9)*wk20_B0[OPS_ACC22(0,0,0)] +
-      (rc12)*wk21_B0[OPS_ACC10(0,0,0)] + wk4_B0[OPS_ACC26(0,0,0)] + (rc12)*wk9_B0[OPS_ACC8(0,0,0)]) +
+    Residual2_B0[OPS_ACC32(0,0,0)] = 1.0*rcinv7*(wk0_B0[OPS_ACC19(0,0,0)] + (rc8)*wk20_B0[OPS_ACC22(0,0,0)] +
+      (rc9)*wk21_B0[OPS_ACC10(0,0,0)] + wk4_B0[OPS_ACC26(0,0,0)] + (rc9)*wk9_B0[OPS_ACC8(0,0,0)]) +
       Residual2_B0[OPS_ACC32(0,0,0)];
 
-    Residual3_B0[OPS_ACC31(0,0,0)] = 1.0*rcinv11*(wk11_B0[OPS_ACC24(0,0,0)] + (rc9)*wk14_B0[OPS_ACC15(0,0,0)] +
-      (rc12)*wk16_B0[OPS_ACC5(0,0,0)] + wk18_B0[OPS_ACC23(0,0,0)] + (rc12)*wk23_B0[OPS_ACC3(0,0,0)]) +
+    Residual3_B0[OPS_ACC31(0,0,0)] = 1.0*rcinv7*(wk11_B0[OPS_ACC24(0,0,0)] + (rc8)*wk14_B0[OPS_ACC15(0,0,0)] +
+      (rc9)*wk16_B0[OPS_ACC5(0,0,0)] + wk18_B0[OPS_ACC23(0,0,0)] + (rc9)*wk23_B0[OPS_ACC3(0,0,0)]) +
       Residual3_B0[OPS_ACC31(0,0,0)];
 
-    Residual4_B0[OPS_ACC30(0,0,0)] = 1.0*rcinv11*rcinv13*rcinv14*(wk12_B0[OPS_ACC13(0,0,0)] + wk19_B0[OPS_ACC20(0,0,0)]
-      + wk1_B0[OPS_ACC11(0,0,0)])/(gama - 1) + 1.0*rcinv11*(wk10_B0[OPS_ACC12(0,0,0)] +
-      wk7_B0[OPS_ACC28(0,0,0)])*wk10_B0[OPS_ACC12(0,0,0)] + 1.0*rcinv11*(wk10_B0[OPS_ACC12(0,0,0)] +
-      wk7_B0[OPS_ACC28(0,0,0)])*wk7_B0[OPS_ACC28(0,0,0)] + 1.0*rcinv11*(wk15_B0[OPS_ACC27(0,0,0)] +
-      wk22_B0[OPS_ACC9(0,0,0)])*wk15_B0[OPS_ACC27(0,0,0)] + 1.0*rcinv11*(wk15_B0[OPS_ACC27(0,0,0)] +
-      wk22_B0[OPS_ACC9(0,0,0)])*wk22_B0[OPS_ACC9(0,0,0)] + 1.0*rcinv11*(wk5_B0[OPS_ACC1(0,0,0)] +
-      wk6_B0[OPS_ACC25(0,0,0)])*wk5_B0[OPS_ACC1(0,0,0)] + 1.0*rcinv11*(wk5_B0[OPS_ACC1(0,0,0)] +
-      wk6_B0[OPS_ACC25(0,0,0)])*wk6_B0[OPS_ACC25(0,0,0)] + 1.0*rcinv11*(-rc8*wk13_B0[OPS_ACC6(0,0,0)] -
-      rc8*wk26_B0[OPS_ACC17(0,0,0)] + (rc9)*wk2_B0[OPS_ACC29(0,0,0)])*wk2_B0[OPS_ACC29(0,0,0)] +
-      1.0*rcinv11*(-rc8*wk13_B0[OPS_ACC6(0,0,0)] + (rc9)*wk26_B0[OPS_ACC17(0,0,0)] -
-      rc8*wk2_B0[OPS_ACC29(0,0,0)])*wk26_B0[OPS_ACC17(0,0,0)] + 1.0*rcinv11*((rc9)*wk13_B0[OPS_ACC6(0,0,0)] -
-      rc8*wk26_B0[OPS_ACC17(0,0,0)] - rc8*wk2_B0[OPS_ACC29(0,0,0)])*wk13_B0[OPS_ACC6(0,0,0)] +
-      1.0*rcinv11*(wk0_B0[OPS_ACC19(0,0,0)] + (rc9)*wk20_B0[OPS_ACC22(0,0,0)] + (rc12)*wk21_B0[OPS_ACC10(0,0,0)] +
-      wk4_B0[OPS_ACC26(0,0,0)] + (rc12)*wk9_B0[OPS_ACC8(0,0,0)])*u1_B0[OPS_ACC14(0,0,0)] +
-      1.0*rcinv11*(wk11_B0[OPS_ACC24(0,0,0)] + (rc9)*wk14_B0[OPS_ACC15(0,0,0)] + (rc12)*wk16_B0[OPS_ACC5(0,0,0)] +
-      wk18_B0[OPS_ACC23(0,0,0)] + (rc12)*wk23_B0[OPS_ACC3(0,0,0)])*u2_B0[OPS_ACC2(0,0,0)] +
-      1.0*rcinv11*((rc9)*wk17_B0[OPS_ACC4(0,0,0)] + (rc12)*wk24_B0[OPS_ACC16(0,0,0)] + wk25_B0[OPS_ACC21(0,0,0)] +
-      (rc12)*wk3_B0[OPS_ACC18(0,0,0)] + wk8_B0[OPS_ACC0(0,0,0)])*u0_B0[OPS_ACC7(0,0,0)] +
+    Residual4_B0[OPS_ACC30(0,0,0)] = 1.0*rcinv10*rcinv11*rcinv7*(wk12_B0[OPS_ACC13(0,0,0)] + wk19_B0[OPS_ACC20(0,0,0)] +
+      wk1_B0[OPS_ACC11(0,0,0)])/(gama - 1) + 1.0*rcinv7*(wk10_B0[OPS_ACC12(0,0,0)] +
+      wk7_B0[OPS_ACC28(0,0,0)])*wk10_B0[OPS_ACC12(0,0,0)] + 1.0*rcinv7*(wk10_B0[OPS_ACC12(0,0,0)] +
+      wk7_B0[OPS_ACC28(0,0,0)])*wk7_B0[OPS_ACC28(0,0,0)] + 1.0*rcinv7*(wk15_B0[OPS_ACC27(0,0,0)] +
+      wk22_B0[OPS_ACC9(0,0,0)])*wk15_B0[OPS_ACC27(0,0,0)] + 1.0*rcinv7*(wk15_B0[OPS_ACC27(0,0,0)] +
+      wk22_B0[OPS_ACC9(0,0,0)])*wk22_B0[OPS_ACC9(0,0,0)] + 1.0*rcinv7*(wk5_B0[OPS_ACC1(0,0,0)] +
+      wk6_B0[OPS_ACC25(0,0,0)])*wk5_B0[OPS_ACC1(0,0,0)] + 1.0*rcinv7*(wk5_B0[OPS_ACC1(0,0,0)] +
+      wk6_B0[OPS_ACC25(0,0,0)])*wk6_B0[OPS_ACC25(0,0,0)] + 1.0*rcinv7*(-rc12*wk13_B0[OPS_ACC6(0,0,0)] -
+      rc12*wk26_B0[OPS_ACC17(0,0,0)] + (rc8)*wk2_B0[OPS_ACC29(0,0,0)])*wk2_B0[OPS_ACC29(0,0,0)] +
+      1.0*rcinv7*(-rc12*wk13_B0[OPS_ACC6(0,0,0)] + (rc8)*wk26_B0[OPS_ACC17(0,0,0)] -
+      rc12*wk2_B0[OPS_ACC29(0,0,0)])*wk26_B0[OPS_ACC17(0,0,0)] + 1.0*rcinv7*((rc8)*wk13_B0[OPS_ACC6(0,0,0)] -
+      rc12*wk26_B0[OPS_ACC17(0,0,0)] - rc12*wk2_B0[OPS_ACC29(0,0,0)])*wk13_B0[OPS_ACC6(0,0,0)] +
+      1.0*rcinv7*(wk0_B0[OPS_ACC19(0,0,0)] + (rc8)*wk20_B0[OPS_ACC22(0,0,0)] + (rc9)*wk21_B0[OPS_ACC10(0,0,0)] +
+      wk4_B0[OPS_ACC26(0,0,0)] + (rc9)*wk9_B0[OPS_ACC8(0,0,0)])*u1_B0[OPS_ACC14(0,0,0)] +
+      1.0*rcinv7*(wk11_B0[OPS_ACC24(0,0,0)] + (rc8)*wk14_B0[OPS_ACC15(0,0,0)] + (rc9)*wk16_B0[OPS_ACC5(0,0,0)] +
+      wk18_B0[OPS_ACC23(0,0,0)] + (rc9)*wk23_B0[OPS_ACC3(0,0,0)])*u2_B0[OPS_ACC2(0,0,0)] +
+      1.0*rcinv7*((rc8)*wk17_B0[OPS_ACC4(0,0,0)] + (rc9)*wk24_B0[OPS_ACC16(0,0,0)] + wk25_B0[OPS_ACC21(0,0,0)] +
+      (rc9)*wk3_B0[OPS_ACC18(0,0,0)] + wk8_B0[OPS_ACC0(0,0,0)])*u0_B0[OPS_ACC7(0,0,0)] +
       Residual4_B0[OPS_ACC30(0,0,0)];
 
 }

@@ -211,13 +211,15 @@ void ops_par_loop_opensbliblock00Kernel079(char const *name, ops_block block, in
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 0, sizeof(cl_mem), (void*) &arg0.data_d ));
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 1, sizeof(cl_mem), (void*) &arg1.data_d ));
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 2, sizeof(cl_double), (void*) &inv_2 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 3, sizeof(cl_double), (void*) &rc7 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 4, sizeof(cl_double), (void*) &rc8 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 5, sizeof(cl_int), (void*) &base0 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 6, sizeof(cl_int), (void*) &base1 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 7, sizeof(cl_int), (void*) &x_size ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 8, sizeof(cl_int), (void*) &y_size ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 9, sizeof(cl_int), (void*) &z_size ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 3, sizeof(cl_double), (void*) &rc21 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 4, sizeof(cl_double), (void*) &rc22 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 5, sizeof(cl_double), (void*) &rc23 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 6, sizeof(cl_double), (void*) &rc24 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 7, sizeof(cl_int), (void*) &base0 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 8, sizeof(cl_int), (void*) &base1 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 9, sizeof(cl_int), (void*) &x_size ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 10, sizeof(cl_int), (void*) &y_size ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[77], 11, sizeof(cl_int), (void*) &z_size ));
 
     //call/enque opencl kernel wrapper function
     clSafeCall( clEnqueueNDRangeKernel(OPS_opencl_core.command_queue, OPS_opencl_core.kernel[77], 3, NULL, globalWorkSize, localWorkSize, 0, NULL, NULL) );

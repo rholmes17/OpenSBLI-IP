@@ -85,8 +85,8 @@ int size, char *dat, char const *name){
     rc6 = *(double*)dat;
   }
   else
-  if (!strcmp(name,"rc7")) {
-    rc7 = *(double*)dat;
+  if (!strcmp(name,"rcinv7")) {
+    rcinv7 = *(double*)dat;
   }
   else
   if (!strcmp(name,"rc8")) {
@@ -97,8 +97,8 @@ int size, char *dat, char const *name){
     rc9 = *(double*)dat;
   }
   else
-  if (!strcmp(name,"rc10")) {
-    rc10 = *(double*)dat;
+  if (!strcmp(name,"rcinv10")) {
+    rcinv10 = *(double*)dat;
   }
   else
   if (!strcmp(name,"rcinv11")) {
@@ -109,12 +109,68 @@ int size, char *dat, char const *name){
     rc12 = *(double*)dat;
   }
   else
-  if (!strcmp(name,"rcinv13")) {
-    rcinv13 = *(double*)dat;
+  if (!strcmp(name,"rc13")) {
+    rc13 = *(double*)dat;
   }
   else
-  if (!strcmp(name,"rcinv14")) {
-    rcinv14 = *(double*)dat;
+  if (!strcmp(name,"rc14")) {
+    rc14 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc15")) {
+    rc15 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc16")) {
+    rc16 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc17")) {
+    rc17 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc18")) {
+    rc18 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc19")) {
+    rc19 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc20")) {
+    rc20 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc21")) {
+    rc21 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc22")) {
+    rc22 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc23")) {
+    rc23 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc24")) {
+    rc24 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc25")) {
+    rc25 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc26")) {
+    rc26 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc27")) {
+    rc27 = *(double*)dat;
+  }
+  else
+  if (!strcmp(name,"rc28")) {
+    rc28 = *(double*)dat;
   }
   else
   {
