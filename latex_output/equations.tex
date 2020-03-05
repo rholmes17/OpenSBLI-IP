@@ -1,0 +1,54 @@
+\documentclass{article}
+\title{Einstein Expansion of the simulation equations}
+\author{Satya P Jammy \& OpenSBLI developers team}
+\date{\today}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{breqn}
+\begin{document}
+\maketitle
+\noindent Simulation equations
+\\\begin{dmath}\left. \frac{d}{d t} rho \right|_{{Temporal }} = - \frac{rho}{2} \,.\, \left(\frac{d}{d x0} u0 + \frac{d}{d x1} u1 + \frac{d}{d x2} u2\right) - \frac{\frac{d}{d x0} rho}{2} \,.\, u0 - \frac{\frac{d}{d x1} rho}{2} \,.\, u1 - 
+\frac{\frac{d}{d x2} rho}{2} \,.\, u2 - \frac{1}{2} \,.\, \frac{\partial}{\partial x0}\left(rho \,.\, u0\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial x1}\left(rho \,.\, u1\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial x2}\left(rho \,.\, 
+u2\right)\end{dmath}
+
+\begin{dmath}\left. \frac{d}{d t} rhou0 \right|_{{Temporal }} = - \frac{rhou0}{2} \,.\, \left(\frac{d}{d x0} u0 + \frac{d}{d x1} u1 + \frac{d}{d x2} u2\right) - \frac{\frac{d}{d x0} rhou0}{2} \,.\, u0 - \frac{\frac{d}{d x1} rhou0}{2} \,.\, u1 - 
+\frac{\frac{d}{d x2} rhou0}{2} \,.\, u2 - \frac{d}{d x0} p - \frac{1}{2} \,.\, \frac{\partial}{\partial x0}\left(rhou0 \,.\, u0\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial x1}\left(rhou0 \,.\, u1\right) - \frac{1}{2} \,.\, 
+\frac{\partial}{\partial x2}\left(rhou0 \,.\, u2\right) + \frac{1.0}{Re} \,.\, \left(\frac{4}{3} \,.\, \frac{d^{2}}{d x0^{2}}  u0 + \frac{d^{2}}{d x1^{2}}  u0 + \frac{d^{2}}{d x2^{2}}  u0 + \frac{d^{2}}{d x0d x1}  u1 - \frac{2}{3} \,.\, 
+\frac{d^{2}}{d x1d x0}  u1 + \frac{d^{2}}{d x0d x2}  u2 - \frac{2}{3} \,.\, \frac{d^{2}}{d x2d x0}  u2\right)\end{dmath}
+
+\begin{dmath}\left. \frac{d}{d t} rhou1 \right|_{{Temporal }} = - \frac{rhou1}{2} \,.\, \left(\frac{d}{d x0} u0 + \frac{d}{d x1} u1 + \frac{d}{d x2} u2\right) - \frac{\frac{d}{d x0} rhou1}{2} \,.\, u0 - \frac{\frac{d}{d x1} rhou1}{2} \,.\, u1 - 
+\frac{\frac{d}{d x2} rhou1}{2} \,.\, u2 - \frac{d}{d x1} p - \frac{1}{2} \,.\, \frac{\partial}{\partial x0}\left(rhou1 \,.\, u0\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial x1}\left(rhou1 \,.\, u1\right) - \frac{1}{2} \,.\, 
+\frac{\partial}{\partial x2}\left(rhou1 \,.\, u2\right) + \frac{1.0}{Re} \,.\, \left(- \frac{2}{3} \,.\, \frac{d^{2}}{d x0d x1}  u0 + \frac{d^{2}}{d x1d x0}  u0 + \frac{d^{2}}{d x0^{2}}  u1 + \frac{4}{3} \,.\, \frac{d^{2}}{d x1^{2}}  u1 + 
+\frac{d^{2}}{d x2^{2}}  u1 + \frac{d^{2}}{d x1d x2}  u2 - \frac{2}{3} \,.\, \frac{d^{2}}{d x2d x1}  u2\right)\end{dmath}
+
+\begin{dmath}\left. \frac{d}{d t} rhou2 \right|_{{Temporal }} = - \frac{rhou2}{2} \,.\, \left(\frac{d}{d x0} u0 + \frac{d}{d x1} u1 + \frac{d}{d x2} u2\right) - \frac{\frac{d}{d x0} rhou2}{2} \,.\, u0 - \frac{\frac{d}{d x1} rhou2}{2} \,.\, u1 - 
+\frac{\frac{d}{d x2} rhou2}{2} \,.\, u2 - \frac{d}{d x2} p - \frac{1}{2} \,.\, \frac{\partial}{\partial x0}\left(rhou2 \,.\, u0\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial x1}\left(rhou2 \,.\, u1\right) - \frac{1}{2} \,.\, 
+\frac{\partial}{\partial x2}\left(rhou2 \,.\, u2\right) + \frac{1.0}{Re} \,.\, \left(- \frac{2}{3} \,.\, \frac{d^{2}}{d x0d x2}  u0 + \frac{d^{2}}{d x2d x0}  u0 - \frac{2}{3} \,.\, \frac{d^{2}}{d x1d x2}  u1 + \frac{d^{2}}{d x2d x1}  u1 + 
+\frac{d^{2}}{d x0^{2}}  u2 + \frac{d^{2}}{d x1^{2}}  u2 + \frac{4}{3} \,.\, \frac{d^{2}}{d x2^{2}}  u2\right)\end{dmath}
+
+\begin{dmath}\left. \frac{d}{d t} rhoE \right|_{{Temporal }} = - \frac{rhoE}{2} \,.\, \left(\frac{d}{d x0} u0 + \frac{d}{d x1} u1 + \frac{d}{d x2} u2\right) - \frac{\frac{d}{d x0} rhoE}{2} \,.\, u0 - \frac{\frac{d}{d x1} rhoE}{2} \,.\, u1 - 
+\frac{\frac{d}{d x2} rhoE}{2} \,.\, u2 - \frac{\partial}{\partial x0}\left(p \,.\, u0\right) - \frac{\partial}{\partial x1}\left(p \,.\, u1\right) - \frac{\partial}{\partial x2}\left(p \,.\, u2\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial 
+x0}\left(rhoE \,.\, u0\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial x1}\left(rhoE \,.\, u1\right) - \frac{1}{2} \,.\, \frac{\partial}{\partial x2}\left(rhoE \,.\, u2\right) + \frac{1.0 \,.\, u0}{Re} \,.\, \left(\frac{4}{3} \,.\, \frac{d^{2}}{d 
+x0^{2}}  u0 + \frac{d^{2}}{d x1^{2}}  u0 + \frac{d^{2}}{d x2^{2}}  u0 + \frac{d^{2}}{d x0d x1}  u1 - \frac{2}{3} \,.\, \frac{d^{2}}{d x1d x0}  u1 + \frac{d^{2}}{d x0d x2}  u2 - \frac{2}{3} \,.\, \frac{d^{2}}{d x2d x0}  u2\right) + \frac{1.0 \,.\, 
+u1}{Re} \,.\, \left(- \frac{2}{3} \,.\, \frac{d^{2}}{d x0d x1}  u0 + \frac{d^{2}}{d x1d x0}  u0 + \frac{d^{2}}{d x0^{2}}  u1 + \frac{4}{3} \,.\, \frac{d^{2}}{d x1^{2}}  u1 + \frac{d^{2}}{d x2^{2}}  u1 + \frac{d^{2}}{d x1d x2}  u2 - \frac{2}{3} \,.\, 
+\frac{d^{2}}{d x2d x1}  u2\right) + \frac{1.0 \,.\, u2}{Re} \,.\, \left(- \frac{2}{3} \,.\, \frac{d^{2}}{d x0d x2}  u0 + \frac{d^{2}}{d x2d x0}  u0 - \frac{2}{3} \,.\, \frac{d^{2}}{d x1d x2}  u1 + \frac{d^{2}}{d x2d x1}  u1 + \frac{d^{2}}{d x0^{2}} 
+u2 + \frac{d^{2}}{d x1^{2}}  u2 + \frac{4}{3} \,.\, \frac{d^{2}}{d x2^{2}}  u2\right) + \frac{1.0}{Re} \,.\, \left(\frac{d}{d x1} u0 + \frac{d}{d x0} u1\right) \,.\, \frac{d}{d x1} u0 + \frac{1.0}{Re} \,.\, \left(\frac{d}{d x1} u0 + \frac{d}{d x0} 
+u1\right) \,.\, \frac{d}{d x0} u1 + \frac{1.0}{Re} \,.\, \left(\frac{d}{d x2} u0 + \frac{d}{d x0} u2\right) \,.\, \frac{d}{d x2} u0 + \frac{1.0}{Re} \,.\, \left(\frac{d}{d x2} u0 + \frac{d}{d x0} u2\right) \,.\, \frac{d}{d x0} u2 + \frac{1.0}{Re} 
+\,.\, \left(\frac{d}{d x2} u1 + \frac{d}{d x1} u2\right) \,.\, \frac{d}{d x2} u1 + \frac{1.0}{Re} \,.\, \left(\frac{d}{d x2} u1 + \frac{d}{d x1} u2\right) \,.\, \frac{d}{d x1} u2 + \frac{1.0}{Re} \,.\, \left(- \frac{2}{3} \,.\, \frac{d}{d x0} u0 - 
+\frac{2}{3} \,.\, \frac{d}{d x1} u1 + \frac{4}{3} \,.\, \frac{d}{d x2} u2\right) \,.\, \frac{d}{d x2} u2 + \frac{1.0}{Re} \,.\, \left(- \frac{2}{3} \,.\, \frac{d}{d x0} u0 + \frac{4}{3} \,.\, \frac{d}{d x1} u1 - \frac{2}{3} \,.\, \frac{d}{d x2} 
+u2\right) \,.\, \frac{d}{d x1} u1 + \frac{1.0}{Re} \,.\, \left(\frac{4}{3} \,.\, \frac{d}{d x0} u0 - \frac{2}{3} \,.\, \frac{d}{d x1} u1 - \frac{2}{3} \,.\, \frac{d}{d x2} u2\right) \,.\, \frac{d}{d x0} u0 + \frac{1.0 \,.\, \left(\frac{d^{2}}{d 
+x0^{2}}  T + \frac{d^{2}}{d x1^{2}}  T + \frac{d^{2}}{d x2^{2}}  T\right)}{\left(Minf \right)^{2} \,.\, Pr \,.\, Re \,.\, \left(gama - 1\right)}\end{dmath}
+
+\noindent Constituent relations
+\\\begin{dmath}u0 = \frac{rhou0}{rho}\end{dmath}
+
+\begin{dmath}u1 = \frac{rhou1}{rho}\end{dmath}
+
+\begin{dmath}u2 = \frac{rhou2}{rho}\end{dmath}
+
+\begin{dmath}p = \left(gama - 1\right) \,.\, \left(- \frac{\left(u0 \right)^{2}}{2} \,.\, rho - \frac{\left(u1 \right)^{2}}{2} \,.\, rho - \frac{\left(u2 \right)^{2}}{2} \,.\, rho + rhoE\right)\end{dmath}
+
+\begin{dmath}T = \frac{\left(Minf \right)^{2}}{rho} \,.\, gama \,.\, p\end{dmath}
+
+\end{document}
