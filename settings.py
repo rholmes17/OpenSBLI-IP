@@ -11,7 +11,7 @@ class SimulationArguments:
 
         self.dt = 0.005         # 0.005     0.0025
         self.niter = 4000       # 4000      8000 for 63 sym
-        self.saveFreq = 50      # 50
+        self.saveFreq = 25      # 50
 
         self.Re = 800.          # 800.
         self.gama = 1.4         # 1.4
@@ -19,10 +19,10 @@ class SimulationArguments:
         self.Pr = 0.71          # 0.71
 
         self.order = 2          # 4
-        self.grid = 17          # Odd number (17, 33, 63)
+        self.grid = 13          # Odd number (17, 33, 63)
 
-        self.timingLog = "TimingLog.csv"
-        self.dataLog = "Data.csv"
+        self.timingLog = "TimingLog 0.0025dt.csv"
+        self.dataLog = "Data 0.0025dt.csv"
 
     def iterate(self):
         if self.order == 8:

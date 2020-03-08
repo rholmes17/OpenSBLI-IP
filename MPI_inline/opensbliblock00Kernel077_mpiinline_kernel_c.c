@@ -23,9 +23,8 @@ void opensbliblock00Kernel077_c_wrapper(
         const ptr_double wk6_B0 = { wk6_B0_p + n_x*1 + n_y * xdim0_opensbliblock00Kernel077*1 + n_z * xdim0_opensbliblock00Kernel077 * ydim0_opensbliblock00Kernel077*1, xdim0_opensbliblock00Kernel077, ydim0_opensbliblock00Kernel077};
         ptr_double wk24_B0 = { wk24_B0_p + n_x*1 + n_y * xdim1_opensbliblock00Kernel077*1 + n_z * xdim1_opensbliblock00Kernel077 * ydim1_opensbliblock00Kernel077*1, xdim1_opensbliblock00Kernel077, ydim1_opensbliblock00Kernel077};
         
-    OPS_ACC(wk24_B0, 0,0,0) = inv_2*((rc24)*OPS_ACC(wk6_B0, 0,0,1) - rc22*OPS_ACC(wk6_B0, 0,0,-3) -
-      rc23*OPS_ACC(wk6_B0, 0,0,4) + (rc23)*OPS_ACC(wk6_B0, 0,0,-4) - rc24*OPS_ACC(wk6_B0, 0,0,-1) +
-      (rc22)*OPS_ACC(wk6_B0, 0,0,3) - rc21*OPS_ACC(wk6_B0, 0,0,2) + (rc21)*OPS_ACC(wk6_B0, 0,0,-2));
+    OPS_ACC(wk24_B0, 0,0,0) = inv_2*((rc12)*OPS_ACC(wk6_B0, 0,0,1) + (rc13)*OPS_ACC(wk6_B0, 0,0,-2) -
+      rc13*OPS_ACC(wk6_B0, 0,0,2) - rc12*OPS_ACC(wk6_B0, 0,0,-1));
 
 
       }

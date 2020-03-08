@@ -343,6 +343,7 @@ def plot_cost(t, error, order):
     plt.ylabel("Error integral")
     # plt.xscale("log")
     # plt.yscale("log")
+    plt.grid(True)
     plt.legend()
     plt.show()
 

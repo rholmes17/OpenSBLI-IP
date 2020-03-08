@@ -99,9 +99,8 @@ void ops_par_loop_opensbliblock00Kernel040_execute(ops_kernel_descriptor *desc) 
         const ACC<double> rho_B0(xdim0_opensbliblock00Kernel040, ydim0_opensbliblock00Kernel040, rho_B0_p + n_x*1 + n_y * xdim0_opensbliblock00Kernel040*1 + n_z * xdim0_opensbliblock00Kernel040 * ydim0_opensbliblock00Kernel040*1);
         ACC<double> wk28_B0(xdim1_opensbliblock00Kernel040, ydim1_opensbliblock00Kernel040, wk28_B0_p + n_x*1 + n_y * xdim1_opensbliblock00Kernel040*1 + n_z * xdim1_opensbliblock00Kernel040 * ydim1_opensbliblock00Kernel040*1);
         
-    wk28_B0(0,0,0) = inv_2*(-rc23*rho_B0(0,0,4) + (rc24)*rho_B0(0,0,1) +
-      (rc23)*rho_B0(0,0,-4) - rc21*rho_B0(0,0,2) - rc22*rho_B0(0,0,-3) +
-      (rc22)*rho_B0(0,0,3) - rc24*rho_B0(0,0,-1) + (rc21)*rho_B0(0,0,-2));
+    wk28_B0(0,0,0) = inv_2*(-rc12*rho_B0(0,0,-1) + (rc13)*rho_B0(0,0,-2) -
+      rc13*rho_B0(0,0,2) + (rc12)*rho_B0(0,0,1));
 
 
       }

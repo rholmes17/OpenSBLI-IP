@@ -14,7 +14,7 @@ import tgv
 runId = 0
 arguments = settings.getSimArgs()
 
-for i in range(4):
+for i in range(39):
 
     os.system("rm -f opensbli_output*")
 

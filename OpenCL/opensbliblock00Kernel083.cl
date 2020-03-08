@@ -72,26 +72,6 @@ void opensbliblock00Kernel083(ptr_double rhoE_B0,
 
    OPS_ACCS(rhoE_B0, 2,0,0) = OPS_ACCS(rhoE_B0, -2,0,0);
 
-   OPS_ACCS(rho_B0, 3,0,0) = OPS_ACCS(rho_B0, -3,0,0);
-
-   OPS_ACCS(rhou0_B0, 3,0,0) = -1.0*OPS_ACCS(rhou0_B0, -3,0,0);
-
-   OPS_ACCS(rhou1_B0, 3,0,0) = OPS_ACCS(rhou1_B0, -3,0,0);
-
-   OPS_ACCS(rhou2_B0, 3,0,0) = OPS_ACCS(rhou2_B0, -3,0,0);
-
-   OPS_ACCS(rhoE_B0, 3,0,0) = OPS_ACCS(rhoE_B0, -3,0,0);
-
-   OPS_ACCS(rho_B0, 4,0,0) = OPS_ACCS(rho_B0, -4,0,0);
-
-   OPS_ACCS(rhou0_B0, 4,0,0) = -1.0*OPS_ACCS(rhou0_B0, -4,0,0);
-
-   OPS_ACCS(rhou1_B0, 4,0,0) = OPS_ACCS(rhou1_B0, -4,0,0);
-
-   OPS_ACCS(rhou2_B0, 4,0,0) = OPS_ACCS(rhou2_B0, -4,0,0);
-
-   OPS_ACCS(rhoE_B0, 4,0,0) = OPS_ACCS(rhoE_B0, -4,0,0);
-
 }
 
 
