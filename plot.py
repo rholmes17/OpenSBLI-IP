@@ -1,16 +1,17 @@
 # plotAll.py
 
+from math import factorial
+from shutil import move, copyfile
+import re
+from os.path import isfile, join
+from os import listdir
+import h5py
+from matplotlib import animation
+import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
 matplotlib.use('GTK3Agg')
 # matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from matplotlib import animation
-import h5py
-from os import listdir
-from os.path import isfile, join
-import re
-from shutil import move, copyfile
 
 plt.style.use('classic')
 
@@ -29,9 +30,11 @@ def read_dataset(group, dataset, halo):
     # print(read_start)
     # print(read_end)
     if len(read_end) == 2:
-        read_data = group["%s" % (dataset)].value[read_start[0]:read_end[0], read_start[1]:read_end[1]]
+        read_data = group["%s" % (
+            dataset)].value[read_start[0]:read_end[0], read_start[1]:read_end[1]]
     elif len(read_end) == 3:
-        read_data = group["%s" % (dataset)][read_start[0]:read_end[0], read_start[1]:read_end[1], read_start[2]:read_end[2]]
+        read_data = group["%s" % (dataset)][read_start[0]:read_end[0],
+                                            read_start[1]:read_end[1], read_start[2]:read_end[2]]
     else:
         raise NotImplementedError("")
     return read_data
@@ -65,72 +68,42 @@ def calc_derivative(var, direction, d_size, order):
     halo = int(order/2)
     invh = (d_size-1)/np.pi
 
-    # h12inv = 1./(12*np.pi/(d_size-1))
+    derivative = 1
 
-    # if direction == 0:  # Calculate x-derivative
-    #     for i in range(halo, d_size+halo):
-    #         der[:, :, i] = h12inv*(var[:, :, i-2]-var[:, :, i+2]+8.0*(var[:, :, i+1]-var[:, :, i-1]))
-    # elif direction == 1:  # Calculate y-derivative
-    #     for j in range(halo, d_size+halo):
-    #         der[:, j, :] = h12inv*(var[:, j-2, :]-var[:, j+2, :]+8.0*(var[:, j+1, :]-var[:, j-1, :]))
-    # elif direction == 2:  # Calculate z-derivative
-    #     for k in range(halo, d_size+halo):
-    #         der[k, :, :] = h12inv*(var[k-2, :, :]-var[k+2, :, :]+8.0*(var[k+1, :, :]-var[k-1, :, :]))
-    # else:
-    #     raise ValueError("Direction should either be 0, 1, or 2.")
+    p = int(order/2)
+    size = 2*p+1
 
-    if order == 2:
-        if direction == 0:  # Calculate x-derivative
-            for i in range(halo, d_size+halo):
-                der[:, :, i] = (invh/2.) * (var[:, :, i+1]-var[:, :, i-1])
-        elif direction == 1:  # Calculate y-derivative
-            for j in range(halo, d_size+halo):
-                der[:, j, :] = (invh/2.) * (var[:, j+1, :]-var[:, j-1, :])
-        elif direction == 2:  # Calculate z-derivative
-            for k in range(halo, d_size+halo):
-                der[k, :, :] = (invh/2.) * (var[k+1, :, :]-var[k-1, :, :])
-        else:
-            raise ValueError("Direction should either be 0, 1, or 2.")
-    elif order == 4:
-        h12inv = 1./(12*np.pi/(d_size-1))
+    A = np.zeros((size, size))
+    b = np.zeros(size)
 
-        if direction == 0:  # Calculate x-derivative
-            for i in range(halo, d_size+halo):
-                der[:, :, i] = h12inv*(var[:, :, i-2]-var[:, :, i+2]+8.0*(var[:, :, i+1]-var[:, :, i-1]))
-        elif direction == 1:  # Calculate y-derivative
-            for j in range(halo, d_size+halo):
-                der[:, j, :] = h12inv*(var[:, j-2, :]-var[:, j+2, :]+8.0*(var[:, j+1, :]-var[:, j-1, :]))
-        elif direction == 2:  # Calculate z-derivative
-            for k in range(halo, d_size+halo):
-                der[k, :, :] = h12inv*(var[k-2, :, :]-var[k+2, :, :]+8.0*(var[k+1, :, :]-var[k-1, :, :]))
-        else:
-            raise ValueError("Direction should either be 0, 1, or 2.")
-    elif order == 6:
-        if direction == 0:  # Calculate x-derivative
-            for i in range(halo, d_size+halo):
-                der[:, :, i] = invh*((1/60)*(var[:, :, i+3]-var[:, :, i-3]) + (3/20)*(var[:, :, i-2]-var[:, :, i+2]) + (3/4)*(var[:, :, i+1]-var[:, :, i-1]))
-        elif direction == 1:  # Calculate y-derivative
-            for j in range(halo, d_size+halo):
-                der[:, j, :] = invh*((1/60)*(var[:, j+3, :]-var[:, j-3, :]) + (3/20)*(var[:, j-2, :]-var[:, j+2, :]) + (3/4)*(var[:, j+1, :]-var[:, j-1, :]))
-        elif direction == 2:  # Calculate z-derivative
-            for k in range(halo, d_size+halo):
-                der[k, :, :] = invh*((1/60)*(var[k+3, :, :]-var[k-3, :, :]) + (3/20)*(var[k-2, :, :]-var[k+2, :, :]) + (3/4)*(var[k+1, :, :]-var[k-1, :, :]))
-        else:
-            raise ValueError("Direction should either be 0, 1, or 2.")
-    elif order == 8:
-        if direction == 0:  # Calculate x-derivative
-            for i in range(halo, d_size+halo):
-                der[:, :, i] = invh*((1/280)*(var[:, :, i+4]-var[:, :, i-4])+(4/105)*(var[:, :, i-3]-var[:, :, i+3])+(1/5)*(var[:, :, i+2]-var[:, :, i-2])+(4/5)*(var[:, :, i-1]-var[:, :, i+1]))
-        elif direction == 1:  # Calculate y-derivative
-            for j in range(halo, d_size+halo):
-                der[:, j, :] = invh*((1/280)*(var[:, j+4, :]-var[:, j-4, :])+(4/105)*(var[:, j-3, :]-var[:, j+3, :])+(1/5)*(var[:, j+2, :]-var[:, j-2, :])+(4/5)*(var[:, j-1, :]-var[:, j+1, :]))
-        elif direction == 2:  # Calculate z-derivative
-            for k in range(halo, d_size+halo):
-                der[k, :, :] = invh*((1/280)*(var[k+4,:,:]-var[k-4,:,:])+(4/105)*(var[k-3,:,:]-var[k+3,:,:])+(1/5)*(var[k+2,:,:]-var[k-2,:,:])+(4/5)*(var[k-1,:,:]-var[k+1,:,:]))
-        else:
-            raise ValueError("Direction should either be 0, 1, or 2.")
+    for i, row in enumerate(A):
+        for j, col in enumerate(range(-p, p+1)):
+            A[i][j] = col**i
+
+    b[derivative] = factorial(derivative)
+
+    x = np.linalg.solve(A, b)
+
+    if direction == 0:  # Calculate x-derivative
+        for i in range(halo, d_size+halo):
+            der[:, :, i] = 0
+            for ite, p in enumerate(range(-int(order/2), int(order/2)+1)):
+                der[:, :, i] += invh*x[ite]*var[:, :, i+p]
+
+    elif direction == 1:  # Calculate y-derivative
+        for j in range(halo, d_size+halo):
+            der[:, j, :] = 0
+            for ite, p in enumerate(range(-int(order/2), int(order/2)+1)):
+                der[:, j, :] += invh*x[ite]*var[:, j+p, :]
+
+    elif direction == 2:  # Calculate z-derivative
+        for k in range(halo, d_size+halo):
+            der[k, :, :] = 0
+            for ite, p in enumerate(range(-int(order/2), int(order/2)+1)):
+                der[k, :, :] += invh*x[ite]*var[k+p, :, :]
+
     else:
-        raise Exception("Unsupported order")
+        raise ValueError("Direction should either be 0, 1, or 2.")
 
     return der
 
@@ -147,7 +120,8 @@ def main_plot(file_no, simulation_times, path, Re, grid, order):
     f, group = read_file(path)
     # Extract the primitive flow variables
     rho, u, v, w, p = extract_flow_variables(group, halo)
-    print("The shape of the output data with halo points is: (%d, %d, %d)" % np.shape(rho))
+    print("The shape of the output data with halo points is: (%d, %d, %d)" %
+          np.shape(rho))
     # Demonstrating how to index only the points inside the domain
     p_without_halos = p[halo:-halo-1, halo:-halo-1, halo:-halo-1]
     p_mean = np.sum(p_without_halos)/np.size(p_without_halos)
@@ -178,12 +152,20 @@ def main_plot(file_no, simulation_times, path, Re, grid, order):
 
     # Calculate enstrophy from vorticiy, remove the halos, then average over simulation volume, then add to list for the run values
     enst_with_halos = vortx**2+vorty**2+vortz**2
-    enst_without_halos = enst_with_halos[halo:-halo-1, halo:-halo-1, halo:-halo-1]
+    enst_without_halos = enst_with_halos[halo:-
+                                         halo-1, halo:-halo-1, halo:-halo-1]
     enst_mean = np.sum(enst_without_halos)/np.size(enst_without_halos)
 
     kedr = enst_mean / Re
 
     print("Enstrophy =", enst_mean)
+
+    # Find maximum velocity magnitude
+    mag = (u**2+v**2+w**2)**0.5
+    print(f"Maximum velocity magnitude = {mag.max()}")
+
+    with open('v.csv', 'a') as vf:
+        vf.write(f"{mag.max()},")
 
     # Close the file before opening the next one
     f.close()
@@ -206,36 +188,32 @@ def plot_file(path, dt, Re, grid, niter, saveFreq, order):
     return enstrophy, KE, KEDR, t
 
 
-def calc_error(t_str, KE_str, KEDR_str):
-
-    t = list(map(float, t_str))
-    KE = list(map(float, KE_str))
-    KEDR = list(map(float, KEDR_str))
+def calc_error(t, KE, KEDR):
 
     dKE_dt = [KEDR[0]]
     error = [0]
 
     for k in range(1, len(t)-1):
         dKE_dt.append(-(KE[k+1]-KE[k-1])/(t[k+1]-t[k-1]))
-        error.append(dKE_dt[k]-KEDR[k])
+        error.append(abs(dKE_dt[k]-KEDR[k]))
 
     # print(error)
     errorSum = 0
     for e in error:
         errorSum += e
 
-    # plt.plot(t[:-1], dKE_dt, label="dKE_dt ")
-    # plt.plot(t, KEDR, label="KEDR ")
-    # plt.plot(t[:-1], error, label="error ")
-    # plt.xlabel('Time')
-    # plt.ylim(bottom=0)
-    # plt.legend()
-    # plt.show()
+    plt.plot(t[:-1], dKE_dt, label="dKE_dt ")
+    plt.plot(t, KEDR, label="KEDR ")
+    plt.plot(t[:-1], error, label="error ")
+    plt.xlabel('Time')
+    plt.ylim(bottom=0)
+    plt.legend()
+    plt.show()
 
     # maxErrorIndex = np.argmax(error)
     # Max error at error[maxErrorIndex]
 
-    return errorSum
+    return errorSum/len(error)
 
 
 def plot_graphs(t, enstrophy, KE, KEDR, grid):
@@ -254,7 +232,8 @@ def plot_graphs(t, enstrophy, KE, KEDR, grid):
     maxErrorIndex = np.argmax(error)
 
     print("Integral of error =", errorSum)
-    print("Maximum error of", error[maxErrorIndex], "at time", t[maxErrorIndex], "with index", maxErrorIndex)
+    print("Maximum error of", error[maxErrorIndex], "at time",
+          t[maxErrorIndex], "with index", maxErrorIndex)
 
     # plt.plot(t[:-1], dKE_dt, label="dKE_dt "+str(grid))
     plt.plot(t, KEDR, label="KEDR "+str(grid))
@@ -322,29 +301,70 @@ def update_quiver(num, Q, velocity, z):
 
 
 def plot_cost(t, error, order):
-    colour = ["green", "blue", "red", "black", "yellow"]
-    for o in set(order):
+    #colour = ["green", "blue", "red", "black", "yellow"]
+    colour = {}
+    # x=[]
+    # y=[]
+    for o in sorted(set(order)):
         x = []
         for i, time in enumerate(t):
             if order[i] == o:
+                print(float(time))
                 x.append(float(time))
 
         y = []
         for i, err in enumerate(error):
             if order[i] == o:
                 y.append(float(err))
-        plt.scatter(x, y, c=colour[int(int(o)/2)], label=f"{o}th order")
+        # plt.scatter(x, y, c=colour[int(int(o)/2)], label=f"{o}th order")
+        # plt.scatter(x, y, c=np.random.rand(3,), label=f"{o}th order")
 
-    plt.ylim(bottom=0)
-    plt.xlim(left=0)
+        if o not in colour:
+            colour[o] = np.random.rand(3,)
 
-    plt.title("Integral of error against grid size for different orders of central difference scheme")
+        plt.scatter(x, y, c=colour[o], label=f"{o}th order")
+
+    # plt.ylim(bottom=0)
+    # plt.xlim(left=0)
+
+    plt.title(
+        "Integral of error against grid size for different orders of central difference scheme")
     plt.xlabel("Wall Time (s)")
+    plt.ylabel("Error integral")
+    plt.legend()
+    # plt.xscale("log")
+    # plt.yscale("log")
+    plt.grid(True)
+
+    # ax=plt.gca()
+    # handles, labels = ax.get_legend_handles_labels()
+    # # sort both labels and handles by labels
+    # labels, handles = zip(*sorted(zip(labels, handles), key=lambda t: t[0]))
+    # ax.legend(handles, labels)
+
+    plt.show()
+
+
+def plot_order(error, order):
+    plt.plot(order,error)
+
+    # plt.ylim(bottom=0)
+    # plt.xlim(left=0)
+
+    plt.title(
+        "Integral of error against different orders of central difference scheme")
+    plt.xlabel("Order")
     plt.ylabel("Error integral")
     # plt.xscale("log")
     # plt.yscale("log")
     plt.grid(True)
-    plt.legend()
+
+    # ax=plt.gca()
+    # handles, labels = ax.get_legend_handles_labels()
+    # # sort both labels and handles by labels
+    # labels, handles = zip(*sorted(zip(labels, handles), key=lambda t: t[0]))
+    # ax.legend(handles, labels)
+
     plt.show()
 
 
@@ -377,7 +397,8 @@ def plot_scatter():
     #plt.xlim(0, x[-1])
     plt.ylim(bottom=0)
     plt.xticks(x)
-    plt.title("Integral of error against grid size for 4th and 6th order central difference scheme")
+    plt.title(
+        "Integral of error against grid size for 4th and 6th order central difference scheme")
     plt.xlabel("Grid size")
     plt.ylabel("Error integral")
     plt.legend()
@@ -395,7 +416,8 @@ def plot_scatter():
     #plt.xlim(0, x[-1])
     plt.ylim(bottom=0)
     plt.xticks(x)
-    plt.title("Max error against grid size for 4th and 6th order central difference scheme")
+    plt.title(
+        "Max error against grid size for 4th and 6th order central difference scheme")
     plt.xlabel("Grid size")
     plt.ylabel("Max Error")
     plt.legend()

@@ -23,8 +23,8 @@ void opensbliblock00Kernel058_c_wrapper(
         const ptr_double u0_B0 = { u0_B0_p + n_x*1 + n_y * xdim0_opensbliblock00Kernel058*1 + n_z * xdim0_opensbliblock00Kernel058 * ydim0_opensbliblock00Kernel058*1, xdim0_opensbliblock00Kernel058, ydim0_opensbliblock00Kernel058};
         ptr_double wk5_B0 = { wk5_B0_p + n_x*1 + n_y * xdim1_opensbliblock00Kernel058*1 + n_z * xdim1_opensbliblock00Kernel058 * ydim1_opensbliblock00Kernel058*1, xdim1_opensbliblock00Kernel058, ydim1_opensbliblock00Kernel058};
         
-    OPS_ACC(wk5_B0, 0,0,0) = inv_2*(-rc13*OPS_ACC(u0_B0, 0,0,2) + (rc12)*OPS_ACC(u0_B0, 0,0,1) -
-      rc12*OPS_ACC(u0_B0, 0,0,-1) + (rc13)*OPS_ACC(u0_B0, 0,0,-2));
+    OPS_ACC(wk5_B0, 0,0,0) = inv_2*(-rc7*OPS_ACC(u0_B0, 0,0,2) + (rc8)*OPS_ACC(u0_B0, 0,0,1) -
+      rc8*OPS_ACC(u0_B0, 0,0,-1) + (rc7)*OPS_ACC(u0_B0, 0,0,-2));
 
 
       }

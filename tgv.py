@@ -8,7 +8,7 @@ import copy
 from opensbli.utilities.helperfunctions import substitute_simulation_parameters
 
 
-def tgv(grid, Re, dt, niter, order=4, saveFreq = 50, gama = 1.4, Minf = 0.1, Pr = 0.71):
+def tgv(grid, Re, dt, niter, order=4, saveFreq=50, gama=1.4, Minf=0.1, Pr=0.71):
 
     # Number of dimensions of the system to be solved
     ndim = 3
@@ -73,11 +73,11 @@ def tgv(grid, Re, dt, niter, order=4, saveFreq = 50, gama = 1.4, Minf = 0.1, Pr 
     latex = LatexWriter()
     latex.open('equations.tex', "Einstein Expansion of the simulation equations")
     latex.write_string("Simulation equations\n")
-    for index, eq in enumerate(flatten(simulation_eq.equations)):
+    for eq in flatten(simulation_eq.equations):
         latex.write_expression(eq)
     
     latex.write_string("Constituent relations\n")
-    for index, eq in enumerate(flatten(constituent.equations)):
+    for eq in flatten(constituent.equations):
         latex.write_expression(eq)
     
     latex.close()

@@ -92,6 +92,7 @@ def on_created(event):
                 currentFilePath = sorted(h5files)[0]
 
             print(f"\n{currentFilePath} has been selected for processing")
+            arguments.useCFL()      # Change values to comply with CFL condition
             enstrophy, ke, kedr, t = plot.plot_file(currentFilePath, arguments.dt, arguments.Re, arguments.grid, arguments.niter, arguments.saveFreq, arguments.order)
 
             with open(arguments.dataLog, 'a') as f:
@@ -99,7 +100,7 @@ def on_created(event):
 
                 f.write("{0},".format(runId))
 
-                f.write("{0},".format(arguments.dt))
+                f.write("{:.10g},".format(arguments.dt))
                 f.write("{0},".format(arguments.niter))
 
                 f.write("{0},".format(arguments.Re))

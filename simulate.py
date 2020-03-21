@@ -14,7 +14,8 @@ import tgv
 runId = 0
 arguments = settings.getSimArgs()
 
-for i in range(39):
+for i in range(1):
+    arguments.useCFL()
 
     os.system("rm -f opensbli_output*")
 
@@ -57,7 +58,7 @@ for i in range(39):
 
         f.write("{0},".format(runId))
 
-        f.write("{0},".format(arguments.dt))
+        f.write("{:.10g},".format(arguments.dt))
         f.write("{0},".format(arguments.niter))
 
         f.write("{0},".format(arguments.Re))
