@@ -1,5 +1,8 @@
 # OpenSBLI files
+*.cu
+*.cpp
 *.h5
+*.csv
 CUDA/
 latex_output/
 MPI_inline/

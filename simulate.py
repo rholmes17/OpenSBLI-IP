@@ -15,7 +15,7 @@ runId = 0
 arguments = settings.getSimArgs()
 
 for i in range(1):
-    arguments.useCFL()
+    # arguments.useCFL()
 
     os.system("rm -f opensbli_output*")
 

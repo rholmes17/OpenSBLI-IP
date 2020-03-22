@@ -1,5 +1,6 @@
 # plotAll.py
 
+from scipy import integrate
 from math import factorial
 from shutil import move, copyfile
 import re
@@ -202,6 +203,32 @@ def calc_error(t, KE, KEDR):
     for e in error:
         errorSum += e
 
+    # maxErrorIndex = np.argmax(error)
+    # Max error at error[maxErrorIndex]
+
+    # print(len(dKE_dt))
+    # print(len(t[0:-1]))
+    newKE = []
+    for i in range(len(t[0:-1])):
+        newKE.append(-integrate.simps(dKE_dt[0:i+1], t[0:i+1]))
+
+    # print(newKE)
+
+    # plt.plot(t[:-1], dKE_dt, label="dKE_dt")
+    # plt.show()
+
+    # plt.plot(t, KE, label="KE")
+    # plt.plot(t[:-1], newKE, label="Integral")
+    # plt.xlabel('Time')
+    # plt.ylim(bottom=0)
+    # plt.legend()
+    # plt.show()
+
+
+    return errorSum/len(error), error, dKE_dt
+
+
+def plot_error(t, error, KEDR, dKE_dt):
     plt.plot(t[:-1], dKE_dt, label="dKE_dt ")
     plt.plot(t, KEDR, label="KEDR ")
     plt.plot(t[:-1], error, label="error ")
@@ -209,11 +236,6 @@ def calc_error(t, KE, KEDR):
     plt.ylim(bottom=0)
     plt.legend()
     plt.show()
-
-    # maxErrorIndex = np.argmax(error)
-    # Max error at error[maxErrorIndex]
-
-    return errorSum/len(error)
 
 
 def plot_graphs(t, enstrophy, KE, KEDR, grid):
@@ -324,8 +346,8 @@ def plot_cost(t, error, order):
 
         plt.scatter(x, y, c=colour[o], label=f"{o}th order")
 
-    # plt.ylim(bottom=0)
-    # plt.xlim(left=0)
+    plt.ylim(bottom=0)
+    plt.xlim(left=0)
 
     plt.title(
         "Integral of error against grid size for different orders of central difference scheme")
@@ -336,20 +358,13 @@ def plot_cost(t, error, order):
     # plt.yscale("log")
     plt.grid(True)
 
-    # ax=plt.gca()
-    # handles, labels = ax.get_legend_handles_labels()
-    # # sort both labels and handles by labels
-    # labels, handles = zip(*sorted(zip(labels, handles), key=lambda t: t[0]))
-    # ax.legend(handles, labels)
-
     plt.show()
 
 
 def plot_order(error, order):
-    plt.plot(order,error)
+    plt.plot(order, error)
 
-    # plt.ylim(bottom=0)
-    # plt.xlim(left=0)
+    plt.ylim(bottom=0)
 
     plt.title(
         "Integral of error against different orders of central difference scheme")
@@ -358,12 +373,6 @@ def plot_order(error, order):
     # plt.xscale("log")
     # plt.yscale("log")
     plt.grid(True)
-
-    # ax=plt.gca()
-    # handles, labels = ax.get_legend_handles_labels()
-    # # sort both labels and handles by labels
-    # labels, handles = zip(*sorted(zip(labels, handles), key=lambda t: t[0]))
-    # ax.legend(handles, labels)
 
     plt.show()
 

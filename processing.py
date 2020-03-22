@@ -77,7 +77,11 @@ with open(arguments.dataLog, 'r') as f:
             time.append(currentRun.wallTime)
             # print(currentRun.KEDR)
             # print(currentRun.t[0])
-            error.append(plot.calc_error(currentRun.t, currentRun.KE, currentRun.KEDR))
+            errorsum, errorList, dKE_dtList = plot.calc_error(currentRun.t, currentRun.KE, currentRun.KEDR)
+
+            plot.plot_error(currentRun.t, errorList, currentRun.KEDR, dKE_dtList)
+
+            error.append(errorsum)
             order.append(int(currentRun.args[8]))
             print(f"Order = {currentRun.args[8]}")
 

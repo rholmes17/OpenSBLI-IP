@@ -55,16 +55,6 @@ void opensbliblock00Kernel082_c_wrapper(
 
    OPS_ACC(rhoE_B0, -2,0,0) = OPS_ACC(rhoE_B0, 2,0,0);
 
-   OPS_ACC(rho_B0, 0,0,0) = OPS_ACC(rho_B0, 1,0,0);
-
-   OPS_ACC(rhou0_B0, 0,0,0) = 0;
-
-   OPS_ACC(rhou1_B0, 0,0,0) = OPS_ACC(rhou1_B0, 1,0,0);
-
-   OPS_ACC(rhou2_B0, 0,0,0) = OPS_ACC(rhou2_B0, 1,0,0);
-
-   OPS_ACC(rhoE_B0, 0,0,0) = OPS_ACC(rhoE_B0, 1,0,0);
-
 
       }
     }

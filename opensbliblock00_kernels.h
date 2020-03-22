@@ -61,16 +61,6 @@ void opensbliblock00Kernel082(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
 
    rhoE_B0[OPS_ACC0(-2,0,0)] = rhoE_B0[OPS_ACC0(2,0,0)];
 
-   rho_B0[OPS_ACC3(0,0,0)] = rho_B0[OPS_ACC3(1,0,0)];
-
-   rhou0_B0[OPS_ACC2(0,0,0)] = 0;
-
-   rhou1_B0[OPS_ACC1(0,0,0)] = rhou1_B0[OPS_ACC1(1,0,0)];
-
-   rhou2_B0[OPS_ACC4(0,0,0)] = rhou2_B0[OPS_ACC4(1,0,0)];
-
-   rhoE_B0[OPS_ACC0(0,0,0)] = rhoE_B0[OPS_ACC0(1,0,0)];
-
 }
 
 void opensbliblock00Kernel083(double *rhoE_B0, double *rhou1_B0, double *rhou0_B0, double *rho_B0, double *rhou2_B0)
@@ -94,16 +84,6 @@ void opensbliblock00Kernel083(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
    rhou2_B0[OPS_ACC4(2,0,0)] = rhou2_B0[OPS_ACC4(-2,0,0)];
 
    rhoE_B0[OPS_ACC0(2,0,0)] = rhoE_B0[OPS_ACC0(-2,0,0)];
-
-   rho_B0[OPS_ACC3(0,0,0)] = rho_B0[OPS_ACC3(-1,0,0)];
-
-   rhou0_B0[OPS_ACC2(0,0,0)] = 0;
-
-   rhou1_B0[OPS_ACC1(0,0,0)] = rhou1_B0[OPS_ACC1(-1,0,0)];
-
-   rhou2_B0[OPS_ACC4(0,0,0)] = rhou2_B0[OPS_ACC4(-1,0,0)];
-
-   rhoE_B0[OPS_ACC0(0,0,0)] = rhoE_B0[OPS_ACC0(-1,0,0)];
 
 }
 
@@ -129,16 +109,6 @@ void opensbliblock00Kernel084(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
 
    rhoE_B0[OPS_ACC0(0,-2,0)] = rhoE_B0[OPS_ACC0(0,2,0)];
 
-   rho_B0[OPS_ACC3(0,0,0)] = rho_B0[OPS_ACC3(0,1,0)];
-
-   rhou0_B0[OPS_ACC2(0,0,0)] = rhou0_B0[OPS_ACC2(0,1,0)];
-
-   rhou1_B0[OPS_ACC1(0,0,0)] = 0;
-
-   rhou2_B0[OPS_ACC4(0,0,0)] = rhou2_B0[OPS_ACC4(0,1,0)];
-
-   rhoE_B0[OPS_ACC0(0,0,0)] = rhoE_B0[OPS_ACC0(0,1,0)];
-
 }
 
 void opensbliblock00Kernel085(double *rhoE_B0, double *rhou1_B0, double *rhou0_B0, double *rho_B0, double *rhou2_B0)
@@ -162,16 +132,6 @@ void opensbliblock00Kernel085(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
    rhou2_B0[OPS_ACC4(0,2,0)] = rhou2_B0[OPS_ACC4(0,-2,0)];
 
    rhoE_B0[OPS_ACC0(0,2,0)] = rhoE_B0[OPS_ACC0(0,-2,0)];
-
-   rho_B0[OPS_ACC3(0,0,0)] = rho_B0[OPS_ACC3(0,-1,0)];
-
-   rhou0_B0[OPS_ACC2(0,0,0)] = rhou0_B0[OPS_ACC2(0,-1,0)];
-
-   rhou1_B0[OPS_ACC1(0,0,0)] = 0;
-
-   rhou2_B0[OPS_ACC4(0,0,0)] = rhou2_B0[OPS_ACC4(0,-1,0)];
-
-   rhoE_B0[OPS_ACC0(0,0,0)] = rhoE_B0[OPS_ACC0(0,-1,0)];
 
 }
 
@@ -197,16 +157,6 @@ void opensbliblock00Kernel086(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
 
    rhoE_B0[OPS_ACC0(0,0,-2)] = rhoE_B0[OPS_ACC0(0,0,2)];
 
-   rho_B0[OPS_ACC3(0,0,0)] = rho_B0[OPS_ACC3(0,0,1)];
-
-   rhou0_B0[OPS_ACC2(0,0,0)] = rhou0_B0[OPS_ACC2(0,0,1)];
-
-   rhou1_B0[OPS_ACC1(0,0,0)] = rhou1_B0[OPS_ACC1(0,0,1)];
-
-   rhou2_B0[OPS_ACC4(0,0,0)] = 0;
-
-   rhoE_B0[OPS_ACC0(0,0,0)] = rhoE_B0[OPS_ACC0(0,0,1)];
-
 }
 
 void opensbliblock00Kernel087(double *rhoE_B0, double *rhou1_B0, double *rhou0_B0, double *rho_B0, double *rhou2_B0)
@@ -230,16 +180,6 @@ void opensbliblock00Kernel087(double *rhoE_B0, double *rhou1_B0, double *rhou0_B
    rhou2_B0[OPS_ACC4(0,0,2)] = -1.0*rhou2_B0[OPS_ACC4(0,0,-2)];
 
    rhoE_B0[OPS_ACC0(0,0,2)] = rhoE_B0[OPS_ACC0(0,0,-2)];
-
-   rho_B0[OPS_ACC3(0,0,0)] = rho_B0[OPS_ACC3(0,0,-1)];
-
-   rhou0_B0[OPS_ACC2(0,0,0)] = rhou0_B0[OPS_ACC2(0,0,-1)];
-
-   rhou1_B0[OPS_ACC1(0,0,0)] = rhou1_B0[OPS_ACC1(0,0,-1)];
-
-   rhou2_B0[OPS_ACC4(0,0,0)] = 0;
-
-   rhoE_B0[OPS_ACC0(0,0,0)] = rhoE_B0[OPS_ACC0(0,0,-1)];
 
 }
 
