@@ -15,7 +15,17 @@ import matplotlib.pyplot as plt
 
 arguments = settings.getSimArgs()
 
-# Create fiel to store data if it does not already exist
+
+def FormatTime(seconds):
+    days = seconds // (24 * 3600)
+    seconds %= (24*3600)
+    hours = seconds // 3600
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %=60
+    return days, hours, minutes, seconds
+
+# Create file to store data if it does not already exist
 if (not os.path.exists(arguments.dataLog)):
     with open(arguments.dataLog, 'w') as f:
         fieldnames = ['id', 'dt', 'niter', 'Re', 'gama', 'Minf', 'Pr', 'Core Count', 'order',
@@ -39,8 +49,8 @@ if (os.path.exists(arguments.timingLog)):
 # Set up live plot
 plt.ion()
 
-x=[]
-y=[]
+x = []
+y = []
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
@@ -50,7 +60,11 @@ ax.set_xlim(left=0)
 ax.set_ylim(bottom=0)
 
 ax.set_xlabel("Time")
-ax.set_title("Kinetic Energy")
+ax.set_title("Kinetic Energy Dissipation Rate")
+
+# Start timers
+startTime = perf_counter()
+currentRunTime = perf_counter()
 
 # Set up an event handler to listen fotr changes in the directory
 if __name__ == "__main__":
@@ -64,7 +78,7 @@ if __name__ == "__main__":
 
 # Run whenever a file is created in the directory
 def on_created(event):
-    global runId, x, y
+    global runId, x, y, startTime, currentRunTime
     h5files = []
     currentFilePath = "./"
     print(f"The file {event.src_path} has been created")
@@ -72,7 +86,6 @@ def on_created(event):
         with os.scandir() as entries:
             for entry in entries:
                 if entry.name[-3:] == ".h5":
-                    # print(f"{entry.name} is in this directory")
                     h5files.append(entry.path)
         # print(len(h5files))
         if len(h5files) >= 2:
@@ -83,9 +96,34 @@ def on_created(event):
                 currentFilePath = sorted(h5files)[0]
 
             print(f"\n{currentFilePath} has been selected for processing")
-            # arguments.useCFL()      # Change values to comply with CFL condition
+            timeSinceStart = perf_counter() - startTime
+            timeSinceRun = perf_counter() - currentRunTime
+
+            formattedTimeSinceStart = FormatTime(timeSinceStart)
+            formattedTimeSinceRun = FormatTime(timeSinceRun)
+
+            print(f"{(timeSinceStart):.2f}s since the start of the batch,", end=" ")
+            print(f"{(timeSinceRun):.2f}s since the start of the current run")
+
+            print(f"{int(formattedTimeSinceStart[0])} days,",end=" ")
+            print(f"{int(formattedTimeSinceStart[1])} hours,",end=" ")
+            print(f"{int(formattedTimeSinceStart[2])} minutes,", end=" ")
+            print(f"and {formattedTimeSinceStart[3]:.2f} seconds since the batch was started.")
+
+            print(f"{int(formattedTimeSinceRun[0])} days,",end=" ")
+            print(f"{int(formattedTimeSinceRun[1])} hours,",end=" ")
+            print(f"{int(formattedTimeSinceRun[2])} minutes,", end=" ")
+            print(f"and {formattedTimeSinceRun[3]:.2f} seconds since this run was started.")
+
+            arguments.useCFL()      # Change values to comply with CFL condition
             enstrophy, ke, kedr, t = plot.plot_file(
-                currentFilePath, arguments.dt, arguments.Re, arguments.grid, arguments.niter, arguments.saveFreq, arguments.order)
+                currentFilePath,
+                arguments.dt,
+                arguments.Re,
+                arguments.grid,
+                arguments.niter,
+                arguments.saveFreq,
+                arguments.order)
 
             with open(arguments.dataLog, 'a') as f:
                 print(f"Writing to {arguments.dataLog}")
@@ -112,7 +150,7 @@ def on_created(event):
                 f.write('\n')
 
                 x.append(t)
-                y.append(ke)
+                y.append(kedr)
 
                 ax.set_xlim(right=x[-1])
                 ax.set_ylim(top=max(y))
@@ -126,13 +164,16 @@ def on_created(event):
             os.system(f"rm -f {currentFilePath}")
             print("")
 
+        # Detect file that is generated at the end of a run
         if event.src_path == "./opensbli_output.h5":
             print(f"Finished run\n")
             arguments.iterate()
             runId += 1
 
-            x=[0]
-            y=[0]
+            del x[:]
+            del y[:]
+
+            currentRunTime = perf_counter()
 
 
 # Configure event handler

@@ -15,7 +15,7 @@ runId = 0
 arguments = settings.getSimArgs()
 
 for i in range(1):
-    # arguments.useCFL()
+    arguments.useCFL()
 
     os.system("rm -f opensbli_output*")
 
@@ -26,7 +26,8 @@ for i in range(1):
 
     if (not os.path.exists(arguments.timingLog)):
         with open(arguments.timingLog, 'w') as f:
-            fieldnames = ['id', 'dt', 'niter', 'Re', 'gama', 'Minf', 'Pr', 'Core Count', 'order', 'grid', 'time']
+            fieldnames = ['id', 'dt', 'niter', 'Re', 'gama',
+                          'Minf', 'Pr', 'Core Count', 'order', 'grid', 'time']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
 
@@ -39,8 +40,9 @@ for i in range(1):
     print("Time step: {0}".format(str(arguments.dt)))
     print("Number of iterations: {0}".format(str(arguments.niter)))
 
-    tgv.tgv(arguments.grid, arguments.Re, arguments.dt, arguments.niter, order=arguments.order, saveFreq=arguments.saveFreq)
-                    
+    tgv.tgv(arguments.grid, arguments.Re, arguments.dt, arguments.niter,
+            order=arguments.order, saveFreq=arguments.saveFreq)
+
     os.system("python $OPS_TRANSLATOR opensbli.cpp")
     os.system("make opensbli_mpi")
 
@@ -74,5 +76,5 @@ for i in range(1):
         f.write(str(endTime - startTime))
 
         f.write('\n')
-    
+
     arguments.iterate()

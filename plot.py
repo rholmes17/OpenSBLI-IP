@@ -1,7 +1,7 @@
 # plotAll.py
 
 from scipy import integrate
-from math import factorial
+from math import factorial, fsum
 from shutil import move, copyfile
 import re
 from os.path import isfile, join
@@ -114,7 +114,7 @@ def main_plot(file_no, simulation_times, path, Re, grid, order):
     solution files are read in and looped over below."""
 
     halo = int(order/2)
-    print(f"Grid of size {grid} and Halo nodes are of size {halo}")
+    print(f"Grid of size {grid} and running an order of {order}")
     print("Processing simulation data in file", path)
     print("Processing simulation data at time t=%.2f" % simulation_times)
     # Open the file
@@ -189,95 +189,55 @@ def plot_file(path, dt, Re, grid, niter, saveFreq, order):
     return enstrophy, KE, KEDR, t
 
 
-def calc_error(t, KE, KEDR):
+def calc_error(t, dKE_dtSelf, KEDRSelf, enstSelf=0, dKE_dtBench=0, KEDRBench=0, enstBench=0, errorType="Self"):
 
-    dKE_dt = [KEDR[0]]
-    error = [0]
-
-    for k in range(1, len(t)-1):
-        dKE_dt.append(-(KE[k+1]-KE[k-1])/(t[k+1]-t[k-1]))
-        error.append(abs(dKE_dt[k]-KEDR[k]))
+    error = []
+    if errorType == "Self":
+        for i in range(len(t)-2):
+            error.append(abs(dKE_dtSelf[i]-KEDRSelf[i]))
+        errorSum = fsum(error)/len(error)
+    elif errorType == "BenchEnst":
+        errorSum = abs(fsum(enstBench)/len(enstBench) -
+                       fsum(enstSelf)/len(enstSelf))
+    elif errorType == "BenchdKE_dt":
+        errorSum = abs(fsum(dKE_dtBench)/len(dKE_dtBench) -
+                       fsum(dKE_dtSelf)/len(dKE_dtSelf))
+    elif errorType == "BenchKEDR":
+        errorSum = abs(fsum(KEDRBench)/len(KEDRBench) -
+                       fsum(KEDRSelf)/len(KEDRSelf))
+    else:
+        raise Exception("Invalid error type")
 
     # print(error)
-    errorSum = 0
-    for e in error:
-        errorSum += e
+    # errorSum = 0
+    # for e in error:
+    #     errorSum += e
 
     # maxErrorIndex = np.argmax(error)
     # Max error at error[maxErrorIndex]
 
-    # print(len(dKE_dt))
-    # print(len(t[0:-1]))
-    newKE = []
-    for i in range(len(t[0:-1])):
-        newKE.append(-integrate.simps(dKE_dt[0:i+1], t[0:i+1]))
-
-    # print(newKE)
-
-    # plt.plot(t[:-1], dKE_dt, label="dKE_dt")
-    # plt.show()
-
-    # plt.plot(t, KE, label="KE")
-    # plt.plot(t[:-1], newKE, label="Integral")
-    # plt.xlabel('Time')
-    # plt.ylim(bottom=0)
-    # plt.legend()
-    # plt.show()
-
-
-    return errorSum/len(error), error, dKE_dt
+    return errorSum, error
 
 
 def plot_error(t, error, KEDR, dKE_dt):
-    plt.plot(t[:-1], dKE_dt, label="dKE_dt ")
+    plt.plot(t[1:-1], dKE_dt, label="dKE_dt ")
     plt.plot(t, KEDR, label="KEDR ")
-    plt.plot(t[:-1], error, label="error ")
+    plt.plot(t[1:-1], error, label="error ")
     plt.xlabel('Time')
     plt.ylim(bottom=0)
     plt.legend()
     plt.show()
 
 
-def plot_graphs(t, enstrophy, KE, KEDR, grid):
-
-    dKE_dt = [float(KEDR[0])]
-    error = [0]
-
+# Perform second order central differencing to find the derivative of KE
+def DerKE(t, KE):
+    dKE_dt = []
     for k in range(1, len(t)-1):
         dKE_dt.append(-(KE[k+1]-KE[k-1])/(t[k+1]-t[k-1]))
-        error.append(dKE_dt[k]-KEDR[k])
-    print(error)
-    errorSum = 0
-    for e in error:
-        errorSum += e
-
-    maxErrorIndex = np.argmax(error)
-
-    print("Integral of error =", errorSum)
-    print("Maximum error of", error[maxErrorIndex], "at time",
-          t[maxErrorIndex], "with index", maxErrorIndex)
-
-    # plt.plot(t[:-1], dKE_dt, label="dKE_dt "+str(grid))
-    plt.plot(t, KEDR, label="KEDR "+str(grid))
-    plt.plot(t[:-1], error, label="error "+str(grid))
-    plt.xlabel('Time')
-    plt.ylim(bottom=0)
-    plt.legend()
-    plt.show()
+    return dKE_dt
 
 
-def plot_quiver(grid, U, V):
-    X = np.arange(1, grid+1, 1)
-    Y = np.arange(1, grid+1, 1)
-
-    fig, ax = plt.subplots()
-    q = ax.quiver(X, Y, U, V)
-    plt.ylim(0, grid+1)
-    plt.xlim(0, grid+1)
-    plt.show()
-
-
-def plot_quiver_new(grid, velocity, z):
+def plot_quiver(grid, velocity, z):
     X = np.arange(1, grid+1, 1)
     Y = np.arange(1, grid+1, 1)
     U = velocity[0, :, :, z, 0]
@@ -290,6 +250,7 @@ def plot_quiver_new(grid, velocity, z):
 
 
 def plot_animated_quiver(grid, velocity, z):
+    # Each value in th evelocity array represents:
     #           t,x,y,z,dir
     # velocity[-1,:,:,7,0]
     X = np.arange(1, grid+1, 1)
@@ -331,7 +292,7 @@ def plot_cost(t, error, order):
         x = []
         for i, time in enumerate(t):
             if order[i] == o:
-                print(float(time))
+                # print(float(time))
                 x.append(float(time))
 
         y = []
@@ -341,8 +302,10 @@ def plot_cost(t, error, order):
         # plt.scatter(x, y, c=colour[int(int(o)/2)], label=f"{o}th order")
         # plt.scatter(x, y, c=np.random.rand(3,), label=f"{o}th order")
 
+        cmap = plt.get_cmap('gist_rainbow')
+
         if o not in colour:
-            colour[o] = np.random.rand(3,)
+            colour[o] = cmap(np.random.rand(1))
 
         plt.scatter(x, y, c=colour[o], label=f"{o}th order")
 

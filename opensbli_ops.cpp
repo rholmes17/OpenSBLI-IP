@@ -576,10 +576,10 @@ block0np2 = 17;
 Delta0block0 = M_PI/(block0np0-1);
 Delta1block0 = M_PI/(block0np1-1);
 Delta2block0 = M_PI/(block0np2-1);
-niter = 4000;
+niter = 4278;
 double rkold[] = {1.0/4.0, 3.0/20.0, 3.0/5.0};
 double rknew[] = {2.0/3.0, 5.0/12.0, 3.0/5.0};
-dt = 0.005;
+dt = 0.00467498906784;
 Minf = 0.1;
 gama = 1.4;
 Pr = 0.71;
@@ -1199,7 +1199,7 @@ int iteration_range_87_block0[] = {-2, block0np0 + 2, -2, block0np1 + 2, block0n
              ops_arg_dat(rhou2_B0, 1, stencil_0_03, "double", OPS_RW));
 
 }
-if (fmod(iter + 1,50) == 0){
+if (fmod(iter + 1,53) == 0){
 char name[80];
 sprintf(name, "opensbli_output_%06d.h5", iter + 1);
 ops_fetch_block_hdf5_file(opensbliblock00, name);

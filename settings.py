@@ -1,5 +1,5 @@
 # Store settings used in simulations
-import numpy as np
+from numpy import pi
 
 
 def getSimArgs():
@@ -20,33 +20,42 @@ class SimulationArguments:
         self.Pr = 0.71          # 0.71
 
         self.order = 4          # 4
-        self.grid = 17          # Odd number (17, 33, 63)
+        self.grid = 65          # Odd number (17, 33, 65)
 
-        self.CFL = 0.1
+        self.CFL = 0.05         # Not the actual CFL number
 
-        fileEnding = " 0.0025dt"
+        # Choose name for the files where data will be stored
+        fileEnding = "65Orders"
         self.timingLog = "Timings"+fileEnding+".csv"
         self.dataLog = "Data"+fileEnding+".csv"
 
+        # Benchmark file must only have one run
+        self.benchmarkFile = "DataBenchmark.csv"
+
     def iterate(self):
+        # Iterate through order and then grid size
         # if self.order == 8:
         #     self.grid += 8
         #     self.order = 2
         # else:
         #     self.order += 2
+
+        # Iterate through order, then number of threads that the simulation is running on
         # if self.order == 8:
         #     self.coreCount += 1
         #     self.order = 2
         # else:
         #     self.order += 2
-        self.order += 2
+
+        # Iterate through orders
+        self.order -= 2
 
     def useCFL(self):
-        endTime = 20            # Non-dimensionalised time when simulation ends
-        numberOfPoints = 80     # Used for calculating save frequency
+        endTime = 20            # 20      Non-dimensionalised time when simulation ends
+        numberOfPoints = 80     # 80      Used for calculating save frequency
 
-        self.dt = self.CFL * (np.pi/(self.grid-1)) / 2.1
-        # Define number of iterations based on running the simulation till t=20
+        # Using max v=2.1 determined empirically (is wrong)
+        self.dt = self.CFL * (pi/(self.grid-1)) / 2.1
         self.niter = int(endTime/self.dt)
 
         self.saveFreq = int(self.niter/numberOfPoints)
