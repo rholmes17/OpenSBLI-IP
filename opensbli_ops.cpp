@@ -24,14 +24,38 @@ double inv_3;
 double inv_4;
 double inv_5;
 double rc6;
-double rc7;
+double rcinv7;
 double rc8;
 double rc9;
-double rc10;
+double rcinv10;
 double rcinv11;
 double rc12;
-double rcinv13;
-double rcinv14;
+double rc13;
+double rc14;
+double rc15;
+double rc16;
+double rc17;
+double rc18;
+double rc19;
+double rc20;
+double rc21;
+double rc22;
+double rc23;
+double rc24;
+double rc25;
+double rc26;
+double rc27;
+double rc28;
+double rc29;
+double rc30;
+double rc31;
+double rc32;
+double rc33;
+double rc34;
+double rc35;
+double rc36;
+double rc37;
+double rc38;
 #define OPS_3D
 #include  "ops_lib_cpp.h"
 
@@ -570,13 +594,13 @@ void ops_par_loop_opensbliblock00Kernel090(char const *, ops_block, int , int*,
 #include "opensbliblock00_kernels.h"
 int main(int argc, char **argv)
 {
-block0np0 = 17;
-block0np1 = 17;
-block0np2 = 17;
+block0np0 = 33;
+block0np1 = 33;
+block0np2 = 33;
 Delta0block0 = M_PI/(block0np0-1);
 Delta1block0 = M_PI/(block0np1-1);
 Delta2block0 = M_PI/(block0np2-1);
-niter = 4278;
+niter = 213;
 double rkold[] = {1.0/4.0, 3.0/20.0, 3.0/5.0};
 double rknew[] = {2.0/3.0, 5.0/12.0, 3.0/5.0};
 dt = 0.00467498906784;
@@ -591,17 +615,41 @@ inv_3 = pow(Delta0block0, -2);
 inv_4 = pow(Delta1block0, -2);
 inv_5 = pow(Delta2block0, -2);
 rc6 = 1.0/2.0;
-rc7 = 1.0/12.0;
-rc8 = 2.0/3.0;
-rc9 = 4.0/3.0;
-rc10 = 5.0/2.0;
-rcinv11 = 1.0/Re;
-rc12 = 1.0/3.0;
-rcinv13 = pow(Minf, -2);
-rcinv14 = 1.0/Pr;
+rcinv7 = 1.0/Re;
+rc8 = 4.0/3.0;
+rc9 = 1.0/3.0;
+rcinv10 = pow(Minf, -2);
+rcinv11 = 1.0/Pr;
+rc12 = 2.0/3.0;
+rc13 = 1.0/12.0;
+rc14 = 5.0/2.0;
+rc15 = 3.0/20.0;
+rc16 = 1.0/60.0;
+rc17 = 3.0/4.0;
+rc18 = 1.0/90.0;
+rc19 = 49.0/18.0;
+rc20 = 3.0/2.0;
+rc21 = 1.0/5.0;
+rc22 = 4.0/105.0;
+rc23 = 1.0/280.0;
+rc24 = 4.0/5.0;
+rc25 = 8.0/5.0;
+rc26 = 205.0/72.0;
+rc27 = 8.0/315.0;
+rc28 = 1.0/560.0;
+rc29 = 5.0/21.0;
+rc30 = 5.0/84.0;
+rc31 = 5.0/504.0;
+rc32 = 1.0/1260.0;
+rc33 = 5.0/6.0;
+rc34 = 5.0/3.0;
+rc35 = 5269.0/1800.0;
+rc36 = 5.0/126.0;
+rc37 = 1.0/3150.0;
+rc38 = 5.0/1008.0;
 
 ops_init(argc,argv,1);
-  ops_init_backend();ops_decl_const2( "block0np0",1, "int",&block0np0);ops_decl_const2( "block0np1",1, "int",&block0np1);ops_decl_const2( "block0np2",1, "int",&block0np2);ops_decl_const2( "Delta0block0",1, "double",&Delta0block0);ops_decl_const2( "Delta1block0",1, "double",&Delta1block0);ops_decl_const2( "Delta2block0",1, "double",&Delta2block0);ops_decl_const2( "niter",1, "int",&niter);ops_decl_const2( "dt",1, "double",&dt);ops_decl_const2( "Minf",1, "double",&Minf);ops_decl_const2( "gama",1, "double",&gama);ops_decl_const2( "Pr",1, "double",&Pr);ops_decl_const2( "Re",1, "double",&Re);ops_decl_const2( "inv_0",1, "double",&inv_0);ops_decl_const2( "inv_1",1, "double",&inv_1);ops_decl_const2( "inv_2",1, "double",&inv_2);ops_decl_const2( "inv_3",1, "double",&inv_3);ops_decl_const2( "inv_4",1, "double",&inv_4);ops_decl_const2( "inv_5",1, "double",&inv_5);ops_decl_const2( "rc6",1, "double",&rc6);ops_decl_const2( "rc7",1, "double",&rc7);ops_decl_const2( "rc8",1, "double",&rc8);ops_decl_const2( "rc9",1, "double",&rc9);ops_decl_const2( "rc10",1, "double",&rc10);ops_decl_const2( "rcinv11",1, "double",&rcinv11);ops_decl_const2( "rc12",1, "double",&rc12);ops_decl_const2( "rcinv13",1, "double",&rcinv13);ops_decl_const2( "rcinv14",1, "double",&rcinv14);
+  ops_init_backend();ops_decl_const2( "block0np0",1, "int",&block0np0);ops_decl_const2( "block0np1",1, "int",&block0np1);ops_decl_const2( "block0np2",1, "int",&block0np2);ops_decl_const2( "Delta0block0",1, "double",&Delta0block0);ops_decl_const2( "Delta1block0",1, "double",&Delta1block0);ops_decl_const2( "Delta2block0",1, "double",&Delta2block0);ops_decl_const2( "niter",1, "int",&niter);ops_decl_const2( "dt",1, "double",&dt);ops_decl_const2( "Minf",1, "double",&Minf);ops_decl_const2( "gama",1, "double",&gama);ops_decl_const2( "Pr",1, "double",&Pr);ops_decl_const2( "Re",1, "double",&Re);ops_decl_const2( "inv_0",1, "double",&inv_0);ops_decl_const2( "inv_1",1, "double",&inv_1);ops_decl_const2( "inv_2",1, "double",&inv_2);ops_decl_const2( "inv_3",1, "double",&inv_3);ops_decl_const2( "inv_4",1, "double",&inv_4);ops_decl_const2( "inv_5",1, "double",&inv_5);ops_decl_const2( "rc6",1, "double",&rc6);ops_decl_const2( "rcinv7",1, "double",&rcinv7);ops_decl_const2( "rc8",1, "double",&rc8);ops_decl_const2( "rc9",1, "double",&rc9);ops_decl_const2( "rcinv10",1, "double",&rcinv10);ops_decl_const2( "rcinv11",1, "double",&rcinv11);ops_decl_const2( "rc12",1, "double",&rc12);ops_decl_const2( "rc13",1, "double",&rc13);ops_decl_const2( "rc14",1, "double",&rc14);ops_decl_const2( "rc15",1, "double",&rc15);ops_decl_const2( "rc16",1, "double",&rc16);ops_decl_const2( "rc17",1, "double",&rc17);ops_decl_const2( "rc18",1, "double",&rc18);ops_decl_const2( "rc19",1, "double",&rc19);ops_decl_const2( "rc20",1, "double",&rc20);ops_decl_const2( "rc21",1, "double",&rc21);ops_decl_const2( "rc22",1, "double",&rc22);ops_decl_const2( "rc23",1, "double",&rc23);ops_decl_const2( "rc24",1, "double",&rc24);ops_decl_const2( "rc25",1, "double",&rc25);ops_decl_const2( "rc26",1, "double",&rc26);ops_decl_const2( "rc27",1, "double",&rc27);ops_decl_const2( "rc28",1, "double",&rc28);ops_decl_const2( "rc29",1, "double",&rc29);ops_decl_const2( "rc30",1, "double",&rc30);ops_decl_const2( "rc31",1, "double",&rc31);ops_decl_const2( "rc32",1, "double",&rc32);ops_decl_const2( "rc33",1, "double",&rc33);ops_decl_const2( "rc34",1, "double",&rc34);ops_decl_const2( "rc35",1, "double",&rc35);ops_decl_const2( "rc36",1, "double",&rc36);ops_decl_const2( "rc37",1, "double",&rc37);ops_decl_const2( "rc38",1, "double",&rc38);
 
 ops_block opensbliblock00 = ops_decl_block(3, "opensbliblock00");
 #include "defdec_data_set.h"
@@ -1199,7 +1247,7 @@ int iteration_range_87_block0[] = {-2, block0np0 + 2, -2, block0np1 + 2, block0n
              ops_arg_dat(rhou2_B0, 1, stencil_0_03, "double", OPS_RW));
 
 }
-if (fmod(iter + 1,53) == 0){
+if (fmod(iter + 1,213) == 0){
 char name[80];
 sprintf(name, "opensbli_output_%06d.h5", iter + 1);
 ops_fetch_block_hdf5_file(opensbliblock00, name);

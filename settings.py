@@ -8,7 +8,7 @@ def getSimArgs():
 
 class SimulationArguments:
     def __init__(self):
-        self.coreCount = 4
+        self.coreCount = 1
 
         self.dt = 0.005         # 0.005     0.0025
         self.niter = 4000       # 4000      8000 for 63 sym
@@ -19,13 +19,13 @@ class SimulationArguments:
         self.Minf = 0.1         # 0.1
         self.Pr = 0.71          # 0.71
 
-        self.order = 4          # 4
-        self.grid = 65          # Odd number (17, 33, 65)
+        self.order = 2          # 4
+        self.grid = 33          # Odd number (17, 33, 65)
 
-        self.CFL = 0.05         # Not the actual CFL number
+        self.CFL = 0.1         # Not the actual CFL number
 
         # Choose name for the files where data will be stored
-        fileEnding = "65Orders"
+        fileEnding = "33mpiTiled"
         self.timingLog = "Timings"+fileEnding+".csv"
         self.dataLog = "Data"+fileEnding+".csv"
 
@@ -41,18 +41,20 @@ class SimulationArguments:
         #     self.order += 2
 
         # Iterate through order, then number of threads that the simulation is running on
-        # if self.order == 8:
-        #     self.coreCount += 1
-        #     self.order = 2
-        # else:
-        #     self.order += 2
+        if self.order == 10:
+            self.coreCount += 1
+            self.order = 2
+        else:
+            self.order += 2
 
         # Iterate through orders
-        self.order -= 2
+        # self.order -= 2
+
+        # self.coreCount += 1
 
     def useCFL(self):
-        endTime = 20            # 20      Non-dimensionalised time when simulation ends
-        numberOfPoints = 80     # 80      Used for calculating save frequency
+        endTime = 1            # 20      Non-dimensionalised time when simulation ends
+        numberOfPoints = 1     # 80      Used for calculating save frequency
 
         # Using max v=2.1 determined empirically (is wrong)
         self.dt = self.CFL * (pi/(self.grid-1)) / 2.1

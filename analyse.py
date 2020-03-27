@@ -8,6 +8,7 @@ import csv
 from time import perf_counter
 import time
 import os
+from math import isnan
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 import sys
@@ -149,16 +150,17 @@ def on_created(event):
                 f.write(f"{kedr}")
                 f.write('\n')
 
-                x.append(t)
-                y.append(kedr)
+                if not isnan(kedr):
+                    x.append(t)
+                    y.append(kedr)
 
-                ax.set_xlim(right=x[-1])
-                ax.set_ylim(top=max(y))
+                    ax.set_xlim(right=x[-1])
+                    ax.set_ylim(top=max(y))
 
-                line1.set_xdata(x)
-                line1.set_ydata(y)
-                fig.canvas.draw()
-                fig.canvas.flush_events()
+                    line1.set_xdata(x)
+                    line1.set_ydata(y)
+                    fig.canvas.draw()
+                    fig.canvas.flush_events()
 
             print(f"Removing {currentFilePath}")
             os.system(f"rm -f {currentFilePath}")

@@ -31,14 +31,38 @@ extern double inv_3;
 extern double inv_4;
 extern double inv_5;
 extern double rc6;
-extern double rc7;
+extern double rcinv7;
 extern double rc8;
 extern double rc9;
-extern double rc10;
+extern double rcinv10;
 extern double rcinv11;
 extern double rc12;
-extern double rcinv13;
-extern double rcinv14;
+extern double rc13;
+extern double rc14;
+extern double rc15;
+extern double rc16;
+extern double rc17;
+extern double rc18;
+extern double rc19;
+extern double rc20;
+extern double rc21;
+extern double rc22;
+extern double rc23;
+extern double rc24;
+extern double rc25;
+extern double rc26;
+extern double rc27;
+extern double rc28;
+extern double rc29;
+extern double rc30;
+extern double rc31;
+extern double rc32;
+extern double rc33;
+extern double rc34;
+extern double rc35;
+extern double rc36;
+extern double rc37;
+extern double rc38;
 
 extern ops_opencl_core OPS_opencl_core;
 
@@ -48,8 +72,8 @@ void ops_init_backend() {}
 void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, char const * name ) {
   cl_int ret = 0;
   if (OPS_opencl_core.constant == NULL) {
-    OPS_opencl_core.constant = (cl_mem*) malloc((27)*sizeof(cl_mem));
-    for ( int i=0; i<27; i++ ){
+    OPS_opencl_core.constant = (cl_mem*) malloc((51)*sizeof(cl_mem));
+    for ( int i=0; i<51; i++ ){
       OPS_opencl_core.constant[i] = NULL;
     }
   }
@@ -262,7 +286,7 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rc7")) {
+  if (!strcmp(name,"rcinv7")) {
     if (OPS_opencl_core.constant[19] == NULL) {
       OPS_opencl_core.constant[19] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );
@@ -295,7 +319,7 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rc10")) {
+  if (!strcmp(name,"rcinv10")) {
     if (OPS_opencl_core.constant[22] == NULL) {
       OPS_opencl_core.constant[22] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );
@@ -328,7 +352,7 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rcinv13")) {
+  if (!strcmp(name,"rc13")) {
     if (OPS_opencl_core.constant[25] == NULL) {
       OPS_opencl_core.constant[25] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );
@@ -339,13 +363,277 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rcinv14")) {
+  if (!strcmp(name,"rc14")) {
     if (OPS_opencl_core.constant[26] == NULL) {
       OPS_opencl_core.constant[26] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );
     }
     //Write the new constant to the memory of the device
     clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[26], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc15")) {
+    if (OPS_opencl_core.constant[27] == NULL) {
+      OPS_opencl_core.constant[27] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[27], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc16")) {
+    if (OPS_opencl_core.constant[28] == NULL) {
+      OPS_opencl_core.constant[28] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[28], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc17")) {
+    if (OPS_opencl_core.constant[29] == NULL) {
+      OPS_opencl_core.constant[29] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[29], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc18")) {
+    if (OPS_opencl_core.constant[30] == NULL) {
+      OPS_opencl_core.constant[30] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[30], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc19")) {
+    if (OPS_opencl_core.constant[31] == NULL) {
+      OPS_opencl_core.constant[31] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[31], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc20")) {
+    if (OPS_opencl_core.constant[32] == NULL) {
+      OPS_opencl_core.constant[32] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[32], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc21")) {
+    if (OPS_opencl_core.constant[33] == NULL) {
+      OPS_opencl_core.constant[33] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[33], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc22")) {
+    if (OPS_opencl_core.constant[34] == NULL) {
+      OPS_opencl_core.constant[34] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[34], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc23")) {
+    if (OPS_opencl_core.constant[35] == NULL) {
+      OPS_opencl_core.constant[35] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[35], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc24")) {
+    if (OPS_opencl_core.constant[36] == NULL) {
+      OPS_opencl_core.constant[36] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[36], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc25")) {
+    if (OPS_opencl_core.constant[37] == NULL) {
+      OPS_opencl_core.constant[37] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[37], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc26")) {
+    if (OPS_opencl_core.constant[38] == NULL) {
+      OPS_opencl_core.constant[38] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[38], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc27")) {
+    if (OPS_opencl_core.constant[39] == NULL) {
+      OPS_opencl_core.constant[39] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[39], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc28")) {
+    if (OPS_opencl_core.constant[40] == NULL) {
+      OPS_opencl_core.constant[40] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[40], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc29")) {
+    if (OPS_opencl_core.constant[41] == NULL) {
+      OPS_opencl_core.constant[41] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[41], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc30")) {
+    if (OPS_opencl_core.constant[42] == NULL) {
+      OPS_opencl_core.constant[42] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[42], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc31")) {
+    if (OPS_opencl_core.constant[43] == NULL) {
+      OPS_opencl_core.constant[43] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[43], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc32")) {
+    if (OPS_opencl_core.constant[44] == NULL) {
+      OPS_opencl_core.constant[44] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[44], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc33")) {
+    if (OPS_opencl_core.constant[45] == NULL) {
+      OPS_opencl_core.constant[45] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[45], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc34")) {
+    if (OPS_opencl_core.constant[46] == NULL) {
+      OPS_opencl_core.constant[46] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[46], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc35")) {
+    if (OPS_opencl_core.constant[47] == NULL) {
+      OPS_opencl_core.constant[47] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[47], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc36")) {
+    if (OPS_opencl_core.constant[48] == NULL) {
+      OPS_opencl_core.constant[48] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[48], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc37")) {
+    if (OPS_opencl_core.constant[49] == NULL) {
+      OPS_opencl_core.constant[49] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[49], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
+    clSafeCall( clFlush(OPS_opencl_core.command_queue) );
+    clSafeCall( clFinish(OPS_opencl_core.command_queue) );
+  }
+  else
+  if (!strcmp(name,"rc38")) {
+    if (OPS_opencl_core.constant[50] == NULL) {
+      OPS_opencl_core.constant[50] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
+      clSafeCall( ret );
+    }
+    //Write the new constant to the memory of the device
+    clSafeCall( clEnqueueWriteBuffer(OPS_opencl_core.command_queue, OPS_opencl_core.constant[50], CL_TRUE, 0, dim*typeSize, (void*) dat, 0, NULL, NULL) );
     clSafeCall( clFlush(OPS_opencl_core.command_queue) );
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }

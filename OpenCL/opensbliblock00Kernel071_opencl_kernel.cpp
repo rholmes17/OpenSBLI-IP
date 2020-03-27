@@ -211,9 +211,9 @@ void ops_par_loop_opensbliblock00Kernel071(char const *name, ops_block block, in
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 0, sizeof(cl_mem), (void*) &arg0.data_d ));
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 1, sizeof(cl_mem), (void*) &arg1.data_d ));
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 2, sizeof(cl_double), (void*) &inv_3 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 3, sizeof(cl_double), (void*) &rc7 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 4, sizeof(cl_double), (void*) &rc9 ));
-    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 5, sizeof(cl_double), (void*) &rc10 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 3, sizeof(cl_double), (void*) &rc8 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 4, sizeof(cl_double), (void*) &rc13 ));
+    clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 5, sizeof(cl_double), (void*) &rc14 ));
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 6, sizeof(cl_int), (void*) &base0 ));
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 7, sizeof(cl_int), (void*) &base1 ));
     clSafeCall( clSetKernelArg(OPS_opencl_core.kernel[71], 8, sizeof(cl_int), (void*) &x_size ));

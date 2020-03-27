@@ -331,36 +331,36 @@ void ops_par_loop_opensbliblock00Kernel081_execute(ops_kernel_descriptor *desc) 
         ACC<double> Residual2_B0(xdim32_opensbliblock00Kernel081, ydim32_opensbliblock00Kernel081, Residual2_B0_p + n_x*1 + n_y * xdim32_opensbliblock00Kernel081*1 + n_z * xdim32_opensbliblock00Kernel081 * ydim32_opensbliblock00Kernel081*1);
         ACC<double> Residual1_B0(xdim33_opensbliblock00Kernel081, ydim33_opensbliblock00Kernel081, Residual1_B0_p + n_x*1 + n_y * xdim33_opensbliblock00Kernel081*1 + n_z * xdim33_opensbliblock00Kernel081 * ydim33_opensbliblock00Kernel081*1);
         
-    Residual1_B0(0,0,0) = 1.0*rcinv11*((rc9)*wk17_B0(0,0,0) + (rc12)*wk24_B0(0,0,0) +
-      wk25_B0(0,0,0) + (rc12)*wk3_B0(0,0,0) + wk8_B0(0,0,0)) +
+    Residual1_B0(0,0,0) = 1.0*rcinv7*((rc8)*wk17_B0(0,0,0) + (rc9)*wk24_B0(0,0,0) +
+      wk25_B0(0,0,0) + (rc9)*wk3_B0(0,0,0) + wk8_B0(0,0,0)) +
       Residual1_B0(0,0,0);
 
-    Residual2_B0(0,0,0) = 1.0*rcinv11*(wk0_B0(0,0,0) + (rc9)*wk20_B0(0,0,0) +
-      (rc12)*wk21_B0(0,0,0) + wk4_B0(0,0,0) + (rc12)*wk9_B0(0,0,0)) +
+    Residual2_B0(0,0,0) = 1.0*rcinv7*(wk0_B0(0,0,0) + (rc8)*wk20_B0(0,0,0) +
+      (rc9)*wk21_B0(0,0,0) + wk4_B0(0,0,0) + (rc9)*wk9_B0(0,0,0)) +
       Residual2_B0(0,0,0);
 
-    Residual3_B0(0,0,0) = 1.0*rcinv11*(wk11_B0(0,0,0) + (rc9)*wk14_B0(0,0,0) +
-      (rc12)*wk16_B0(0,0,0) + wk18_B0(0,0,0) + (rc12)*wk23_B0(0,0,0)) +
+    Residual3_B0(0,0,0) = 1.0*rcinv7*(wk11_B0(0,0,0) + (rc8)*wk14_B0(0,0,0) +
+      (rc9)*wk16_B0(0,0,0) + wk18_B0(0,0,0) + (rc9)*wk23_B0(0,0,0)) +
       Residual3_B0(0,0,0);
 
-    Residual4_B0(0,0,0) = 1.0*rcinv11*rcinv13*rcinv14*(wk12_B0(0,0,0) + wk19_B0(0,0,0)
-      + wk1_B0(0,0,0))/(gama - 1) + 1.0*rcinv11*(wk10_B0(0,0,0) +
-      wk7_B0(0,0,0))*wk10_B0(0,0,0) + 1.0*rcinv11*(wk10_B0(0,0,0) +
-      wk7_B0(0,0,0))*wk7_B0(0,0,0) + 1.0*rcinv11*(wk15_B0(0,0,0) +
-      wk22_B0(0,0,0))*wk15_B0(0,0,0) + 1.0*rcinv11*(wk15_B0(0,0,0) +
-      wk22_B0(0,0,0))*wk22_B0(0,0,0) + 1.0*rcinv11*(wk5_B0(0,0,0) +
-      wk6_B0(0,0,0))*wk5_B0(0,0,0) + 1.0*rcinv11*(wk5_B0(0,0,0) +
-      wk6_B0(0,0,0))*wk6_B0(0,0,0) + 1.0*rcinv11*(-rc8*wk13_B0(0,0,0) -
-      rc8*wk26_B0(0,0,0) + (rc9)*wk2_B0(0,0,0))*wk2_B0(0,0,0) +
-      1.0*rcinv11*(-rc8*wk13_B0(0,0,0) + (rc9)*wk26_B0(0,0,0) -
-      rc8*wk2_B0(0,0,0))*wk26_B0(0,0,0) + 1.0*rcinv11*((rc9)*wk13_B0(0,0,0) -
-      rc8*wk26_B0(0,0,0) - rc8*wk2_B0(0,0,0))*wk13_B0(0,0,0) +
-      1.0*rcinv11*(wk0_B0(0,0,0) + (rc9)*wk20_B0(0,0,0) + (rc12)*wk21_B0(0,0,0) +
-      wk4_B0(0,0,0) + (rc12)*wk9_B0(0,0,0))*u1_B0(0,0,0) +
-      1.0*rcinv11*(wk11_B0(0,0,0) + (rc9)*wk14_B0(0,0,0) + (rc12)*wk16_B0(0,0,0) +
-      wk18_B0(0,0,0) + (rc12)*wk23_B0(0,0,0))*u2_B0(0,0,0) +
-      1.0*rcinv11*((rc9)*wk17_B0(0,0,0) + (rc12)*wk24_B0(0,0,0) + wk25_B0(0,0,0) +
-      (rc12)*wk3_B0(0,0,0) + wk8_B0(0,0,0))*u0_B0(0,0,0) +
+    Residual4_B0(0,0,0) = 1.0*rcinv10*rcinv11*rcinv7*(wk12_B0(0,0,0) + wk19_B0(0,0,0) +
+      wk1_B0(0,0,0))/(gama - 1) + 1.0*rcinv7*(wk10_B0(0,0,0) +
+      wk7_B0(0,0,0))*wk10_B0(0,0,0) + 1.0*rcinv7*(wk10_B0(0,0,0) +
+      wk7_B0(0,0,0))*wk7_B0(0,0,0) + 1.0*rcinv7*(wk15_B0(0,0,0) +
+      wk22_B0(0,0,0))*wk15_B0(0,0,0) + 1.0*rcinv7*(wk15_B0(0,0,0) +
+      wk22_B0(0,0,0))*wk22_B0(0,0,0) + 1.0*rcinv7*(wk5_B0(0,0,0) +
+      wk6_B0(0,0,0))*wk5_B0(0,0,0) + 1.0*rcinv7*(wk5_B0(0,0,0) +
+      wk6_B0(0,0,0))*wk6_B0(0,0,0) + 1.0*rcinv7*(-rc12*wk13_B0(0,0,0) -
+      rc12*wk26_B0(0,0,0) + (rc8)*wk2_B0(0,0,0))*wk2_B0(0,0,0) +
+      1.0*rcinv7*(-rc12*wk13_B0(0,0,0) + (rc8)*wk26_B0(0,0,0) -
+      rc12*wk2_B0(0,0,0))*wk26_B0(0,0,0) + 1.0*rcinv7*((rc8)*wk13_B0(0,0,0) -
+      rc12*wk26_B0(0,0,0) - rc12*wk2_B0(0,0,0))*wk13_B0(0,0,0) +
+      1.0*rcinv7*(wk0_B0(0,0,0) + (rc8)*wk20_B0(0,0,0) + (rc9)*wk21_B0(0,0,0) +
+      wk4_B0(0,0,0) + (rc9)*wk9_B0(0,0,0))*u1_B0(0,0,0) +
+      1.0*rcinv7*(wk11_B0(0,0,0) + (rc8)*wk14_B0(0,0,0) + (rc9)*wk16_B0(0,0,0) +
+      wk18_B0(0,0,0) + (rc9)*wk23_B0(0,0,0))*u2_B0(0,0,0) +
+      1.0*rcinv7*((rc8)*wk17_B0(0,0,0) + (rc9)*wk24_B0(0,0,0) + wk25_B0(0,0,0) +
+      (rc9)*wk3_B0(0,0,0) + wk8_B0(0,0,0))*u0_B0(0,0,0) +
       Residual4_B0(0,0,0);
 
 
