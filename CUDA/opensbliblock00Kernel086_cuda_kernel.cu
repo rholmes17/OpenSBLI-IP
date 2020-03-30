@@ -33,6 +33,36 @@ void opensbliblock00Kernel086_gpu(ACC<double> &rhoE_B0,
 
    rhoE_B0(0,0,-2) = rhoE_B0(0,0,2);
 
+   rho_B0(0,0,-3) = rho_B0(0,0,3);
+
+   rhou0_B0(0,0,-3) = rhou0_B0(0,0,3);
+
+   rhou1_B0(0,0,-3) = rhou1_B0(0,0,3);
+
+   rhou2_B0(0,0,-3) = -1.0*rhou2_B0(0,0,3);
+
+   rhoE_B0(0,0,-3) = rhoE_B0(0,0,3);
+
+   rho_B0(0,0,-4) = rho_B0(0,0,4);
+
+   rhou0_B0(0,0,-4) = rhou0_B0(0,0,4);
+
+   rhou1_B0(0,0,-4) = rhou1_B0(0,0,4);
+
+   rhou2_B0(0,0,-4) = -1.0*rhou2_B0(0,0,4);
+
+   rhoE_B0(0,0,-4) = rhoE_B0(0,0,4);
+
+   rho_B0(0,0,-5) = rho_B0(0,0,5);
+
+   rhou0_B0(0,0,-5) = rhou0_B0(0,0,5);
+
+   rhou1_B0(0,0,-5) = rhou1_B0(0,0,5);
+
+   rhou2_B0(0,0,-5) = -1.0*rhou2_B0(0,0,5);
+
+   rhoE_B0(0,0,-5) = rhoE_B0(0,0,5);
+
 }
 
 

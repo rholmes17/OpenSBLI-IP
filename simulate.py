@@ -14,13 +14,13 @@ import tgv
 runId = 0
 arguments = settings.getSimArgs()
 
-for i in range(30):
+for i in range(4):
     arguments.useCFL()
 
     os.system("rm -f opensbli_output*")
 
     # Compile string to run solver using specified number of cores
-    mpirunString = "mpirun -np " + str(arguments.coreCount) + " opensbli_mpi_tiled"
+    mpirunString = "mpirun -np " + str(arguments.coreCount) + " opensbli_mpi"
 
     # Check if file for logging time exists
 
@@ -44,7 +44,7 @@ for i in range(30):
             order=arguments.order, saveFreq=arguments.saveFreq)
 
     os.system("python $OPS_TRANSLATOR opensbli.cpp")
-    os.system("make opensbli_mpi_tiled")
+    os.system("make opensbli_mpi")
 
     startTime = time.time()
     os.system(mpirunString)

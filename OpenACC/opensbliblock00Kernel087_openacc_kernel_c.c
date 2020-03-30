@@ -43,6 +43,36 @@ void opensbliblock00Kernel087(ptr_double rhoE_B0,
 
    OPS_ACC(rhoE_B0, 0,0,2) = OPS_ACC(rhoE_B0, 0,0,-2);
 
+   OPS_ACC(rho_B0, 0,0,3) = OPS_ACC(rho_B0, 0,0,-3);
+
+   OPS_ACC(rhou0_B0, 0,0,3) = OPS_ACC(rhou0_B0, 0,0,-3);
+
+   OPS_ACC(rhou1_B0, 0,0,3) = OPS_ACC(rhou1_B0, 0,0,-3);
+
+   OPS_ACC(rhou2_B0, 0,0,3) = -1.0*OPS_ACC(rhou2_B0, 0,0,-3);
+
+   OPS_ACC(rhoE_B0, 0,0,3) = OPS_ACC(rhoE_B0, 0,0,-3);
+
+   OPS_ACC(rho_B0, 0,0,4) = OPS_ACC(rho_B0, 0,0,-4);
+
+   OPS_ACC(rhou0_B0, 0,0,4) = OPS_ACC(rhou0_B0, 0,0,-4);
+
+   OPS_ACC(rhou1_B0, 0,0,4) = OPS_ACC(rhou1_B0, 0,0,-4);
+
+   OPS_ACC(rhou2_B0, 0,0,4) = -1.0*OPS_ACC(rhou2_B0, 0,0,-4);
+
+   OPS_ACC(rhoE_B0, 0,0,4) = OPS_ACC(rhoE_B0, 0,0,-4);
+
+   OPS_ACC(rho_B0, 0,0,5) = OPS_ACC(rho_B0, 0,0,-5);
+
+   OPS_ACC(rhou0_B0, 0,0,5) = OPS_ACC(rhou0_B0, 0,0,-5);
+
+   OPS_ACC(rhou1_B0, 0,0,5) = OPS_ACC(rhou1_B0, 0,0,-5);
+
+   OPS_ACC(rhou2_B0, 0,0,5) = -1.0*OPS_ACC(rhou2_B0, 0,0,-5);
+
+   OPS_ACC(rhoE_B0, 0,0,5) = OPS_ACC(rhoE_B0, 0,0,-5);
+
 }
 
 

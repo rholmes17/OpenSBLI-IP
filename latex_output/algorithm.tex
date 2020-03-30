@@ -8,7 +8,7 @@
 \begin{document}
 \maketitle
 \noindent Starting of the main program\\
-\\\noindent The kernel is Grid_based_initialisation0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}x_{0} = Delta0block0 \,.\, {idx}[{0}]\end{dmath}
+\\\noindent The kernel is Grid_based_initialisation0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}x_{0} = Delta0block0 \,.\, {idx}[{0}]\end{dmath}
 
 \begin{dmath}x_{1} = Delta1block0 \,.\, {idx}[{1}]\end{dmath}
 
@@ -37,7 +37,7 @@ gama}\end{dmath}
 
 \noindent Initialising timers\\
 \\\noindent Do loop iter,0, niter - 1\\
-\\\noindent The kernel is Symmetry boundary dir0 side0, block is 0\\\noindent The ranges are 0,1,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{-1,0}] = {\rho{_{B0}}}[{1,0}]\end{dmath}
+\\\noindent The kernel is Symmetry boundary dir0 side0, block is 0\\\noindent The ranges are 0,1,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{-1,0}] = {\rho{_{B0}}}[{1,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{-1,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{1,0}]\end{dmath}
 
@@ -57,7 +57,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{-2,0}] = {rhoE{_{B0}}}[{2,0}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir0 side1, block is 0\\\noindent The ranges are block0np0 - 1,block0np0,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{1,0}] = {\rho{_{B0}}}[{-1,0}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{-3,0}] = {\rho{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{-3,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{-3,0}] = {rhou_{1}{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{-3,0}] = {rhou_{2}{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{-3,0}] = {rhoE{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{-4,0}] = {\rho{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{-4,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{-4,0}] = {rhou_{1}{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{-4,0}] = {rhou_{2}{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{-4,0}] = {rhoE{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{-5,0}] = {\rho{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{-5,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{-5,0}] = {rhou_{1}{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{-5,0}] = {rhou_{2}{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{-5,0}] = {rhoE{_{B0}}}[{5,0}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir0 side1, block is 0\\\noindent The ranges are block0np0 - 1,block0np0,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{1,0}] = {\rho{_{B0}}}[{-1,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{1,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-1,0}]\end{dmath}
 
@@ -77,7 +107,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{2,0}] = {rhoE{_{B0}}}[{-2,0}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir1 side0, block is 0\\\noindent The ranges are -2,block0np0 + 2,0,1,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{0,-1}] = {\rho{_{B0}}}[{0,1}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{3,0}] = {\rho{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{3,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{3,0}] = {rhou_{1}{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{3,0}] = {rhou_{2}{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{3,0}] = {rhoE{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{4,0}] = {\rho{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{4,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{4,0}] = {rhou_{1}{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{4,0}] = {rhou_{2}{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{4,0}] = {rhoE{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{5,0}] = {\rho{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{5,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{5,0}] = {rhou_{1}{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{5,0}] = {rhou_{2}{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{5,0}] = {rhoE{_{B0}}}[{-5,0}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir1 side0, block is 0\\\noindent The ranges are -5,block0np0 + 5,0,1,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{0,-1}] = {\rho{_{B0}}}[{0,1}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,-1}] = {rhou_{0}{_{B0}}}[{0,1}]\end{dmath}
 
@@ -97,7 +157,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{0,-2}] = {rhoE{_{B0}}}[{0,2}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir1 side1, block is 0\\\noindent The ranges are -2,block0np0 + 2,block0np1 - 1,block0np1,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{0,1}] = {\rho{_{B0}}}[{0,-1}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{0,-3}] = {\rho{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,-3}] = {rhou_{0}{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,-3}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,-3}] = {rhou_{2}{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,-3}] = {rhoE{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,-4}] = {\rho{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,-4}] = {rhou_{0}{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,-4}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,-4}] = {rhou_{2}{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,-4}] = {rhoE{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,-5}] = {\rho{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,-5}] = {rhou_{0}{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,-5}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,-5}] = {rhou_{2}{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,-5}] = {rhoE{_{B0}}}[{0,5}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir1 side1, block is 0\\\noindent The ranges are -5,block0np0 + 5,block0np1 - 1,block0np1,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{0,1}] = {\rho{_{B0}}}[{0,-1}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,1}] = {rhou_{0}{_{B0}}}[{0,-1}]\end{dmath}
 
@@ -117,7 +207,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{0,2}] = {rhoE{_{B0}}}[{0,-2}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir2 side0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,0,1\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{0,3}] = {\rho{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,3}] = {rhou_{0}{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,3}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,3}] = {rhou_{2}{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,3}] = {rhoE{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,4}] = {\rho{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,4}] = {rhou_{0}{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,4}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,4}] = {rhou_{2}{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,4}] = {rhoE{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,5}] = {\rho{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,5}] = {rhou_{0}{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,5}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,5}] = {rhou_{2}{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,5}] = {rhoE{_{B0}}}[{0,-5}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir2 side0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,0,1\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
 
@@ -137,7 +257,67 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir2 side1, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,block0np2 - 1,block0np2\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir2 side1, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,block0np2 - 1,block0np2\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
 
@@ -168,16 +348,16 @@ gama}\end{dmath}
 \begin{dmath}{rhoE_{old}{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
 
 \noindent Do loop stage,0, 2\\
-\\\noindent The kernel is CRu2_B0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{u_{2}{_{B0}}}[{0,0}] = \frac{{rhou_{2}{_{B0}}}[{0,0}]}{{\rho{_{B0}}}[{0,0}]}\end{dmath}
+\\\noindent The kernel is CRu2_B0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{u_{2}{_{B0}}}[{0,0}] = \frac{{rhou_{2}{_{B0}}}[{0,0}]}{{\rho{_{B0}}}[{0,0}]}\end{dmath}
 
-\noindent The kernel is CRu0_B0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{u_{0}{_{B0}}}[{0,0}] = \frac{{rhou_{0}{_{B0}}}[{0,0}]}{{\rho{_{B0}}}[{0,0}]}\end{dmath}
+\noindent The kernel is CRu0_B0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{u_{0}{_{B0}}}[{0,0}] = \frac{{rhou_{0}{_{B0}}}[{0,0}]}{{\rho{_{B0}}}[{0,0}]}\end{dmath}
 
-\noindent The kernel is CRu1_B0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{u_{1}{_{B0}}}[{0,0}] = \frac{{rhou_{1}{_{B0}}}[{0,0}]}{{\rho{_{B0}}}[{0,0}]}\end{dmath}
+\noindent The kernel is CRu1_B0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{u_{1}{_{B0}}}[{0,0}] = \frac{{rhou_{1}{_{B0}}}[{0,0}]}{{\rho{_{B0}}}[{0,0}]}\end{dmath}
 
-\noindent The kernel is CRp_B0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{p{_{B0}}}[{0,0}] = \left(gama - 1\right) \,.\, \left({rhoE{_{B0}}}[{0,0}] - \frac{\left({u_{0}{_{B0}}}[{0,0}] \right)^{2}}{2} \,.\, {\rho{_{B0}}}[{0,0}] - \frac{\left({u_{1}{_{B0}}}[{0,0}] \right)^{2}}{2} \,.\, {\rho{_{B0}}}[{0,0}] - 
+\noindent The kernel is CRp_B0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{p{_{B0}}}[{0,0}] = \left(gama - 1\right) \,.\, \left({rhoE{_{B0}}}[{0,0}] - \frac{\left({u_{0}{_{B0}}}[{0,0}] \right)^{2}}{2} \,.\, {\rho{_{B0}}}[{0,0}] - \frac{\left({u_{1}{_{B0}}}[{0,0}] \right)^{2}}{2} \,.\, {\rho{_{B0}}}[{0,0}] - 
 \frac{\left({u_{2}{_{B0}}}[{0,0}] \right)^{2}}{2} \,.\, {\rho{_{B0}}}[{0,0}]\right)\end{dmath}
 
-\noindent The kernel is CRT_B0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{T{_{B0}}}[{0,0}] = \frac{\left(Minf \right)^{2}}{{\rho{_{B0}}}[{0,0}]} \,.\, gama \,.\, {p{_{B0}}}[{0,0}]\end{dmath}
+\noindent The kernel is CRT_B0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{T{_{B0}}}[{0,0}] = \frac{\left(Minf \right)^{2}}{{\rho{_{B0}}}[{0,0}]} \,.\, gama \,.\, {p{_{B0}}}[{0,0}]\end{dmath}
 
 \noindent The kernel is Zeroing residuals, block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{Residual_{0}{_{B0}}}[{0,0}] = 0\end{dmath}
 
@@ -189,7 +369,7 @@ gama}\end{dmath}
 
 \begin{dmath}{Residual_{4}{_{B0}}}[{0,0}] = 0\end{dmath}
 
-\noindent The kernel is Convective terms group 0, block is 0\\\noindent The ranges are -2,block0np0 + 2,0,block0np1,0,block0np2\\\begin{dmath}{wk_{39}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}] \,.\, {u_{0}{_{B0}}}[{0,0}]\end{dmath}
+\noindent The kernel is Convective terms group 0, block is 0\\\noindent The ranges are -5,block0np0 + 5,0,block0np1,0,block0np2\\\begin{dmath}{wk_{39}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}] \,.\, {u_{0}{_{B0}}}[{0,0}]\end{dmath}
 
 \begin{dmath}{wk_{40}{_{B0}}}[{0,0}] = {rhou_{2}{_{B0}}}[{0,0}] \,.\, {u_{0}{_{B0}}}[{0,0}]\end{dmath}
 
@@ -201,33 +381,57 @@ gama}\end{dmath}
 
 \begin{dmath}{wk_{44}{_{B0}}}[{0,0}] = {p{_{B0}}}[{0,0}] \,.\, {u_{0}{_{B0}}}[{0,0}]\end{dmath}
 
-\noindent The kernel is Convective CD rhou1_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{0}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{wk_{39}{_{B0}}}[{2,0}]}{12} + \frac{{wk_{39}{_{B0}}}[{-2,0}]}{12} - \frac{2 \,.\, {wk_{39}{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {wk_{39}{_{B0}}}[{1,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou1_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{0}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{5 \,.\, {wk_{39}{_{B0}}}[{2,0}]}{21} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, {wk_{39}{_{B0}}}[{4,0}]}{504} - \frac{{wk_{39}{_{B0}}}[{-5,0}]}{1260} + 
+\frac{{wk_{39}{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{-4,0}]}{504} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{-2,0}]}{21} - \frac{5 \,.\, {wk_{39}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{1,0}]}{6} - \frac{5 \,.\, 
+{wk_{39}{_{B0}}}[{-1,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou2_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{1}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{wk_{40}{_{B0}}}[{2,0}]}{12} + \frac{{wk_{40}{_{B0}}}[{-2,0}]}{12} - \frac{2 \,.\, {wk_{40}{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {wk_{40}{_{B0}}}[{1,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou2_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{1}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{5 \,.\, {wk_{40}{_{B0}}}[{-3,0}]}{84} - \frac{5 \,.\, {wk_{40}{_{B0}}}[{4,0}]}{504} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{-2,0}]}{21} - \frac{5 \,.\, {wk_{40}{_{B0}}}[{-1,0}]}{6} + 
+\frac{{wk_{40}{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{1,0}]}{6} - \frac{{wk_{40}{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, {wk_{40}{_{B0}}}[{2,0}]}{21} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{-4,0}]}{504} + \frac{5 \,.\, 
+{wk_{40}{_{B0}}}[{3,0}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Convective CD p_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{2}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{p{_{B0}}}[{2,0}]}{12} - \frac{2 \,.\, {p{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {p{_{B0}}}[{1,0}]}{3} + \frac{{p{_{B0}}}[{-2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD p_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{2}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{5 \,.\, {p{_{B0}}}[{2,0}]}{21} - \frac{{p{_{B0}}}[{-5,0}]}{1260} + \frac{5 \,.\, {p{_{B0}}}[{1,0}]}{6} + \frac{{p{_{B0}}}[{5,0}]}{1260} - \frac{5 \,.\, {p{_{B0}}}[{-1,0}]}{6} - \frac{5 
+\,.\, {p{_{B0}}}[{4,0}]}{504} - \frac{5 \,.\, {p{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {p{_{B0}}}[{-4,0}]}{504} + \frac{5 \,.\, {p{_{B0}}}[{3,0}]}{84} + \frac{5 \,.\, {p{_{B0}}}[{-2,0}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou2_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{3}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{rhou_{2}{_{B0}}}[{2,0}]}{12} - \frac{2 \,.\, {rhou_{2}{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {rhou_{2}{_{B0}}}[{1,0}]}{3} + \frac{{rhou_{2}{_{B0}}}[{-2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou2_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{3}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {rhou_{2}{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{-1,0}]}{6} + \frac{5 \,.\, {rhou_{2}{_{B0}}}[{1,0}]}{6} + \frac{5 
+\,.\, {rhou_{2}{_{B0}}}[{-2,0}]}{21} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {rhou_{2}{_{B0}}}[{-4,0}]}{504} + \frac{{rhou_{2}{_{B0}}}[{5,0}]}{1260} - \frac{{rhou_{2}{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, 
+{rhou_{2}{_{B0}}}[{4,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rho_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{4}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{{wk_{41}{_{B0}}}[{-2,0}]}{12} - \frac{{wk_{41}{_{B0}}}[{2,0}]}{12} + \frac{2 \,.\, {wk_{41}{_{B0}}}[{1,0}]}{3} - \frac{2 \,.\, {wk_{41}{_{B0}}}[{-1,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rho_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{4}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {wk_{41}{_{B0}}}[{3,0}]}{84} + \frac{{wk_{41}{_{B0}}}[{5,0}]}{1260} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{4,0}]}{504} - 
+\frac{{wk_{41}{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{-4,0}]}{504} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{1,0}]}{6} - \frac{5 \,.\, 
+{wk_{41}{_{B0}}}[{-1,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhoE_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{5}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{2 \,.\, {wk_{42}{_{B0}}}[{-1,0}]}{3} + \frac{{wk_{42}{_{B0}}}[{-2,0}]}{12} + \frac{2 \,.\, {wk_{42}{_{B0}}}[{1,0}]}{3} - \frac{{wk_{42}{_{B0}}}[{2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhoE_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{5}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{5 \,.\, {wk_{42}{_{B0}}}[{-1,0}]}{6} + \frac{5 \,.\, {wk_{42}{_{B0}}}[{-2,0}]}{21} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{4,0}]}{504} + \frac{{wk_{42}{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, 
+{wk_{42}{_{B0}}}[{-4,0}]}{504} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {wk_{42}{_{B0}}}[{3,0}]}{84} - \frac{{wk_{42}{_{B0}}}[{-5,0}]}{1260} + \frac{5 \,.\, 
+{wk_{42}{_{B0}}}[{1,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rho_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{6}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{2 \,.\, {\rho{_{B0}}}[{1,0}]}{3} - \frac{2 \,.\, {\rho{_{B0}}}[{-1,0}]}{3} + \frac{{\rho{_{B0}}}[{-2,0}]}{12} - \frac{{\rho{_{B0}}}[{2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rho_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{6}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {\rho{_{B0}}}[{1,0}]}{6} - \frac{5 \,.\, {\rho{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {\rho{_{B0}}}[{4,0}]}{504} + \frac{5 \,.\, {\rho{_{B0}}}[{3,0}]}{84} + 
+\frac{{\rho{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, {\rho{_{B0}}}[{-4,0}]}{504} - \frac{{\rho{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, {\rho{_{B0}}}[{-3,0}]}{84} - \frac{5 \,.\, {\rho{_{B0}}}[{-1,0}]}{6} + \frac{5 \,.\, 
+{\rho{_{B0}}}[{-2,0}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Convective CD u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{7}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{u_{0}{_{B0}}}[{2,0}]}{12} - \frac{2 \,.\, {u_{0}{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {u_{0}{_{B0}}}[{1,0}]}{3} + \frac{{u_{0}{_{B0}}}[{-2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{7}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {u_{0}{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, {u_{0}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{-1,0}]}{6} + \frac{5 \,.\, {u_{0}{_{B0}}}[{1,0}]}{6} + \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{-2,0}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {u_{0}{_{B0}}}[{-4,0}]}{504} + \frac{{u_{0}{_{B0}}}[{5,0}]}{1260} - \frac{{u_{0}{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{4,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou1_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{8}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{rhou_{1}{_{B0}}}[{2,0}]}{12} + \frac{{rhou_{1}{_{B0}}}[{-2,0}]}{12} - \frac{2 \,.\, {rhou_{1}{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {rhou_{1}{_{B0}}}[{1,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou1_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{8}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{{rhou_{1}{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{-4,0}]}{504} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{1,0}]}{6} - \frac{5 \,.\, 
+{rhou_{1}{_{B0}}}[{-1,0}]}{6} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{2,0}]}{21} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{4,0}]}{504} - 
+\frac{{rhou_{1}{_{B0}}}[{-5,0}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou0_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{9}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{2 \,.\, {wk_{43}{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {wk_{43}{_{B0}}}[{1,0}]}{3} - \frac{{wk_{43}{_{B0}}}[{2,0}]}{12} + \frac{{wk_{43}{_{B0}}}[{-2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou0_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{9}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{5 \,.\, {wk_{43}{_{B0}}}[{-1,0}]}{6} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{-2,0}]}{21} - \frac{{wk_{43}{_{B0}}}[{-5,0}]}{1260} + \frac{5 \,.\, 
+{wk_{43}{_{B0}}}[{-4,0}]}{504} + \frac{{wk_{43}{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{4,0}]}{504} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{2,0}]}{21} + \frac{5 \,.\, 
+{wk_{43}{_{B0}}}[{1,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{10}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{{rhou_{0}{_{B0}}}[{-2,0}]}{12} - \frac{{rhou_{0}{_{B0}}}[{2,0}]}{12} + \frac{2 \,.\, {rhou_{0}{_{B0}}}[{1,0}]}{3} - \frac{2 \,.\, {rhou_{0}{_{B0}}}[{-1,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{10}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{{rhou_{0}{_{B0}}}[{5,0}]}{1260} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{4,0}]}{504} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{-1,0}]}{6} + \frac{5 \,.\, 
+{rhou_{0}{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {rhou_{0}{_{B0}}}[{1,0}]}{6} - \frac{{rhou_{0}{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {rhou_{0}{_{B0}}}[{-4,0}]}{504} + \frac{5 \,.\, 
+{rhou_{0}{_{B0}}}[{3,0}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhoE_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{11}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{rhoE{_{B0}}}[{2,0}]}{12} + \frac{{rhoE{_{B0}}}[{-2,0}]}{12} - \frac{2 \,.\, {rhoE{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {rhoE{_{B0}}}[{1,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhoE_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{11}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {rhoE{_{B0}}}[{1,0}]}{6} - \frac{{rhoE{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, {rhoE{_{B0}}}[{2,0}]}{21} + \frac{5 \,.\, {rhoE{_{B0}}}[{-4,0}]}{504} + \frac{5 \,.\, 
+{rhoE{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {rhoE{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, {rhoE{_{B0}}}[{-3,0}]}{84} - \frac{5 \,.\, {rhoE{_{B0}}}[{4,0}]}{504} - \frac{5 \,.\, {rhoE{_{B0}}}[{-1,0}]}{6} + \frac{{rhoE{_{B0}}}[{5,0}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Convective CD p_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{12}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{2 \,.\, {wk_{44}{_{B0}}}[{1,0}]}{3} - \frac{2 \,.\, {wk_{44}{_{B0}}}[{-1,0}]}{3} + \frac{{wk_{44}{_{B0}}}[{-2,0}]}{12} - \frac{{wk_{44}{_{B0}}}[{2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD p_B0*u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{12}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {wk_{44}{_{B0}}}[{-4,0}]}{504} + \frac{5 \,.\, {wk_{44}{_{B0}}}[{1,0}]}{6} - \frac{{wk_{44}{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{-3,0}]}{84} - \frac{5 \,.\, 
+{wk_{44}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{4,0}]}{504} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{-1,0}]}{6} + \frac{5 \,.\, {wk_{44}{_{B0}}}[{3,0}]}{84} + \frac{{wk_{44}{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, 
+{wk_{44}{_{B0}}}[{-2,0}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Convective terms group 1, block is 0\\\noindent The ranges are 0,block0np0,-2,block0np1 + 2,0,block0np2\\\begin{dmath}{wk_{39}{_{B0}}}[{0,0}] = {p{_{B0}}}[{0,0}] \,.\, {u_{1}{_{B0}}}[{0,0}]\end{dmath}
+\noindent The kernel is Convective terms group 1, block is 0\\\noindent The ranges are 0,block0np0,-5,block0np1 + 5,0,block0np2\\\begin{dmath}{wk_{39}{_{B0}}}[{0,0}] = {p{_{B0}}}[{0,0}] \,.\, {u_{1}{_{B0}}}[{0,0}]\end{dmath}
 
 \begin{dmath}{wk_{40}{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}] \,.\, {u_{1}{_{B0}}}[{0,0}]\end{dmath}
 
@@ -239,33 +443,57 @@ gama}\end{dmath}
 
 \begin{dmath}{wk_{44}{_{B0}}}[{0,0}] = {rhou_{2}{_{B0}}}[{0,0}] \,.\, {u_{1}{_{B0}}}[{0,0}]\end{dmath}
 
-\noindent The kernel is Convective CD u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{13}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{2 \,.\, {u_{1}{_{B0}}}[{0,-1}]}{3} + \frac{{u_{1}{_{B0}}}[{0,-2}]}{12} + \frac{2 \,.\, {u_{1}{_{B0}}}[{0,1}]}{3} - \frac{{u_{1}{_{B0}}}[{0,2}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{13}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {u_{1}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,3}]}{84} - \frac{{u_{1}{_{B0}}}[{0,-5}]}{1260} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,-1}]}{6} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,4}]}{504} + \frac{{u_{1}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,-4}]}{504} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,-3}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhoE_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{14}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{rhoE{_{B0}}}[{0,2}]}{12} + \frac{{rhoE{_{B0}}}[{0,-2}]}{12} - \frac{2 \,.\, {rhoE{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {rhoE{_{B0}}}[{0,1}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhoE_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{14}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {rhoE{_{B0}}}[{0,1}]}{6} - \frac{{rhoE{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, {rhoE{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {rhoE{_{B0}}}[{0,-4}]}{504} + \frac{5 \,.\, 
+{rhoE{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {rhoE{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, {rhoE{_{B0}}}[{0,-3}]}{84} - \frac{5 \,.\, {rhoE{_{B0}}}[{0,4}]}{504} - \frac{5 \,.\, {rhoE{_{B0}}}[{0,-1}]}{6} + \frac{{rhoE{_{B0}}}[{0,5}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Convective CD p_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{15}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{wk_{39}{_{B0}}}[{0,2}]}{12} + \frac{{wk_{39}{_{B0}}}[{0,-2}]}{12} - \frac{2 \,.\, {wk_{39}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {wk_{39}{_{B0}}}[{0,1}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD p_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{15}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,4}]}{504} - \frac{{wk_{39}{_{B0}}}[{0,-5}]}{1260} + 
+\frac{{wk_{39}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,-4}]}{504} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,-2}]}{21} - \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, 
+{wk_{39}{_{B0}}}[{0,-1}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou2_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{16}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{rhou_{2}{_{B0}}}[{0,2}]}{12} - \frac{2 \,.\, {rhou_{2}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {rhou_{2}{_{B0}}}[{0,1}]}{3} + \frac{{rhou_{2}{_{B0}}}[{0,-2}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou2_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{16}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,-1}]}{6} + \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,1}]}{6} + \frac{5 
+\,.\, {rhou_{2}{_{B0}}}[{0,-2}]}{21} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,-4}]}{504} + \frac{{rhou_{2}{_{B0}}}[{0,5}]}{1260} - \frac{{rhou_{2}{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, 
+{rhou_{2}{_{B0}}}[{0,4}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rho_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{17}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{wk_{40}{_{B0}}}[{0,2}]}{12} + \frac{{wk_{40}{_{B0}}}[{0,-2}]}{12} - \frac{2 \,.\, {wk_{40}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {wk_{40}{_{B0}}}[{0,1}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rho_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{17}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,-3}]}{84} - \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,4}]}{504} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,-2}]}{21} - \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,-1}]}{6} + 
+\frac{{wk_{40}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,1}]}{6} - \frac{{wk_{40}{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,-4}]}{504} + \frac{5 \,.\, 
+{wk_{40}{_{B0}}}[{0,3}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou0_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{18}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{{wk_{41}{_{B0}}}[{0,-2}]}{12} - \frac{{wk_{41}{_{B0}}}[{0,2}]}{12} + \frac{2 \,.\, {wk_{41}{_{B0}}}[{0,1}]}{3} - \frac{2 \,.\, {wk_{41}{_{B0}}}[{0,-1}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou0_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{18}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {wk_{41}{_{B0}}}[{0,3}]}{84} + \frac{{wk_{41}{_{B0}}}[{0,5}]}{1260} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,4}]}{504} - 
+\frac{{wk_{41}{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,-4}]}{504} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, 
+{wk_{41}{_{B0}}}[{0,-1}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhoE_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{19}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{2 \,.\, {wk_{42}{_{B0}}}[{0,-1}]}{3} + \frac{{wk_{42}{_{B0}}}[{0,-2}]}{12} + \frac{2 \,.\, {wk_{42}{_{B0}}}[{0,1}]}{3} - \frac{{wk_{42}{_{B0}}}[{0,2}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhoE_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{19}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,-1}]}{6} + \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,-2}]}{21} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,4}]}{504} + \frac{{wk_{42}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, 
+{wk_{42}{_{B0}}}[{0,-4}]}{504} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,3}]}{84} - \frac{{wk_{42}{_{B0}}}[{0,-5}]}{1260} + \frac{5 \,.\, 
+{wk_{42}{_{B0}}}[{0,1}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD p_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{20}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{p{_{B0}}}[{0,2}]}{12} - \frac{2 \,.\, {p{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {p{_{B0}}}[{0,1}]}{3} + \frac{{p{_{B0}}}[{0,-2}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD p_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{20}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{5 \,.\, {p{_{B0}}}[{0,2}]}{21} - \frac{{p{_{B0}}}[{0,-5}]}{1260} + \frac{5 \,.\, {p{_{B0}}}[{0,1}]}{6} + \frac{{p{_{B0}}}[{0,5}]}{1260} - \frac{5 \,.\, {p{_{B0}}}[{0,-1}]}{6} - \frac{5 
+\,.\, {p{_{B0}}}[{0,4}]}{504} - \frac{5 \,.\, {p{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {p{_{B0}}}[{0,-4}]}{504} + \frac{5 \,.\, {p{_{B0}}}[{0,3}]}{84} + \frac{5 \,.\, {p{_{B0}}}[{0,-2}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{21}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{rhou_{1}{_{B0}}}[{0,2}]}{12} + \frac{{rhou_{1}{_{B0}}}[{0,-2}]}{12} - \frac{2 \,.\, {rhou_{1}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {rhou_{1}{_{B0}}}[{0,1}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{21}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{{rhou_{1}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,-4}]}{504} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, 
+{rhou_{1}{_{B0}}}[{0,-1}]}{6} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,4}]}{504} - 
+\frac{{rhou_{1}{_{B0}}}[{0,-5}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou0_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{22}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{{rhou_{0}{_{B0}}}[{0,-2}]}{12} - \frac{{rhou_{0}{_{B0}}}[{0,2}]}{12} + \frac{2 \,.\, {rhou_{0}{_{B0}}}[{0,1}]}{3} - \frac{2 \,.\, {rhou_{0}{_{B0}}}[{0,-1}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou0_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{22}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{{rhou_{0}{_{B0}}}[{0,5}]}{1260} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,4}]}{504} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,-1}]}{6} + \frac{5 \,.\, 
+{rhou_{0}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,1}]}{6} - \frac{{rhou_{0}{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,-4}]}{504} + \frac{5 \,.\, 
+{rhou_{0}{_{B0}}}[{0,3}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rho_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{23}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{2 \,.\, {\rho{_{B0}}}[{0,1}]}{3} - \frac{2 \,.\, {\rho{_{B0}}}[{0,-1}]}{3} + \frac{{\rho{_{B0}}}[{0,-2}]}{12} - \frac{{\rho{_{B0}}}[{0,2}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rho_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{23}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {\rho{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, {\rho{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {\rho{_{B0}}}[{0,4}]}{504} + \frac{5 \,.\, {\rho{_{B0}}}[{0,3}]}{84} + 
+\frac{{\rho{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {\rho{_{B0}}}[{0,-4}]}{504} - \frac{{\rho{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, {\rho{_{B0}}}[{0,-3}]}{84} - \frac{5 \,.\, {\rho{_{B0}}}[{0,-1}]}{6} + \frac{5 \,.\, 
+{\rho{_{B0}}}[{0,-2}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou1_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{24}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{2 \,.\, {wk_{43}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {wk_{43}{_{B0}}}[{0,1}]}{3} - \frac{{wk_{43}{_{B0}}}[{0,2}]}{12} + \frac{{wk_{43}{_{B0}}}[{0,-2}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou1_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{24}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,-1}]}{6} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,-2}]}{21} - \frac{{wk_{43}{_{B0}}}[{0,-5}]}{1260} + \frac{5 \,.\, 
+{wk_{43}{_{B0}}}[{0,-4}]}{504} + \frac{{wk_{43}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,4}]}{504} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, 
+{wk_{43}{_{B0}}}[{0,1}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou2_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{25}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{2 \,.\, {wk_{44}{_{B0}}}[{0,1}]}{3} - \frac{2 \,.\, {wk_{44}{_{B0}}}[{0,-1}]}{3} + \frac{{wk_{44}{_{B0}}}[{0,-2}]}{12} - \frac{{wk_{44}{_{B0}}}[{0,2}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou2_B0*u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{25}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {wk_{44}{_{B0}}}[{0,-4}]}{504} + \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,1}]}{6} - \frac{{wk_{44}{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,-3}]}{84} - \frac{5 \,.\, 
+{wk_{44}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,4}]}{504} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,-1}]}{6} + \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,3}]}{84} + \frac{{wk_{44}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, 
+{wk_{44}{_{B0}}}[{0,-2}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Convective terms group 2, block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-2,block0np2 + 2\\\begin{dmath}{wk_{39}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}] \,.\, {u_{2}{_{B0}}}[{0,0}]\end{dmath}
+\noindent The kernel is Convective terms group 2, block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-5,block0np2 + 5\\\begin{dmath}{wk_{39}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}] \,.\, {u_{2}{_{B0}}}[{0,0}]\end{dmath}
 
 \begin{dmath}{wk_{40}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}] \,.\, {u_{2}{_{B0}}}[{0,0}]\end{dmath}
 
@@ -277,31 +505,55 @@ gama}\end{dmath}
 
 \begin{dmath}{wk_{44}{_{B0}}}[{0,0}] = {rhou_{2}{_{B0}}}[{0,0}] \,.\, {u_{2}{_{B0}}}[{0,0}]\end{dmath}
 
-\noindent The kernel is Convective CD rhou1_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{26}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{3} - \frac{{rhou_{1}{_{B0}}}[{0,0}]}{12} + \frac{{rhou_{1}{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou1_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{26}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{84} + \frac{{rhou_{1}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, 
+{rhou_{1}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {rhou_{1}{_{B0}}}[{0,0}]}{21} - \frac{{rhou_{1}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, 
+{rhou_{1}{_{B0}}}[{0,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Convective CD p_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{27}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{{p{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {p{_{B0}}}[{0,0}]}{3} - \frac{2 \,.\, {p{_{B0}}}[{0,0}]}{3} + \frac{{p{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD p_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{27}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {p{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {p{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {p{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {p{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, {p{_{B0}}}[{0,0}]}{84} 
+- \frac{{p{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {p{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, {p{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {p{_{B0}}}[{0,0}]}{6} + \frac{{p{_{B0}}}[{0,0}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rho_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{28}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {\rho{_{B0}}}[{0,0}]}{3} + \frac{{\rho{_{B0}}}[{0,0}]}{12} - \frac{{\rho{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {\rho{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rho_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{28}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{5 \,.\, {\rho{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {\rho{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {\rho{_{B0}}}[{0,0}]}{504} + \frac{{\rho{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, 
+{\rho{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {\rho{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, {\rho{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {\rho{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {\rho{_{B0}}}[{0,0}]}{21} - \frac{{\rho{_{B0}}}[{0,0}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou0_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{29}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{3} - \frac{{wk_{39}{_{B0}}}[{0,0}]}{12} + \frac{{wk_{39}{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou0_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{29}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{21} - \frac{{wk_{39}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, 
+{wk_{39}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, {wk_{39}{_{B0}}}[{0,0}]}{21} + \frac{{wk_{39}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, 
+{wk_{39}{_{B0}}}[{0,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhoE_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{30}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {rhoE{_{B0}}}[{0,0}]}{3} - \frac{{rhoE{_{B0}}}[{0,0}]}{12} + \frac{{rhoE{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {rhoE{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhoE_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{30}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{{rhoE{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {rhoE{_{B0}}}[{0,0}]}{504} + \frac{{rhoE{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {rhoE{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, 
+{rhoE{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {rhoE{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {rhoE{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {rhoE{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {rhoE{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, 
+{rhoE{_{B0}}}[{0,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{31}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{{rhou_{2}{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{3} - \frac{2 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{3} + \frac{{rhou_{2}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{31}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{21} + \frac{{rhou_{2}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, 
+{rhou_{2}{_{B0}}}[{0,0}]}{504} - \frac{{rhou_{2}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {rhou_{2}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, 
+{rhou_{2}{_{B0}}}[{0,0}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou1_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{32}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{3} - \frac{{wk_{40}{_{B0}}}[{0,0}]}{12} + \frac{{wk_{40}{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou1_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{32}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{84} - \frac{5 
+\,.\, {wk_{40}{_{B0}}}[{0,0}]}{504} - \frac{{wk_{40}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{504} + \frac{{wk_{40}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {wk_{40}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, 
+{wk_{40}{_{B0}}}[{0,0}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rho_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{33}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{3} - \frac{{wk_{41}{_{B0}}}[{0,0}]}{12} + \frac{{wk_{41}{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rho_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{33}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{{wk_{41}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, 
+{wk_{41}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{21} + \frac{{wk_{41}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {wk_{41}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, 
+{wk_{41}{_{B0}}}[{0,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhoE_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{34}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{3} + \frac{{wk_{42}{_{B0}}}[{0,0}]}{12} - \frac{{wk_{42}{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhoE_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{34}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{21} + \frac{{wk_{42}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{21} - 
+\frac{{wk_{42}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {wk_{42}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, 
+{wk_{42}{_{B0}}}[{0,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou0_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{35}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{3} - \frac{{rhou_{0}{_{B0}}}[{0,0}]}{12} + \frac{{rhou_{0}{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou0_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{35}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{84} - \frac{{rhou_{0}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{21} + \frac{{rhou_{0}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, 
+{rhou_{0}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {rhou_{0}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, 
+{rhou_{0}{_{B0}}}[{0,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Convective CD p_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{36}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{3} - \frac{{wk_{43}{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{3} + \frac{{wk_{43}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD p_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{36}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{21} - \frac{5 
+\,.\, {wk_{43}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{21} + \frac{{wk_{43}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {wk_{43}{_{B0}}}[{0,0}]}{504} - 
+\frac{{wk_{43}{_{B0}}}[{0,0}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Convective CD rhou2_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{37}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{3} + \frac{{wk_{44}{_{B0}}}[{0,0}]}{12} - \frac{{wk_{44}{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Convective CD rhou2_B0*u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{37}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{84} + \frac{5 
+\,.\, {wk_{44}{_{B0}}}[{0,0}]}{6} + \frac{{wk_{44}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {wk_{44}{_{B0}}}[{0,0}]}{21} - \frac{{wk_{44}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, 
+{wk_{44}{_{B0}}}[{0,0}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Convective CD u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{38}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {u_{2}{_{B0}}}[{0,0}]}{3} + \frac{2 \,.\, {u_{2}{_{B0}}}[{0,0}]}{3} + \frac{{u_{2}{_{B0}}}[{0,0}]}{12} - \frac{{u_{2}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Convective CD u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{38}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{{u_{2}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{21} - \frac{{u_{2}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,0}]}{6}\right)\end{dmath}
 
 \noindent The kernel is Convective residual , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{Residual_{0}{_{B0}}}[{0,0}] = - \frac{{\rho{_{B0}}}[{0,0}]}{2} \,.\, \left({wk_{13}{_{B0}}}[{0,0}] + {wk_{38}{_{B0}}}[{0,0}] + {wk_{7}{_{B0}}}[{0,0}]\right) + {Residual_{0}{_{B0}}}[{0,0}] - \frac{{u_{0}{_{B0}}}[{0,0}] \,.\, 
 {wk_{6}{_{B0}}}[{0,0}]}{2} - \frac{{u_{1}{_{B0}}}[{0,0}] \,.\, {wk_{23}{_{B0}}}[{0,0}]}{2} - \frac{{u_{2}{_{B0}}}[{0,0}] \,.\, {wk_{28}{_{B0}}}[{0,0}]}{2} - \frac{{wk_{17}{_{B0}}}[{0,0}]}{2} - \frac{{wk_{33}{_{B0}}}[{0,0}]}{2} - 
@@ -323,70 +575,112 @@ gama}\end{dmath}
 {wk_{11}{_{B0}}}[{0,0}]}{2} - \frac{{u_{1}{_{B0}}}[{0,0}] \,.\, {wk_{14}{_{B0}}}[{0,0}]}{2} - \frac{{u_{2}{_{B0}}}[{0,0}] \,.\, {wk_{30}{_{B0}}}[{0,0}]}{2} - {wk_{12}{_{B0}}}[{0,0}] - {wk_{15}{_{B0}}}[{0,0}] - \frac{{wk_{19}{_{B0}}}[{0,0}]}{2} - 
 \frac{{wk_{34}{_{B0}}}[{0,0}]}{2} - {wk_{36}{_{B0}}}[{0,0}] - \frac{{wk_{5}{_{B0}}}[{0,0}]}{2}\end{dmath}
 
-\noindent The kernel is Viscous CD u1_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{0}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(- \frac{{u_{1}{_{B0}}}[{-2,0}]}{12} + \frac{4 \,.\, {u_{1}{_{B0}}}[{-1,0}]}{3} + \frac{4 \,.\, {u_{1}{_{B0}}}[{1,0}]}{3} - \frac{{u_{1}{_{B0}}}[{2,0}]}{12} - \frac{5 \,.\, 
-{u_{1}{_{B0}}}[{0,0}]}{2}\right)\end{dmath}
+\noindent The kernel is Viscous CD u1_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{0}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(\frac{5 \,.\, {u_{1}{_{B0}}}[{-1,0}]}{3} - \frac{5269 \,.\, {u_{1}{_{B0}}}[{0,0}]}{1800} + \frac{5 \,.\, {u_{1}{_{B0}}}[{3,0}]}{126} + \frac{{u_{1}{_{B0}}}[{-5,0}]}{3150} + \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{1,0}]}{3} - \frac{5 \,.\, {u_{1}{_{B0}}}[{-2,0}]}{21} - \frac{5 \,.\, {u_{1}{_{B0}}}[{4,0}]}{1008} + \frac{{u_{1}{_{B0}}}[{5,0}]}{3150} - \frac{5 \,.\, {u_{1}{_{B0}}}[{-4,0}]}{1008} - \frac{5 \,.\, {u_{1}{_{B0}}}[{2,0}]}{21} + \frac{5 
+\,.\, {u_{1}{_{B0}}}[{-3,0}]}{126}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD T_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{1}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(- \frac{{T{_{B0}}}[{0,-2}]}{12} + \frac{4 \,.\, {T{_{B0}}}[{0,1}]}{3} - \frac{{T{_{B0}}}[{0,2}]}{12} + \frac{4 \,.\, {T{_{B0}}}[{0,-1}]}{3} - \frac{5 \,.\, 
-{T{_{B0}}}[{0,0}]}{2}\right)\end{dmath}
+\noindent The kernel is Viscous CD T_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{1}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(- \frac{5 \,.\, {T{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {T{_{B0}}}[{0,-3}]}{126} + \frac{5 \,.\, {T{_{B0}}}[{0,-1}]}{3} + \frac{{T{_{B0}}}[{0,-5}]}{3150} - \frac{5 \,.\, 
+{T{_{B0}}}[{0,-4}]}{1008} + \frac{{T{_{B0}}}[{0,5}]}{3150} + \frac{5 \,.\, {T{_{B0}}}[{0,3}]}{126} - \frac{5 \,.\, {T{_{B0}}}[{0,4}]}{1008} - \frac{5 \,.\, {T{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {T{_{B0}}}[{0,1}]}{3} - \frac{5269 \,.\, 
+{T{_{B0}}}[{0,0}]}{1800}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-2,block0np2 + 2\\\begin{dmath}{wk_{2}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{2 \,.\, {u_{1}{_{B0}}}[{0,-1}]}{3} + \frac{{u_{1}{_{B0}}}[{0,-2}]}{12} + \frac{2 \,.\, {u_{1}{_{B0}}}[{0,1}]}{3} - \frac{{u_{1}{_{B0}}}[{0,2}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u1_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-5,block0np2 + 5\\\begin{dmath}{wk_{2}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {u_{1}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,3}]}{84} - \frac{{u_{1}{_{B0}}}[{0,-5}]}{1260} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,-1}]}{6} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,4}]}{504} + \frac{{u_{1}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,-4}]}{504} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,-3}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u1_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{4}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(- \frac{{u_{1}{_{B0}}}[{0,0}]}{12} + \frac{4 \,.\, {u_{1}{_{B0}}}[{0,0}]}{3} - \frac{{u_{1}{_{B0}}}[{0,0}]}{12} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{2} + \frac{4 \,.\, 
-{u_{1}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD u1_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{4}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(\frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{3} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{1008} - \frac{5269 \,.\, {u_{1}{_{B0}}}[{0,0}]}{1800} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{1008} + \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,0}]}{126} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{3} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{21} + \frac{{u_{1}{_{B0}}}[{0,0}]}{3150} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{21} + \frac{{u_{1}{_{B0}}}[{0,0}]}{3150} + \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,0}]}{126}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u0_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{5}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{{u_{0}{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {u_{0}{_{B0}}}[{0,0}]}{3} - \frac{2 \,.\, {u_{0}{_{B0}}}[{0,0}]}{3} + \frac{{u_{0}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u0_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{5}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{21} + \frac{{u_{0}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{0,0}]}{504} - \frac{{u_{0}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{0,0}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u2_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-2,block0np2 + 2\\\begin{dmath}{wk_{6}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{2 \,.\, {u_{2}{_{B0}}}[{1,0}]}{3} + \frac{{u_{2}{_{B0}}}[{-2,0}]}{12} - \frac{2 \,.\, {u_{2}{_{B0}}}[{-1,0}]}{3} - \frac{{u_{2}{_{B0}}}[{2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u2_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-5,block0np2 + 5\\\begin{dmath}{wk_{6}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {u_{2}{_{B0}}}[{1,0}]}{6} - \frac{{u_{2}{_{B0}}}[{-5,0}]}{1260} + \frac{5 \,.\, {u_{2}{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {u_{2}{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{-3,0}]}{84} - \frac{5 \,.\, {u_{2}{_{B0}}}[{2,0}]}{21} + \frac{5 \,.\, {u_{2}{_{B0}}}[{-4,0}]}{504} + \frac{{u_{2}{_{B0}}}[{5,0}]}{1260} - \frac{5 \,.\, {u_{2}{_{B0}}}[{4,0}]}{504} - \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{-1,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u1_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{7}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {u_{1}{_{B0}}}[{0,0}]}{3} + \frac{{u_{1}{_{B0}}}[{0,0}]}{12} - \frac{{u_{1}{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {u_{1}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD u1_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{7}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{6} + \frac{{u_{1}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{21} - \frac{{u_{1}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,0}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u0_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{8}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(- \frac{{u_{0}{_{B0}}}[{0,2}]}{12} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{2} - \frac{{u_{0}{_{B0}}}[{0,-2}]}{12} + \frac{4 \,.\, {u_{0}{_{B0}}}[{0,1}]}{3} + \frac{4 \,.\, 
-{u_{0}{_{B0}}}[{0,-1}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD u0_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{8}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(\frac{5 \,.\, {u_{0}{_{B0}}}[{0,3}]}{126} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,1}]}{3} + \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{0,-1}]}{3} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,-3}]}{126} - \frac{5269 \,.\, {u_{0}{_{B0}}}[{0,0}]}{1800} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,-4}]}{1008} + \frac{{u_{0}{_{B0}}}[{0,5}]}{3150} + \frac{{u_{0}{_{B0}}}[{0,-5}]}{3150} - \frac{5 
+\,.\, {u_{0}{_{B0}}}[{0,4}]}{1008}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u2_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-2,block0np2 + 2\\\begin{dmath}{wk_{10}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{2 \,.\, {u_{2}{_{B0}}}[{0,1}]}{3} + \frac{{u_{2}{_{B0}}}[{0,-2}]}{12} - \frac{2 \,.\, {u_{2}{_{B0}}}[{0,-1}]}{3} - \frac{{u_{2}{_{B0}}}[{0,2}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u2_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,-5,block0np2 + 5\\\begin{dmath}{wk_{10}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {u_{2}{_{B0}}}[{0,1}]}{6} - \frac{{u_{2}{_{B0}}}[{0,-5}]}{1260} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,-3}]}{84} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,-4}]}{504} + \frac{{u_{2}{_{B0}}}[{0,5}]}{1260} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,4}]}{504} - \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,-1}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u2_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{11}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(\frac{4 \,.\, {u_{2}{_{B0}}}[{0,1}]}{3} + \frac{4 \,.\, {u_{2}{_{B0}}}[{0,-1}]}{3} - \frac{{u_{2}{_{B0}}}[{0,-2}]}{12} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{2} - 
-\frac{{u_{2}{_{B0}}}[{0,2}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u2_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{11}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(\frac{5 \,.\, {u_{2}{_{B0}}}[{0,1}]}{3} + \frac{{u_{2}{_{B0}}}[{0,-5}]}{3150} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,-1}]}{3} - \frac{5269 \,.\, {u_{2}{_{B0}}}[{0,0}]}{1800} + \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,3}]}{126} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,-3}]}{126} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,-4}]}{1008} + \frac{{u_{2}{_{B0}}}[{0,5}]}{3150} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,4}]}{1008} - 
+\frac{5 \,.\, {u_{2}{_{B0}}}[{0,-2}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{wk_{13}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{{u_{0}{_{B0}}}[{2,0}]}{12} - \frac{2 \,.\, {u_{0}{_{B0}}}[{-1,0}]}{3} + \frac{2 \,.\, {u_{0}{_{B0}}}[{1,0}]}{3} + \frac{{u_{0}{_{B0}}}[{-2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u0_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{wk_{13}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {u_{0}{_{B0}}}[{3,0}]}{84} - \frac{5 \,.\, {u_{0}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{-1,0}]}{6} + \frac{5 \,.\, {u_{0}{_{B0}}}[{1,0}]}{6} + \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{-2,0}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{-3,0}]}{84} + \frac{5 \,.\, {u_{0}{_{B0}}}[{-4,0}]}{504} + \frac{{u_{0}{_{B0}}}[{5,0}]}{1260} - \frac{{u_{0}{_{B0}}}[{-5,0}]}{1260} - \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{4,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u2_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{14}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(- \frac{{u_{2}{_{B0}}}[{0,0}]}{12} + \frac{4 \,.\, {u_{2}{_{B0}}}[{0,0}]}{3} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{2} + \frac{4 \,.\, {u_{2}{_{B0}}}[{0,0}]}{3} - 
-\frac{{u_{2}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u2_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{14}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(\frac{{u_{2}{_{B0}}}[{0,0}]}{3150} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{21} - \frac{5269 \,.\, {u_{2}{_{B0}}}[{0,0}]}{1800} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{126} - \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,0}]}{1008} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{126} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{1008} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{3} + \frac{{u_{2}{_{B0}}}[{0,0}]}{3150} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{21} + \frac{5 
+\,.\, {u_{2}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u1_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,-2,block0np1 + 2,0,block0np2\\\begin{dmath}{wk_{15}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(- \frac{2 \,.\, {u_{1}{_{B0}}}[{-1,0}]}{3} + \frac{{u_{1}{_{B0}}}[{-2,0}]}{12} + \frac{2 \,.\, {u_{1}{_{B0}}}[{1,0}]}{3} - \frac{{u_{1}{_{B0}}}[{2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u1_B0 x0 , block is 0\\\noindent The ranges are 0,block0np0,-5,block0np1 + 5,0,block0np2\\\begin{dmath}{wk_{15}{_{B0}}}[{0,0}] = inv_0 \,.\, \left(\frac{5 \,.\, {u_{1}{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {u_{1}{_{B0}}}[{3,0}]}{84} - \frac{{u_{1}{_{B0}}}[{-5,0}]}{1260} + \frac{5 \,.\, {u_{1}{_{B0}}}[{1,0}]}{6} - \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{-1,0}]}{6} - \frac{5 \,.\, {u_{1}{_{B0}}}[{4,0}]}{504} + \frac{{u_{1}{_{B0}}}[{5,0}]}{1260} + \frac{5 \,.\, {u_{1}{_{B0}}}[{-4,0}]}{504} - \frac{5 \,.\, {u_{1}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{-3,0}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u0_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{17}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(- \frac{{u_{0}{_{B0}}}[{2,0}]}{12} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{2} - \frac{{u_{0}{_{B0}}}[{-2,0}]}{12} + \frac{4 \,.\, {u_{0}{_{B0}}}[{1,0}]}{3} + \frac{4 \,.\, 
-{u_{0}{_{B0}}}[{-1,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD u0_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{17}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(\frac{5 \,.\, {u_{0}{_{B0}}}[{3,0}]}{126} - \frac{5 \,.\, {u_{0}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {u_{0}{_{B0}}}[{1,0}]}{3} + \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{-1,0}]}{3} + \frac{5 \,.\, {u_{0}{_{B0}}}[{-3,0}]}{126} - \frac{5269 \,.\, {u_{0}{_{B0}}}[{0,0}]}{1800} - \frac{5 \,.\, {u_{0}{_{B0}}}[{-4,0}]}{1008} + \frac{{u_{0}{_{B0}}}[{5,0}]}{3150} + \frac{{u_{0}{_{B0}}}[{-5,0}]}{3150} - \frac{5 
+\,.\, {u_{0}{_{B0}}}[{4,0}]}{1008}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u2_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{18}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(\frac{4 \,.\, {u_{2}{_{B0}}}[{1,0}]}{3} + \frac{4 \,.\, {u_{2}{_{B0}}}[{-1,0}]}{3} - \frac{{u_{2}{_{B0}}}[{-2,0}]}{12} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{2} - 
-\frac{{u_{2}{_{B0}}}[{2,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u2_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{18}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(\frac{5 \,.\, {u_{2}{_{B0}}}[{1,0}]}{3} + \frac{{u_{2}{_{B0}}}[{-5,0}]}{3150} + \frac{5 \,.\, {u_{2}{_{B0}}}[{-1,0}]}{3} - \frac{5269 \,.\, {u_{2}{_{B0}}}[{0,0}]}{1800} + \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{3,0}]}{126} + \frac{5 \,.\, {u_{2}{_{B0}}}[{-3,0}]}{126} - \frac{5 \,.\, {u_{2}{_{B0}}}[{2,0}]}{21} - \frac{5 \,.\, {u_{2}{_{B0}}}[{-4,0}]}{1008} + \frac{{u_{2}{_{B0}}}[{5,0}]}{3150} - \frac{5 \,.\, {u_{2}{_{B0}}}[{4,0}]}{1008} - 
+\frac{5 \,.\, {u_{2}{_{B0}}}[{-2,0}]}{21}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD T_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{19}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(- \frac{{T{_{B0}}}[{-2,0}]}{12} + \frac{4 \,.\, {T{_{B0}}}[{1,0}]}{3} - \frac{{T{_{B0}}}[{2,0}]}{12} + \frac{4 \,.\, {T{_{B0}}}[{-1,0}]}{3} - \frac{5 \,.\, 
-{T{_{B0}}}[{0,0}]}{2}\right)\end{dmath}
+\noindent The kernel is Viscous CD T_B0 x0 x0 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{19}{_{B0}}}[{0,0}] = inv_3 \,.\, \left(- \frac{5 \,.\, {T{_{B0}}}[{-2,0}]}{21} + \frac{5 \,.\, {T{_{B0}}}[{-3,0}]}{126} + \frac{5 \,.\, {T{_{B0}}}[{-1,0}]}{3} + \frac{{T{_{B0}}}[{-5,0}]}{3150} - \frac{5 \,.\, 
+{T{_{B0}}}[{-4,0}]}{1008} + \frac{{T{_{B0}}}[{5,0}]}{3150} + \frac{5 \,.\, {T{_{B0}}}[{3,0}]}{126} - \frac{5 \,.\, {T{_{B0}}}[{4,0}]}{1008} - \frac{5 \,.\, {T{_{B0}}}[{2,0}]}{21} + \frac{5 \,.\, {T{_{B0}}}[{1,0}]}{3} - \frac{5269 \,.\, 
+{T{_{B0}}}[{0,0}]}{1800}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u1_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{20}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(- \frac{{u_{1}{_{B0}}}[{0,-2}]}{12} + \frac{4 \,.\, {u_{1}{_{B0}}}[{0,-1}]}{3} + \frac{4 \,.\, {u_{1}{_{B0}}}[{0,1}]}{3} - \frac{{u_{1}{_{B0}}}[{0,2}]}{12} - \frac{5 \,.\, 
-{u_{1}{_{B0}}}[{0,0}]}{2}\right)\end{dmath}
+\noindent The kernel is Viscous CD u1_B0 x1 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{20}{_{B0}}}[{0,0}] = inv_4 \,.\, \left(\frac{5 \,.\, {u_{1}{_{B0}}}[{0,-1}]}{3} - \frac{5269 \,.\, {u_{1}{_{B0}}}[{0,0}]}{1800} + \frac{5 \,.\, {u_{1}{_{B0}}}[{0,3}]}{126} + \frac{{u_{1}{_{B0}}}[{0,-5}]}{3150} + \frac{5 \,.\, 
+{u_{1}{_{B0}}}[{0,1}]}{3} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,-2}]}{21} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,4}]}{1008} + \frac{{u_{1}{_{B0}}}[{0,5}]}{3150} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,-4}]}{1008} - \frac{5 \,.\, {u_{1}{_{B0}}}[{0,2}]}{21} + \frac{5 
+\,.\, {u_{1}{_{B0}}}[{0,-3}]}{126}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u0_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{22}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{u_{0}{_{B0}}}[{0,2}]}{12} - \frac{2 \,.\, {u_{0}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {u_{0}{_{B0}}}[{0,1}]}{3} + \frac{{u_{0}{_{B0}}}[{0,-2}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u0_B0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{22}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{5 \,.\, {u_{0}{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,2}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,-1}]}{6} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,1}]}{6} + \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{0,-2}]}{21} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,-4}]}{504} + \frac{{u_{0}{_{B0}}}[{0,5}]}{1260} - \frac{{u_{0}{_{B0}}}[{0,-5}]}{1260} - \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{0,4}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD T_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{12}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(- \frac{{T{_{B0}}}[{0,0}]}{12} + \frac{4 \,.\, {T{_{B0}}}[{0,0}]}{3} - \frac{{T{_{B0}}}[{0,0}]}{12} + \frac{4 \,.\, {T{_{B0}}}[{0,0}]}{3} - \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{2}\right)\end{dmath}
+\noindent The kernel is Viscous CD T_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{12}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(- \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{1008} + \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{126} - \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, 
+{T{_{B0}}}[{0,0}]}{126} + \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{3} + \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{3} + \frac{{T{_{B0}}}[{0,0}]}{3150} - \frac{5 \,.\, {T{_{B0}}}[{0,0}]}{1008} + \frac{{T{_{B0}}}[{0,0}]}{3150} - \frac{5269 \,.\, 
+{T{_{B0}}}[{0,0}]}{1800}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u0_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{25}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(- \frac{{u_{0}{_{B0}}}[{0,0}]}{12} + \frac{4 \,.\, {u_{0}{_{B0}}}[{0,0}]}{3} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{2} - \frac{{u_{0}{_{B0}}}[{0,0}]}{12} + \frac{4 \,.\, 
-{u_{0}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD u0_B0 x2 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{25}{_{B0}}}[{0,0}] = inv_5 \,.\, \left(- \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{21} + \frac{{u_{0}{_{B0}}}[{0,0}]}{3150} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{1008} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{3} - \frac{5 \,.\, 
+{u_{0}{_{B0}}}[{0,0}]}{1008} + \frac{{u_{0}{_{B0}}}[{0,0}]}{3150} - \frac{5269 \,.\, {u_{0}{_{B0}}}[{0,0}]}{1800} - \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{126} + \frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{126} + 
+\frac{5 \,.\, {u_{0}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{26}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {u_{2}{_{B0}}}[{0,0}]}{3} + \frac{2 \,.\, {u_{2}{_{B0}}}[{0,0}]}{3} + \frac{{u_{2}{_{B0}}}[{0,0}]}{12} - \frac{{u_{2}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD u2_B0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{26}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{{u_{2}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{21} - \frac{{u_{2}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {u_{2}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, 
+{u_{2}{_{B0}}}[{0,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD CD u1_B0 x0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{3}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{wk_{15}{_{B0}}}[{0,2}]}{12} + \frac{{wk_{15}{_{B0}}}[{0,-2}]}{12} - \frac{2 \,.\, {wk_{15}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {wk_{15}{_{B0}}}[{0,1}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD CD u1_B0 x0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{3}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{5 \,.\, {wk_{15}{_{B0}}}[{0,-3}]}{84} - \frac{{wk_{15}{_{B0}}}[{0,-5}]}{1260} + \frac{5 \,.\, {wk_{15}{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, {wk_{15}{_{B0}}}[{0,-1}]}{6} - \frac{5 \,.\, 
+{wk_{15}{_{B0}}}[{0,4}]}{504} - \frac{5 \,.\, {wk_{15}{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {wk_{15}{_{B0}}}[{0,-2}]}{21} + \frac{{wk_{15}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {wk_{15}{_{B0}}}[{0,3}]}{84} + \frac{5 \,.\, 
+{wk_{15}{_{B0}}}[{0,-4}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD CD u0_B0 x0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{9}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(- \frac{{wk_{13}{_{B0}}}[{0,2}]}{12} + \frac{{wk_{13}{_{B0}}}[{0,-2}]}{12} - \frac{2 \,.\, {wk_{13}{_{B0}}}[{0,-1}]}{3} + \frac{2 \,.\, {wk_{13}{_{B0}}}[{0,1}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD CD u0_B0 x0 x1 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{9}{_{B0}}}[{0,0}] = inv_1 \,.\, \left(\frac{{wk_{13}{_{B0}}}[{0,5}]}{1260} + \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,-4}]}{504} - \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,-3}]}{84} + \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,1}]}{6} - \frac{5 \,.\, 
+{wk_{13}{_{B0}}}[{0,-1}]}{6} - \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,2}]}{21} + \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,-2}]}{21} + \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,3}]}{84} - \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,4}]}{504} - 
+\frac{{wk_{13}{_{B0}}}[{0,-5}]}{1260}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD CD u0_B0 x0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{16}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{3} - \frac{{wk_{13}{_{B0}}}[{0,0}]}{12} + \frac{{wk_{13}{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD CD u0_B0 x0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{16}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{504} - \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{84} + \frac{{wk_{13}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, 
+{wk_{13}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{6} + \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{21} - \frac{5 \,.\, {wk_{13}{_{B0}}}[{0,0}]}{21} - \frac{{wk_{13}{_{B0}}}[{0,0}]}{1260} + \frac{5 \,.\, 
+{wk_{13}{_{B0}}}[{0,0}]}{504}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD CD u2_B0 x0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{24}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{3} + \frac{{wk_{6}{_{B0}}}[{0,0}]}{12} - \frac{{wk_{6}{_{B0}}}[{0,0}]}{12} - \frac{2 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{3}\right)\end{dmath}
+\noindent The kernel is Viscous CD CD u2_B0 x0 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{24}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{84} + \frac{5 \,.\, 
+{wk_{6}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{21} - \frac{{wk_{6}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{6}{_{B0}}}[{0,0}]}{21} + \frac{{wk_{6}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, 
+{wk_{6}{_{B0}}}[{0,0}]}{6}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD CD u2_B0 x1 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{21}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(- \frac{2 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{3} - \frac{{wk_{10}{_{B0}}}[{0,0}]}{12} + \frac{2 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{3} + \frac{{wk_{10}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD CD u2_B0 x1 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{21}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{504} - \frac{{wk_{10}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, 
+{wk_{10}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{6} + \frac{{wk_{10}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {wk_{10}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, 
+{wk_{10}{_{B0}}}[{0,0}]}{84}\right)\end{dmath}
 
-\noindent The kernel is Viscous CD CD u1_B0 x1 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{23}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{2 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{3} - \frac{2 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{3} + \frac{{wk_{2}{_{B0}}}[{0,0}]}{12} - \frac{{wk_{2}{_{B0}}}[{0,0}]}{12}\right)\end{dmath}
+\noindent The kernel is Viscous CD CD u1_B0 x1 x2 , block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{wk_{23}{_{B0}}}[{0,0}] = inv_2 \,.\, \left(\frac{5 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{504} - \frac{{wk_{2}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{6} + 
+\frac{{wk_{2}{_{B0}}}[{0,0}]}{1260} - \frac{5 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{6} - \frac{5 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{84} - \frac{5 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{504} + \frac{5 \,.\, {wk_{2}{_{B0}}}[{0,0}]}{21} + \frac{5 \,.\, 
+{wk_{2}{_{B0}}}[{0,0}]}{84}\right)\end{dmath}
 
 \noindent The kernel is Viscous residual, block is 0\\\noindent The ranges are 0,block0np0,0,block0np1,0,block0np2\\\begin{dmath}{Residual_{1}{_{B0}}}[{0,0}] = {Residual_{1}{_{B0}}}[{0,0}] + \frac{1.0}{Re} \,.\, \left(\frac{4 \,.\, {wk_{17}{_{B0}}}[{0,0}]}{3} + \frac{{wk_{24}{_{B0}}}[{0,0}]}{3} + {wk_{25}{_{B0}}}[{0,0}] + \frac{{wk_{3}{_{B0}}}[{0,0}]}{3} + 
 {wk_{8}{_{B0}}}[{0,0}]\right)\end{dmath}
@@ -428,7 +722,7 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE_{old}{_{B0}}}[{0,0}] = dt \,.\, {rkold}[{stage}] \,.\, {Residual_{4}{_{B0}}}[{0,0}] + {rhoE_{old}{_{B0}}}[{0,0}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir0 side0, block is 0\\\noindent The ranges are 0,1,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{-1,0}] = {\rho{_{B0}}}[{1,0}]\end{dmath}
+\noindent The kernel is Symmetry boundary dir0 side0, block is 0\\\noindent The ranges are 0,1,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{-1,0}] = {\rho{_{B0}}}[{1,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{-1,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{1,0}]\end{dmath}
 
@@ -448,7 +742,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{-2,0}] = {rhoE{_{B0}}}[{2,0}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir0 side1, block is 0\\\noindent The ranges are block0np0 - 1,block0np0,-2,block0np1 + 2,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{1,0}] = {\rho{_{B0}}}[{-1,0}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{-3,0}] = {\rho{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{-3,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{-3,0}] = {rhou_{1}{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{-3,0}] = {rhou_{2}{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{-3,0}] = {rhoE{_{B0}}}[{3,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{-4,0}] = {\rho{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{-4,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{-4,0}] = {rhou_{1}{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{-4,0}] = {rhou_{2}{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{-4,0}] = {rhoE{_{B0}}}[{4,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{-5,0}] = {\rho{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{-5,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{-5,0}] = {rhou_{1}{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{-5,0}] = {rhou_{2}{_{B0}}}[{5,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{-5,0}] = {rhoE{_{B0}}}[{5,0}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir0 side1, block is 0\\\noindent The ranges are block0np0 - 1,block0np0,-5,block0np1 + 5,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{1,0}] = {\rho{_{B0}}}[{-1,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{1,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-1,0}]\end{dmath}
 
@@ -468,7 +792,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{2,0}] = {rhoE{_{B0}}}[{-2,0}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir1 side0, block is 0\\\noindent The ranges are -2,block0np0 + 2,0,1,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{0,-1}] = {\rho{_{B0}}}[{0,1}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{3,0}] = {\rho{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{3,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{3,0}] = {rhou_{1}{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{3,0}] = {rhou_{2}{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{3,0}] = {rhoE{_{B0}}}[{-3,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{4,0}] = {\rho{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{4,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{4,0}] = {rhou_{1}{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{4,0}] = {rhou_{2}{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{4,0}] = {rhoE{_{B0}}}[{-4,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{5,0}] = {\rho{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{5,0}] = - 1.0 \,.\, {rhou_{0}{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{5,0}] = {rhou_{1}{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{5,0}] = {rhou_{2}{_{B0}}}[{-5,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{5,0}] = {rhoE{_{B0}}}[{-5,0}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir1 side0, block is 0\\\noindent The ranges are -5,block0np0 + 5,0,1,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{0,-1}] = {\rho{_{B0}}}[{0,1}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,-1}] = {rhou_{0}{_{B0}}}[{0,1}]\end{dmath}
 
@@ -488,7 +842,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{0,-2}] = {rhoE{_{B0}}}[{0,2}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir1 side1, block is 0\\\noindent The ranges are -2,block0np0 + 2,block0np1 - 1,block0np1,-2,block0np2 + 2\\\begin{dmath}{\rho{_{B0}}}[{0,1}] = {\rho{_{B0}}}[{0,-1}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{0,-3}] = {\rho{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,-3}] = {rhou_{0}{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,-3}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,-3}] = {rhou_{2}{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,-3}] = {rhoE{_{B0}}}[{0,3}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,-4}] = {\rho{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,-4}] = {rhou_{0}{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,-4}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,-4}] = {rhou_{2}{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,-4}] = {rhoE{_{B0}}}[{0,4}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,-5}] = {\rho{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,-5}] = {rhou_{0}{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,-5}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,-5}] = {rhou_{2}{_{B0}}}[{0,5}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,-5}] = {rhoE{_{B0}}}[{0,5}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir1 side1, block is 0\\\noindent The ranges are -5,block0np0 + 5,block0np1 - 1,block0np1,-5,block0np2 + 5\\\begin{dmath}{\rho{_{B0}}}[{0,1}] = {\rho{_{B0}}}[{0,-1}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,1}] = {rhou_{0}{_{B0}}}[{0,-1}]\end{dmath}
 
@@ -508,7 +892,37 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{0,2}] = {rhoE{_{B0}}}[{0,-2}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir2 side0, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,0,1\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{0,3}] = {\rho{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,3}] = {rhou_{0}{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,3}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,3}] = {rhou_{2}{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,3}] = {rhoE{_{B0}}}[{0,-3}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,4}] = {\rho{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,4}] = {rhou_{0}{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,4}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,4}] = {rhou_{2}{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,4}] = {rhoE{_{B0}}}[{0,-4}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,5}] = {\rho{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,5}] = {rhou_{0}{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,5}] = - 1.0 \,.\, {rhou_{1}{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,5}] = {rhou_{2}{_{B0}}}[{0,-5}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,5}] = {rhoE{_{B0}}}[{0,-5}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir2 side0, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,0,1\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
 
@@ -528,7 +942,67 @@ gama}\end{dmath}
 
 \begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
 
-\noindent The kernel is Symmetry boundary dir2 side1, block is 0\\\noindent The ranges are -2,block0np0 + 2,-2,block0np1 + 2,block0np2 - 1,block0np2\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\noindent The kernel is Symmetry boundary dir2 side1, block is 0\\\noindent The ranges are -5,block0np0 + 5,-5,block0np1 + 5,block0np2 - 1,block0np2\\\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{1}{_{B0}}}[{0,0}] = {rhou_{1}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhou_{2}{_{B0}}}[{0,0}] = - 1.0 \,.\, {rhou_{2}{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{rhoE{_{B0}}}[{0,0}] = {rhoE{_{B0}}}[{0,0}]\end{dmath}
+
+\begin{dmath}{\rho{_{B0}}}[{0,0}] = {\rho{_{B0}}}[{0,0}]\end{dmath}
 
 \begin{dmath}{rhou_{0}{_{B0}}}[{0,0}] = {rhou_{0}{_{B0}}}[{0,0}]\end{dmath}
 

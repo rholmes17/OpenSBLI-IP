@@ -31,14 +31,14 @@ extern double inv_3;
 extern double inv_4;
 extern double inv_5;
 extern double rc6;
-extern double rcinv7;
+extern double rc7;
 extern double rc8;
 extern double rc9;
-extern double rcinv10;
+extern double rc10;
 extern double rcinv11;
 extern double rc12;
-extern double rc13;
-extern double rc14;
+extern double rcinv13;
+extern double rcinv14;
 extern double rc15;
 extern double rc16;
 extern double rc17;
@@ -286,7 +286,7 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rcinv7")) {
+  if (!strcmp(name,"rc7")) {
     if (OPS_opencl_core.constant[19] == NULL) {
       OPS_opencl_core.constant[19] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );
@@ -319,7 +319,7 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rcinv10")) {
+  if (!strcmp(name,"rc10")) {
     if (OPS_opencl_core.constant[22] == NULL) {
       OPS_opencl_core.constant[22] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );
@@ -352,7 +352,7 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rc13")) {
+  if (!strcmp(name,"rcinv13")) {
     if (OPS_opencl_core.constant[25] == NULL) {
       OPS_opencl_core.constant[25] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );
@@ -363,7 +363,7 @@ void ops_decl_const_char( int dim, char const * type, int typeSize, char * dat, 
     clSafeCall( clFinish(OPS_opencl_core.command_queue) );
   }
   else
-  if (!strcmp(name,"rc14")) {
+  if (!strcmp(name,"rcinv14")) {
     if (OPS_opencl_core.constant[26] == NULL) {
       OPS_opencl_core.constant[26] = clCreateBuffer(OPS_opencl_core.context, CL_MEM_READ_ONLY, dim*typeSize, NULL, &ret);
       clSafeCall( ret );

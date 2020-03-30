@@ -35,13 +35,14 @@ def CollectBenchmarkData():
 
 
 # Valid error types: Self, BenchEnst, BenchKEDR, BenchdKE_dt
-def ProcessRunData(errorType="Self", makePlot=False):
+def ProcessRunData(errorType="Self", makePlot=False, perfRun=False):
     time = []
     error = []
     order = []
     coreCount = []
-    wallTime = []
+    # wallTime = []
     runId = []
+    grid = []
 
     currentRun = RunData()
 
@@ -53,21 +54,23 @@ def ProcessRunData(errorType="Self", makePlot=False):
             currentRun.args.append(float(data_list[1][i]))
 
         # Iterate through all rows excluding headers
-        for i in range(1, len(data_list)):
+        for i in range(1, len(data_list)+1):
             rowSettings = []
-            for j in range(10):
-                rowSettings.append(float(data_list[i][j]))
+            if i < len(data_list):
+                for j in range(10):
+                    rowSettings.append(float(data_list[i][j]))
 
             # print(f"Current = {currentRun.args}")
             # print(f"New = {rowSettings}")
+
             # Check if still reading data from the same run
-            if currentRun.args == rowSettings and i != len(data_list)-1:
+            if currentRun.args == rowSettings and i != len(data_list):
                 # print(f"raw time ={data_list[i][10]}")
-                currentRun.t.append(float(data_list[i][10]))
-                currentRun.Enstrophy.append(float(data_list[i][11]))
-                currentRun.KE.append(float(data_list[i][12]))
-                currentRun.KEDR.append(float(data_list[i][13]))
-                # print(f"Stored tine = {currentRun.t}")
+                currentRun.t.append(float(data_list[i][-4]))
+                currentRun.Enstrophy.append(float(data_list[i][-3]))
+                currentRun.KE.append(float(data_list[i][-2]))
+                currentRun.KEDR.append(float(data_list[i][-1]))
+                # print(f"Stored time = {currentRun.t}")
             else:
                 print("new run")
 
@@ -80,11 +83,10 @@ def ProcessRunData(errorType="Self", makePlot=False):
                     for k, row in enumerate(reader):
                         # Ignore headers
                         if k > 0:
-                            wallTime.append(float(row[-1]))
-                            coreCount.append(int(row[-4]))
-                            runId.append(int(row[0]))
+                            # wallTime.append(float(row[-1]))
 
-                            # Decide whether current run coincides with row in the timing log
+                            # Decide whether current run coincides with 
+                            # row in the timing log
                             equal = True
                             for j in range(len(currentRun.args)):
                                 if float(row[j]) != currentRun.args[j]:
@@ -95,33 +97,44 @@ def ProcessRunData(errorType="Self", makePlot=False):
                             if equal:
                                 print(f"Wall Time is {row[-1]}s")
                                 currentRun.wallTime = float(row[-1])
+                                grid.append(int(row[9]))
+                                coreCount.append(int(row[-4]))
+                                runId.append(int(row[0]))
+
+                        # for j in range(len(row)):
+                        #     print(row[j], end=",")
+                        # print("\n")
+                
 
                 # Update list of wall times
                 time.append(currentRun.wallTime)
 
-                # Obtain data from benchmark run
-                enstBench, KEDRBench, dKE_dtBench = CollectBenchmarkData()
+                # If it was a run to measure performance then error is not needed
+                if not perfRun:
 
-                # Calculate derivative of kinetic energy
-                dKE_dt = plot.DerKE(currentRun.t, currentRun.KE)
+                    # Obtain data from benchmark run
+                    enstBench, KEDRBench, dKE_dtBench = CollectBenchmarkData()
 
-                # Calculate the error for the given metric (errorType)
-                errorsum, errorList = plot.calc_error(
-                    currentRun.t, 
-                    dKE_dt, 
-                    currentRun.KEDR, 
-                    currentRun.Enstrophy, 
-                    dKE_dtBench, 
-                    KEDRBench, 
-                    enstBench, 
-                    errorType)
+                    # Calculate derivative of kinetic energy
+                    dKE_dt = plot.DerKE(currentRun.t, currentRun.KE)
 
-                # Plot error
-                if errorType == "Self" and makePlot:
-                    plot.plot_error(currentRun.t, errorList,
-                                    currentRun.KEDR, dKE_dt)
+                    # Calculate the error for the given metric (errorType)
+                    errorsum, errorList = plot.calc_error(
+                        currentRun.t,
+                        dKE_dt,
+                        currentRun.KEDR,
+                        currentRun.Enstrophy,
+                        dKE_dtBench,
+                        KEDRBench,
+                        enstBench,
+                        errorType)
 
-                error.append(errorsum)
+                    # Plot error
+                    if errorType == "Self" and makePlot:
+                        plot.plot_error(currentRun.t, errorList,
+                                        currentRun.KEDR, dKE_dt)
+
+                    error.append(errorsum)
                 order.append(int(currentRun.args[8]))
                 print(f"Order = {currentRun.args[8]}")
 
@@ -134,18 +147,21 @@ def ProcessRunData(errorType="Self", makePlot=False):
                 # print(currentRun.t)
                 # print(f"Iterator = {i}")
                 # print(f"new time ={data_list[i][10]}")
-                currentRun.t.append(float(data_list[i][10]))
-                currentRun.Enstrophy.append(float(data_list[i][11]))
-                currentRun.KE.append(float(data_list[i][12]))
-                currentRun.KEDR.append(float(data_list[i][13]))
-    return time, error, order, coreCount, wallTime, runId
+                if i < len(data_list):
+                    currentRun.t.append(float(data_list[i][-4]))
+                    currentRun.Enstrophy.append(float(data_list[i][-3]))
+                    currentRun.KE.append(float(data_list[i][-2]))
+                    currentRun.KEDR.append(float(data_list[i][-1]))
+    return time, error, order, coreCount, runId, grid
 
 
-time, error, order, coreCount, wallTime, runId = ProcessRunData(makePlot=False)
-# time, error, order, coreCount, wallTime, runId = ProcessRunData("BenchEnst")
-# time, error, order, coreCount, wallTime, runId = ProcessRunData("BenchKEDR")
-# time, error, order, coreCount, wallTime, runId = ProcessRunData("BenchdKE_dt")
+# time, error, order, coreCount, runId, grid = ProcessRunData(
+#     makePlot=False, perfRun=False)
+time, error, order, coreCount, runId, grid = ProcessRunData("BenchEnst")
+# time, error, order, coreCount, runId, grid = ProcessRunData("BenchKEDR")
+# time, error, order, coreCount, runId, grid = ProcessRunData("BenchdKE_dt")
 
+# print(order)
 # plot.plot_cost(time, error, order)
-plot.plot_order(error, order)
-# plot.plot_cores(coreCount, wallTime, runId)
+plot.plot_order(error, order, ylog=True, xlog=True)
+# plot.plot_cores(coreCount, time, order)

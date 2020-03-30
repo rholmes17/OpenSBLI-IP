@@ -15,6 +15,7 @@ matplotlib.use('GTK3Agg')
 # matplotlib.use('Agg')
 
 plt.style.use('classic')
+plt.figure(num=None, figsize=(10, 6), dpi=80, facecolor='w', edgecolor='k')
 
 
 def read_file(fname):
@@ -31,11 +32,12 @@ def read_dataset(group, dataset, halo):
     # print(read_start)
     # print(read_end)
     if len(read_end) == 2:
-        read_data = group["%s" % (
-            dataset)].value[read_start[0]:read_end[0], read_start[1]:read_end[1]]
+        read_data = group["%s" % (dataset)].value[read_start[0]:read_end[0],
+                                                  read_start[1]:read_end[1]]
     elif len(read_end) == 3:
         read_data = group["%s" % (dataset)][read_start[0]:read_end[0],
-                                            read_start[1]:read_end[1], read_start[2]:read_end[2]]
+                                            read_start[1]:read_end[1],
+                                            read_start[2]:read_end[2]]
     else:
         raise NotImplementedError("")
     return read_data
@@ -49,9 +51,6 @@ def extract_flow_variables(group, halo):
     rhov = read_dataset(group, "rhou1_B0", halo)
     rhow = read_dataset(group, "rhou2_B0", halo)
     rhoE = read_dataset(group, "rhoE_B0", halo)
-
-    #print("rho =", rho[10, 10, 10], "rhou =", rhou[10][10][10], "rhov =", rhov[10][10][10], "rhow =", rhow[10][10][10], "rhoE =", rhoE[10][10][10])
-    # print(rho)
 
     # Velocity components u0, u1, u2
     u = rhou/rho
@@ -110,8 +109,8 @@ def calc_derivative(var, direction, d_size, order):
 
 
 def main_plot(file_no, simulation_times, path, Re, grid, order):
-    """ This is the main plot function to perform the coursework. The intermediate
-    solution files are read in and looped over below."""
+    """ This is the main plot function to perform the coursework. 
+    The intermediate solution files are read in and looped over below."""
 
     halo = int(order/2)
     print(f"Grid of size {grid} and running an order of {order}")
@@ -151,10 +150,12 @@ def main_plot(file_no, simulation_times, path, Re, grid, order):
     vorty = dudz - dwdx
     vortz = dvdx - dudy
 
-    # Calculate enstrophy from vorticiy, remove the halos, then average over simulation volume, then add to list for the run values
+    # Calculate enstrophy from vorticiy, remove the halos,
+    # then average over simulation volume, then add to list for the run values
     enst_with_halos = vortx**2+vorty**2+vortz**2
-    enst_without_halos = enst_with_halos[halo:-
-                                         halo-1, halo:-halo-1, halo:-halo-1]
+    enst_without_halos = enst_with_halos[halo:-halo-1,
+                                         halo:-halo-1,
+                                         halo:-halo-1]
     enst_mean = np.sum(enst_without_halos)/np.size(enst_without_halos)
 
     kedr = enst_mean / Re
@@ -189,7 +190,8 @@ def plot_file(path, dt, Re, grid, niter, saveFreq, order):
     return enstrophy, KE, KEDR, t
 
 
-def calc_error(t, dKE_dtSelf, KEDRSelf, enstSelf=0, dKE_dtBench=0, KEDRBench=0, enstBench=0, errorType="Self"):
+def calc_error(t, dKE_dtSelf, KEDRSelf, enstSelf=0,
+               dKE_dtBench=0, KEDRBench=0, enstBench=0, errorType="Self"):
 
     error = []
     if errorType == "Self":
@@ -265,7 +267,8 @@ def plot_animated_quiver(grid, velocity, z):
     plt.xlim(0, grid+1)
 
     anim = animation.FuncAnimation(fig, update_quiver, fargs=(q, velocity, z),
-                                   interval=50, frames=velocity.shape[0], blit=False)
+                                   interval=50, frames=velocity.shape[0],
+                                   blit=False)
     anim.save(f"{grid} sym anim quiver.mp4", bitrate=12000)
     plt.show()
 
@@ -283,16 +286,14 @@ def update_quiver(num, Q, velocity, z):
     return Q
 
 
-def plot_cost(t, error, order):
+def plot_cost(t, error, order, ylog=False, xlog=False):
     #colour = ["green", "blue", "red", "black", "yellow"]
-    colour = {}
-    # x=[]
-    # y=[]
+    colour = {2: "green", 4: "blue", 6: "red", 8: "black", 10: "yellow"}
+    # colour = {}
     for o in sorted(set(order)):
         x = []
         for i, time in enumerate(t):
             if order[i] == o:
-                # print(float(time))
                 x.append(float(time))
 
         y = []
@@ -302,95 +303,80 @@ def plot_cost(t, error, order):
         # plt.scatter(x, y, c=colour[int(int(o)/2)], label=f"{o}th order")
         # plt.scatter(x, y, c=np.random.rand(3,), label=f"{o}th order")
 
-        cmap = plt.get_cmap('gist_rainbow')
+        # cmap = plt.get_cmap('gist_rainbow')
 
-        if o not in colour:
-            colour[o] = cmap(np.random.rand(1))
+        # if o not in colour:
+        #     colour[o] = cmap(np.random.rand(1))
 
-        plt.scatter(x, y, c=colour[o], label=f"{o}th order")
+        if o % 10 == 2:
+            plt.scatter(x, y, c=colour[o], label=f"{o}nd order")
+        else:
+            plt.scatter(x, y, c=colour[o], label=f"{o}th order")
 
-    plt.ylim(bottom=0)
-    plt.xlim(left=0)
+    if ylog:
+        plt.yscale("log")
+    else:
+        plt.ylim(bottom=0)
 
-    plt.title(
-        "Integral of error against grid size for different orders of central difference scheme")
+    if xlog:
+        plt.xscale("log")
+    else:
+        plt.xlim(left=0)
+
+    plt.title("Error against grid size for different "
+              "orders of central difference scheme")
     plt.xlabel("Wall Time (s)")
-    plt.ylabel("Error integral")
+    plt.ylabel("Error")
     plt.legend()
-    # plt.xscale("log")
-    # plt.yscale("log")
+
     plt.grid(True)
 
     plt.show()
 
 
-def plot_order(error, order):
-    plt.plot(order, error)
+def plot_order(error, order, ylog=False, xlog=False):
+    plt.scatter(order, error)
 
-    plt.ylim(bottom=0)
+    if ylog:
+        plt.yscale("log")
+    else:
+        plt.ylim(bottom=0)
 
-    plt.title(
-        "Integral of error against different orders of central difference scheme")
+    if xlog:
+        plt.xscale("log")
+
+    # plt.title("Error against different orders of central difference scheme")
     plt.xlabel("Order")
-    plt.ylabel("Error integral")
-    # plt.xscale("log")
-    # plt.yscale("log")
+    plt.ylabel("Error")
+
     plt.grid(True)
 
     plt.show()
 
 
-def plot_cores(cores, t, runId):
+def plot_cores(cores, t, order):
 
-    # for num, i in enumerate(runId):
-    #     if i < 17:
-    #         plt.scatter(cores[num], t[num], c="red")
-    #     elif i < 32:
-    #         plt.scatter(cores[num], t[num], c="blue")
-    #     else:
-    #         plt.scatter(cores[num], t[num], c="green")
-    plt.scatter(cores, t)
+    colour = {2: "yellow", 4: "c", 6: "red", 8: "w", 10: "k"}
+    for o in sorted(set(order)):
+        y = []
+        for i, time in enumerate(t):
+            if order[i] == o:
+                y.append(float(time))
+
+        x = []
+        for i, core in enumerate(cores):
+            if order[i] == o:
+                x.append(float(core))
+
+        if o % 10 == 2:
+            plt.scatter(x, y, c=colour[o], label=f"{o}nd order")
+        else:
+            plt.scatter(x, y, c=colour[o], label=f"{o}th order")
+
+    # plt.scatter(cores, t)
     plt.ylim(bottom=0)
     plt.ylabel("Wall time (s)")
     plt.xlabel("Number of Threads")
-    plt.show()
-
-
-def plot_scatter():
-    # Plot integral of error
-    y = [0.1723, 0.1249, 0.07821, 0.01538]
-    x = [32, 48, 64, 128]
-    plt.scatter(x, y, c="red", label="4th order")
-
-    y = [0.1837, 0.1290, 0.08187]
-    x = [32, 48, 64]
-    plt.scatter(x, y, c="blue", label="6th order")
-
-    #plt.xlim(0, x[-1])
-    plt.ylim(bottom=0)
-    plt.xticks(x)
-    plt.title(
-        "Integral of error against grid size for 4th and 6th order central difference scheme")
-    plt.xlabel("Grid size")
-    plt.ylabel("Error integral")
-    plt.legend()
-    plt.show()
-
-    # Plot max error
-    y = [0.005048, 0.0040998, 0.00296, 0.0006431]
-    x = [32, 48, 64, 128]
-    plt.scatter(x, y, c="red", label="4th order")
-
-    y = [0.005525, 0.004582, 0.003160]
-    x = [32, 48, 64]
-    plt.scatter(x, y, c="blue", label="6th order")
-
-    #plt.xlim(0, x[-1])
-    plt.ylim(bottom=0)
-    plt.xticks(x)
-    plt.title(
-        "Max error against grid size for 4th and 6th order central difference scheme")
-    plt.xlabel("Grid size")
-    plt.ylabel("Max Error")
-    plt.legend()
+    plt.legend(loc=0)
+    plt.grid(True)
     plt.show()

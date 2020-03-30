@@ -81,38 +81,38 @@ ptr_double wk6_B0,
   ptr_double Residual4_B0,
   ptr_double Residual3_B0,
   ptr_double Residual2_B0,
-  ptr_double Residual1_B0, const double gama, const double rcinv7, const double rc8, const double rc9, const double rcinv10, const double rcinv11, const double rc12)
+  ptr_double Residual1_B0, const double gama, const double rc8, const double rc9, const double rcinv11, const double rc12, const double rcinv13, const double rcinv14)
 {
-    OPS_ACCS(Residual1_B0, 0,0,0) = 1.0*rcinv7*((rc8)*OPS_ACCS(wk17_B0, 0,0,0) + (rc9)*OPS_ACCS(wk24_B0, 0,0,0) +
-      OPS_ACCS(wk25_B0, 0,0,0) + (rc9)*OPS_ACCS(wk3_B0, 0,0,0) + OPS_ACCS(wk8_B0, 0,0,0)) +
+    OPS_ACCS(Residual1_B0, 0,0,0) = 1.0*rcinv11*((rc9)*OPS_ACCS(wk17_B0, 0,0,0) + (rc12)*OPS_ACCS(wk24_B0, 0,0,0) +
+      OPS_ACCS(wk25_B0, 0,0,0) + (rc12)*OPS_ACCS(wk3_B0, 0,0,0) + OPS_ACCS(wk8_B0, 0,0,0)) +
       OPS_ACCS(Residual1_B0, 0,0,0);
 
-    OPS_ACCS(Residual2_B0, 0,0,0) = 1.0*rcinv7*(OPS_ACCS(wk0_B0, 0,0,0) + (rc8)*OPS_ACCS(wk20_B0, 0,0,0) +
-      (rc9)*OPS_ACCS(wk21_B0, 0,0,0) + OPS_ACCS(wk4_B0, 0,0,0) + (rc9)*OPS_ACCS(wk9_B0, 0,0,0)) +
+    OPS_ACCS(Residual2_B0, 0,0,0) = 1.0*rcinv11*(OPS_ACCS(wk0_B0, 0,0,0) + (rc9)*OPS_ACCS(wk20_B0, 0,0,0) +
+      (rc12)*OPS_ACCS(wk21_B0, 0,0,0) + OPS_ACCS(wk4_B0, 0,0,0) + (rc12)*OPS_ACCS(wk9_B0, 0,0,0)) +
       OPS_ACCS(Residual2_B0, 0,0,0);
 
-    OPS_ACCS(Residual3_B0, 0,0,0) = 1.0*rcinv7*(OPS_ACCS(wk11_B0, 0,0,0) + (rc8)*OPS_ACCS(wk14_B0, 0,0,0) +
-      (rc9)*OPS_ACCS(wk16_B0, 0,0,0) + OPS_ACCS(wk18_B0, 0,0,0) + (rc9)*OPS_ACCS(wk23_B0, 0,0,0)) +
+    OPS_ACCS(Residual3_B0, 0,0,0) = 1.0*rcinv11*(OPS_ACCS(wk11_B0, 0,0,0) + (rc9)*OPS_ACCS(wk14_B0, 0,0,0) +
+      (rc12)*OPS_ACCS(wk16_B0, 0,0,0) + OPS_ACCS(wk18_B0, 0,0,0) + (rc12)*OPS_ACCS(wk23_B0, 0,0,0)) +
       OPS_ACCS(Residual3_B0, 0,0,0);
 
-    OPS_ACCS(Residual4_B0, 0,0,0) = 1.0*rcinv10*rcinv11*rcinv7*(OPS_ACCS(wk12_B0, 0,0,0) + OPS_ACCS(wk19_B0, 0,0,0) +
-      OPS_ACCS(wk1_B0, 0,0,0))/(gama - 1) + 1.0*rcinv7*(OPS_ACCS(wk10_B0, 0,0,0) +
-      OPS_ACCS(wk7_B0, 0,0,0))*OPS_ACCS(wk10_B0, 0,0,0) + 1.0*rcinv7*(OPS_ACCS(wk10_B0, 0,0,0) +
-      OPS_ACCS(wk7_B0, 0,0,0))*OPS_ACCS(wk7_B0, 0,0,0) + 1.0*rcinv7*(OPS_ACCS(wk15_B0, 0,0,0) +
-      OPS_ACCS(wk22_B0, 0,0,0))*OPS_ACCS(wk15_B0, 0,0,0) + 1.0*rcinv7*(OPS_ACCS(wk15_B0, 0,0,0) +
-      OPS_ACCS(wk22_B0, 0,0,0))*OPS_ACCS(wk22_B0, 0,0,0) + 1.0*rcinv7*(OPS_ACCS(wk5_B0, 0,0,0) +
-      OPS_ACCS(wk6_B0, 0,0,0))*OPS_ACCS(wk5_B0, 0,0,0) + 1.0*rcinv7*(OPS_ACCS(wk5_B0, 0,0,0) +
-      OPS_ACCS(wk6_B0, 0,0,0))*OPS_ACCS(wk6_B0, 0,0,0) + 1.0*rcinv7*(-rc12*OPS_ACCS(wk13_B0, 0,0,0) -
-      rc12*OPS_ACCS(wk26_B0, 0,0,0) + (rc8)*OPS_ACCS(wk2_B0, 0,0,0))*OPS_ACCS(wk2_B0, 0,0,0) +
-      1.0*rcinv7*(-rc12*OPS_ACCS(wk13_B0, 0,0,0) + (rc8)*OPS_ACCS(wk26_B0, 0,0,0) -
-      rc12*OPS_ACCS(wk2_B0, 0,0,0))*OPS_ACCS(wk26_B0, 0,0,0) + 1.0*rcinv7*((rc8)*OPS_ACCS(wk13_B0, 0,0,0) -
-      rc12*OPS_ACCS(wk26_B0, 0,0,0) - rc12*OPS_ACCS(wk2_B0, 0,0,0))*OPS_ACCS(wk13_B0, 0,0,0) +
-      1.0*rcinv7*(OPS_ACCS(wk0_B0, 0,0,0) + (rc8)*OPS_ACCS(wk20_B0, 0,0,0) + (rc9)*OPS_ACCS(wk21_B0, 0,0,0) +
-      OPS_ACCS(wk4_B0, 0,0,0) + (rc9)*OPS_ACCS(wk9_B0, 0,0,0))*OPS_ACCS(u1_B0, 0,0,0) +
-      1.0*rcinv7*(OPS_ACCS(wk11_B0, 0,0,0) + (rc8)*OPS_ACCS(wk14_B0, 0,0,0) + (rc9)*OPS_ACCS(wk16_B0, 0,0,0) +
-      OPS_ACCS(wk18_B0, 0,0,0) + (rc9)*OPS_ACCS(wk23_B0, 0,0,0))*OPS_ACCS(u2_B0, 0,0,0) +
-      1.0*rcinv7*((rc8)*OPS_ACCS(wk17_B0, 0,0,0) + (rc9)*OPS_ACCS(wk24_B0, 0,0,0) + OPS_ACCS(wk25_B0, 0,0,0) +
-      (rc9)*OPS_ACCS(wk3_B0, 0,0,0) + OPS_ACCS(wk8_B0, 0,0,0))*OPS_ACCS(u0_B0, 0,0,0) +
+    OPS_ACCS(Residual4_B0, 0,0,0) = 1.0*rcinv11*rcinv13*rcinv14*(OPS_ACCS(wk12_B0, 0,0,0) + OPS_ACCS(wk19_B0, 0,0,0)
+      + OPS_ACCS(wk1_B0, 0,0,0))/(gama - 1) + 1.0*rcinv11*(OPS_ACCS(wk10_B0, 0,0,0) +
+      OPS_ACCS(wk7_B0, 0,0,0))*OPS_ACCS(wk10_B0, 0,0,0) + 1.0*rcinv11*(OPS_ACCS(wk10_B0, 0,0,0) +
+      OPS_ACCS(wk7_B0, 0,0,0))*OPS_ACCS(wk7_B0, 0,0,0) + 1.0*rcinv11*(OPS_ACCS(wk15_B0, 0,0,0) +
+      OPS_ACCS(wk22_B0, 0,0,0))*OPS_ACCS(wk15_B0, 0,0,0) + 1.0*rcinv11*(OPS_ACCS(wk15_B0, 0,0,0) +
+      OPS_ACCS(wk22_B0, 0,0,0))*OPS_ACCS(wk22_B0, 0,0,0) + 1.0*rcinv11*(OPS_ACCS(wk5_B0, 0,0,0) +
+      OPS_ACCS(wk6_B0, 0,0,0))*OPS_ACCS(wk5_B0, 0,0,0) + 1.0*rcinv11*(OPS_ACCS(wk5_B0, 0,0,0) +
+      OPS_ACCS(wk6_B0, 0,0,0))*OPS_ACCS(wk6_B0, 0,0,0) + 1.0*rcinv11*(-rc8*OPS_ACCS(wk13_B0, 0,0,0) -
+      rc8*OPS_ACCS(wk26_B0, 0,0,0) + (rc9)*OPS_ACCS(wk2_B0, 0,0,0))*OPS_ACCS(wk2_B0, 0,0,0) +
+      1.0*rcinv11*(-rc8*OPS_ACCS(wk13_B0, 0,0,0) + (rc9)*OPS_ACCS(wk26_B0, 0,0,0) -
+      rc8*OPS_ACCS(wk2_B0, 0,0,0))*OPS_ACCS(wk26_B0, 0,0,0) + 1.0*rcinv11*((rc9)*OPS_ACCS(wk13_B0, 0,0,0) -
+      rc8*OPS_ACCS(wk26_B0, 0,0,0) - rc8*OPS_ACCS(wk2_B0, 0,0,0))*OPS_ACCS(wk13_B0, 0,0,0) +
+      1.0*rcinv11*(OPS_ACCS(wk0_B0, 0,0,0) + (rc9)*OPS_ACCS(wk20_B0, 0,0,0) + (rc12)*OPS_ACCS(wk21_B0, 0,0,0) +
+      OPS_ACCS(wk4_B0, 0,0,0) + (rc12)*OPS_ACCS(wk9_B0, 0,0,0))*OPS_ACCS(u1_B0, 0,0,0) +
+      1.0*rcinv11*(OPS_ACCS(wk11_B0, 0,0,0) + (rc9)*OPS_ACCS(wk14_B0, 0,0,0) + (rc12)*OPS_ACCS(wk16_B0, 0,0,0) +
+      OPS_ACCS(wk18_B0, 0,0,0) + (rc12)*OPS_ACCS(wk23_B0, 0,0,0))*OPS_ACCS(u2_B0, 0,0,0) +
+      1.0*rcinv11*((rc9)*OPS_ACCS(wk17_B0, 0,0,0) + (rc12)*OPS_ACCS(wk24_B0, 0,0,0) + OPS_ACCS(wk25_B0, 0,0,0) +
+      (rc12)*OPS_ACCS(wk3_B0, 0,0,0) + OPS_ACCS(wk8_B0, 0,0,0))*OPS_ACCS(u0_B0, 0,0,0) +
       OPS_ACCS(Residual4_B0, 0,0,0);
 
 }
@@ -154,12 +154,12 @@ __global double* restrict arg31,
 __global double* restrict arg32,
 __global double* restrict arg33,
 const double gama,
-const double rcinv7,
 const double rc8,
 const double rc9,
-const double rcinv10,
 const double rcinv11,
 const double rc12,
+const double rcinv13,
+const double rcinv14,
 const int base0,
 const int base1,
 const int base2,
@@ -273,12 +273,12 @@ const int size2 ){
                                   ptr32,
                                   ptr33,
                                   gama,
-                                  rcinv7,
                                   rc8,
                                   rc9,
-                                  rcinv10,
                                   rcinv11,
-                                  rc12);
+                                  rc12,
+                                  rcinv13,
+                                  rcinv14);
   }
 
 }
