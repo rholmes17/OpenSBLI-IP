@@ -1,5 +1,6 @@
 # Python 3
-# Analyse data found in DataDump directory
+# Monitor created files and process them when they correspond
+# with OpenBLI outputs, adding data to a csv
 
 import settings
 import plot
@@ -23,14 +24,16 @@ def FormatTime(seconds):
     hours = seconds // 3600
     seconds %= 3600
     minutes = seconds // 60
-    seconds %=60
+    seconds %= 60
     return days, hours, minutes, seconds
+
 
 # Create file to store data if it does not already exist
 if (not os.path.exists(arguments.dataLog)):
     with open(arguments.dataLog, 'w') as f:
-        fieldnames = ['id', 'dt', 'niter', 'Re', 'gama', 'Minf', 'Pr', 'Core Count', 'order',
-                      'grid', 'time', "Enstrophy", "Kinetic Energy", "Kinetic Energy Dissipation Rate"]
+        fieldnames = ['id', 'dt', 'niter', 'Re', 'gama', 'Minf', 'Pr',
+                      'Core Count', 'order', 'grid', 'time', "Enstrophy",
+                      "Kinetic Energy", "Kinetic Energy Dissipation Rate"]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
 
@@ -38,7 +41,7 @@ if (not os.path.exists(arguments.dataLog)):
 
 print("Now waiting to analyse data")
 
-# Set up ID of current run using the latest run from the timing log file if it exists
+# Use ID of current run using the latest from the timing log file if it exists
 runId = 0
 if (os.path.exists(arguments.timingLog)):
     with open(arguments.timingLog, 'r') as f:
@@ -55,7 +58,7 @@ y = []
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-line1, = ax.plot(x, y, 'r-')  # Returns a tuple of line objects, thus the comma
+line1, = ax.plot(x, y, 'r-')
 
 ax.set_xlim(left=0)
 ax.set_ylim(bottom=0)
@@ -103,18 +106,21 @@ def on_created(event):
             formattedTimeSinceStart = FormatTime(timeSinceStart)
             formattedTimeSinceRun = FormatTime(timeSinceRun)
 
-            print(f"{(timeSinceStart):.2f}s since the start of the batch,", end=" ")
+            print(f"{(timeSinceStart): .2f}s
+                  since the start of the batch, ", end=" ")
             print(f"{(timeSinceRun):.2f}s since the start of the current run")
 
-            print(f"{int(formattedTimeSinceStart[0])} days,",end=" ")
-            print(f"{int(formattedTimeSinceStart[1])} hours,",end=" ")
+            print(f"{int(formattedTimeSinceStart[0])} days,", end=" ")
+            print(f"{int(formattedTimeSinceStart[1])} hours,", end=" ")
             print(f"{int(formattedTimeSinceStart[2])} minutes,", end=" ")
-            print(f"and {formattedTimeSinceStart[3]:.2f} seconds since the batch was started.")
+            print(f"and {formattedTimeSinceStart[3]: .2f} seconds
+                  since the batch was started.")
 
-            print(f"{int(formattedTimeSinceRun[0])} days,",end=" ")
-            print(f"{int(formattedTimeSinceRun[1])} hours,",end=" ")
+            print(f"{int(formattedTimeSinceRun[0])} days,", end=" ")
+            print(f"{int(formattedTimeSinceRun[1])} hours,", end=" ")
             print(f"{int(formattedTimeSinceRun[2])} minutes,", end=" ")
-            print(f"and {formattedTimeSinceRun[3]:.2f} seconds since this run was started.")
+            print(f"and {formattedTimeSinceRun[3]: .2f} seconds
+                  since this run was started.")
 
             arguments.useCFL()      # Change values to comply with CFL condition
             enstrophy, ke, kedr, t = plot.plot_file(

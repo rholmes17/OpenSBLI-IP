@@ -1,4 +1,6 @@
-# plotAll.py
+# Python3
+# Store functions used by processing.py and 
+# postproc.py to interpret and plot data
 
 from scipy import integrate
 from math import factorial, fsum
@@ -12,7 +14,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
 matplotlib.use('GTK3Agg')
-# matplotlib.use('Agg')
 
 plt.style.use('classic')
 plt.figure(num=None, figsize=(10, 6), dpi=80, facecolor='w', edgecolor='k')

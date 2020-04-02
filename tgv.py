@@ -1,8 +1,6 @@
 # Python 2.7
+# Configure and run OpenSBLI simulation
 
-#!/usr/bin/env python
-
-# Import all the functions from opensbli
 from opensbli import *
 import copy
 from opensbli.utilities.helperfunctions import substitute_simulation_parameters

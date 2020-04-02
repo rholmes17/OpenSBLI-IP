@@ -1,4 +1,5 @@
-# Store settings used in simulations
+# Store settings used in simulations and how they will change on each iteration
+
 from numpy import pi
 
 
@@ -23,6 +24,7 @@ class SimulationArguments:
         self.grid = 33          # Odd number (17, 33, 65)
 
         self.CFL = 0.1          # Not the actual CFL number
+        self.runCount = 4       # Number of runs in batch
 
         # Choose name for the files where data will be stored
         fileEnding = "33Orders"
@@ -50,11 +52,9 @@ class SimulationArguments:
         # Iterate through orders
         # self.order -= 2
 
-        # self.coreCount += 1
-
     def useCFL(self):
-        endTime = 20        # 20    Non-dimensionalised time when simulation ends
-        numberOfPoints = 80 # 80    Used for calculating save frequency
+        endTime = 20        # 20  Non-dimensionalised time when simulation ends
+        numberOfPoints = 80  # 80  Used for calculating save frequency
 
         # Using max v=2.1 determined empirically (is wrong)
         self.dt = self.CFL * (pi/(self.grid-1)) / 2.1

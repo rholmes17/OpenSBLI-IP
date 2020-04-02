@@ -1,5 +1,6 @@
 # Python 2.7
-# Run simulation and output data to DataDump directory
+# Run simulation and output data to current directory
+# Record wall time for each run in a csv file
 
 # Libraries
 import os
@@ -14,7 +15,7 @@ import tgv
 runId = 0
 arguments = settings.getSimArgs()
 
-for i in range(4):
+for i in range(arguments.runCount):
     arguments.useCFL()
 
     os.system("rm -f opensbli_output*")
