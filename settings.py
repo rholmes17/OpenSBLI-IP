@@ -52,11 +52,12 @@ class SimulationArguments:
         # Iterate through orders
         # self.order -= 2
 
+    # Use CFL condition to calculate time step and number of iterations
     def useCFL(self):
         endTime = 20        # 20  Non-dimensionalised time when simulation ends
         numberOfPoints = 80  # 80  Used for calculating save frequency
 
-        # Using max v=2.1 determined empirically (is wrong)
+        # Using max v=2.1 determined empirically (is not the right velocity)
         self.dt = self.CFL * (pi/(self.grid-1)) / 2.1
         self.niter = int(endTime/self.dt)
 

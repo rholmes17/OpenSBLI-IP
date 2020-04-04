@@ -122,7 +122,9 @@ def on_created(event):
             print(f"and {formattedTimeSinceRun[3]: .2f} seconds
                   since this run was started.")
 
-            arguments.useCFL()      # Change values to comply with CFL condition
+            # Change values to comply with CFL condition
+            arguments.useCFL()
+
             enstrophy, ke, kedr, t = plot.plot_file(
                 currentFilePath,
                 arguments.dt,

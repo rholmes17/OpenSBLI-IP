@@ -123,7 +123,7 @@ def tgv(grid, Re, dt, niter, order=4, saveFreq=50, gama=1.4, Minf=0.1, Pr=0.71):
 
     eqns = [x0, x1, x2, u0, u1, u2, p, r, rho, rhou0, rhou1, rhou2, rhoE]
 
-    # parse the initial conditions
+    # Parse the initial conditions
     initial_equations = [parse_expr(eq, local_dict=local_dict) for eq in eqns]
     initial = GridBasedInitialisation()
     initial.add_equations(initial_equations)

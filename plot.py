@@ -1,5 +1,5 @@
-# Python3
-# Store functions used by processing.py and 
+# Python 3
+# Store functions used by process.py and
 # postproc.py to interpret and plot data
 
 from scipy import integrate
@@ -13,8 +13,9 @@ from matplotlib import animation
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
-matplotlib.use('GTK3Agg')
 
+# Configure matplotlib
+matplotlib.use('GTK3Agg')
 plt.style.use('classic')
 plt.figure(num=None, figsize=(10, 6), dpi=80, facecolor='w', edgecolor='k')
 
@@ -133,26 +134,26 @@ def main_plot(file_no, simulation_times, path, Re, grid, order):
     ke_mean = np.sum(ke_without_halos)/np.size(ke_without_halos)
     print("KE mean is %.8f" % ke_mean)
 
-    # Calculate all the derivatives for the velocities
-    dudx = calc_derivative(u, 0, grid, order)
+    # Calculate the derivatives for the velocities (not all used)
+    # dudx = calc_derivative(u, 0, grid, order)
     dudy = calc_derivative(u, 1, grid, order)
     dudz = calc_derivative(u, 2, grid, order)
 
     dvdx = calc_derivative(v, 0, grid, order)
-    dvdy = calc_derivative(v, 1, grid, order)
+    # dvdy = calc_derivative(v, 1, grid, order)
     dvdz = calc_derivative(v, 2, grid, order)
 
     dwdx = calc_derivative(w, 0, grid, order)
     dwdy = calc_derivative(w, 1, grid, order)
-    dwdz = calc_derivative(w, 2, grid, order)
+    # dwdz = calc_derivative(w, 2, grid, order)
 
-    # Calculate vorticity as cross product of del operator and velocity vector
+    # Calculate vorticity
     vortx = dwdy - dvdz
     vorty = dudz - dwdx
     vortz = dvdx - dudy
 
     # Calculate enstrophy from vorticiy, remove the halos,
-    # then average over simulation volume, then add to list for the run values
+    # and average over simulation volume
     enst_with_halos = vortx**2+vorty**2+vortz**2
     enst_without_halos = enst_with_halos[halo:-halo-1,
                                          halo:-halo-1,
@@ -167,6 +168,7 @@ def main_plot(file_no, simulation_times, path, Re, grid, order):
     mag = (u**2+v**2+w**2)**0.5
     print(f"Maximum velocity magnitude = {mag.max()}")
 
+    # Store maximum velocity magnitude out of curiosity
     with open('v.csv', 'a') as vf:
         vf.write(f"{mag.max()},")
 
@@ -176,6 +178,7 @@ def main_plot(file_no, simulation_times, path, Re, grid, order):
     return enst_mean, ke_mean, kedr
 
 
+# Obtain useful data from file
 def plot_file(path, dt, Re, grid, niter, saveFreq, order):
 
     print("Plotting file " + path)
@@ -191,6 +194,7 @@ def plot_file(path, dt, Re, grid, niter, saveFreq, order):
     return enstrophy, KE, KEDR, t
 
 
+# Calculate error from input, different errors can be specified
 def calc_error(t, dKE_dtSelf, KEDRSelf, enstSelf=0,
                dKE_dtBench=0, KEDRBench=0, enstBench=0, errorType="Self"):
 
@@ -211,28 +215,21 @@ def calc_error(t, dKE_dtSelf, KEDRSelf, enstSelf=0,
     else:
         raise Exception("Invalid error type")
 
-    # print(error)
-    # errorSum = 0
-    # for e in error:
-    #     errorSum += e
-
-    # maxErrorIndex = np.argmax(error)
-    # Max error at error[maxErrorIndex]
-
     return errorSum, error
 
 
+# Display error over time using matplotlib
 def plot_error(t, error, KEDR, dKE_dt):
-    plt.plot(t[1:-1], dKE_dt, label="dKE_dt ")
-    plt.plot(t, KEDR, label="KEDR ")
-    plt.plot(t[1:-1], error, label="error ")
+    plt.plot(t[1:-1], dKE_dt, label="dKE_dt")
+    plt.plot(t, KEDR, label="KEDR")
+    plt.plot(t[1:-1], error, label="error")
     plt.xlabel('Time')
     plt.ylim(bottom=0)
     plt.legend()
     plt.show()
 
 
-# Perform second order central differencing to find the derivative of KE
+# Perform second order central differencing to find the time derivative of KE
 def DerKE(t, KE):
     dKE_dt = []
     for k in range(1, len(t)-1):
@@ -240,6 +237,7 @@ def DerKE(t, KE):
     return dKE_dt
 
 
+# Display velocity field at an xy plane at the given z
 def plot_quiver(grid, velocity, z):
     X = np.arange(1, grid+1, 1)
     Y = np.arange(1, grid+1, 1)
@@ -252,8 +250,9 @@ def plot_quiver(grid, velocity, z):
     plt.show()
 
 
+# Record an animation of the velocity field at z
 def plot_animated_quiver(grid, velocity, z):
-    # Each value in th evelocity array represents:
+    # Each value in the velocity array represents:
     #           t,x,y,z,dir
     # velocity[-1,:,:,7,0]
     X = np.arange(1, grid+1, 1)
@@ -274,11 +273,8 @@ def plot_animated_quiver(grid, velocity, z):
     plt.show()
 
 
+# Updates the horizontal and vertical vector components by a given increment
 def update_quiver(num, Q, velocity, z):
-    """updates the horizontal and vertical vector components by a
-    fixed increment on each frame
-    """
-
     U = velocity[num, :, :, z, 0]
     V = velocity[num, :, :, z, 1]
 
@@ -287,10 +283,9 @@ def update_quiver(num, Q, velocity, z):
     return Q
 
 
+# Plot error against cost with different orders colour coded and labeled
 def plot_cost(t, error, order, ylog=False, xlog=False):
-    #colour = ["green", "blue", "red", "black", "yellow"]
     colour = {2: "green", 4: "blue", 6: "red", 8: "black", 10: "yellow"}
-    # colour = {}
     for o in sorted(set(order)):
         x = []
         for i, time in enumerate(t):
@@ -301,13 +296,11 @@ def plot_cost(t, error, order, ylog=False, xlog=False):
         for i, err in enumerate(error):
             if order[i] == o:
                 y.append(float(err))
-        # plt.scatter(x, y, c=colour[int(int(o)/2)], label=f"{o}th order")
-        # plt.scatter(x, y, c=np.random.rand(3,), label=f"{o}th order")
 
-        # cmap = plt.get_cmap('gist_rainbow')
-
-        # if o not in colour:
-        #     colour[o] = cmap(np.random.rand(1))
+        # Generate random colours for other orders
+        cmap = plt.get_cmap('gist_rainbow')
+        if o not in colour:
+            colour[o] = cmap(np.random.rand(1))
 
         if o % 10 == 2:
             plt.scatter(x, y, c=colour[o], label=f"{o}nd order")
@@ -329,12 +322,11 @@ def plot_cost(t, error, order, ylog=False, xlog=False):
     plt.xlabel("Wall Time (s)")
     plt.ylabel("Error")
     plt.legend()
-
     plt.grid(True)
-
     plt.show()
 
 
+# Plot error against order
 def plot_order(error, order, ylog=False, xlog=False):
     plt.scatter(order, error)
 
@@ -349,14 +341,12 @@ def plot_order(error, order, ylog=False, xlog=False):
     # plt.title("Error against different orders of central difference scheme")
     plt.xlabel("Order")
     plt.ylabel("Error")
-
     plt.grid(True)
-
     plt.show()
 
 
+# Plot time taken against number of threads used
 def plot_cores(cores, t, order):
-
     colour = {2: "yellow", 4: "c", 6: "red", 8: "w", 10: "k"}
     for o in sorted(set(order)):
         y = []

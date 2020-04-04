@@ -1,4 +1,4 @@
-# Open two new terminals and run the simulation and the processing software
+# Open two new terminals and run the simulation and the processing programs
 
 import os
 
