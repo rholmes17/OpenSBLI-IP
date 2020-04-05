@@ -2,6 +2,7 @@
 *.cu
 *.cpp
 *.h5
+*.h
 CUDA/
 latex_output/
 MPI_inline/
