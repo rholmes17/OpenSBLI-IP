@@ -42,30 +42,6 @@ __constant__ double rcinv11;
 __constant__ double rc12;
 __constant__ double rcinv13;
 __constant__ double rcinv14;
-__constant__ double rc15;
-__constant__ double rc16;
-__constant__ double rc17;
-__constant__ double rc18;
-__constant__ double rc19;
-__constant__ double rc20;
-__constant__ double rc21;
-__constant__ double rc22;
-__constant__ double rc23;
-__constant__ double rc24;
-__constant__ double rc25;
-__constant__ double rc26;
-__constant__ double rc27;
-__constant__ double rc28;
-__constant__ double rc29;
-__constant__ double rc30;
-__constant__ double rc31;
-__constant__ double rc32;
-__constant__ double rc33;
-__constant__ double rc34;
-__constant__ double rc35;
-__constant__ double rc36;
-__constant__ double rc37;
-__constant__ double rc38;
 
 void ops_init_backend() {}
 
@@ -177,102 +153,6 @@ int size, char *dat, char const *name){
   else
   if (!strcmp(name,"rcinv14")) {
     cutilSafeCall(cudaMemcpyToSymbol(rcinv14, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc15")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc15, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc16")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc16, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc17")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc17, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc18")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc18, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc19")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc19, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc20")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc20, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc21")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc21, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc22")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc22, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc23")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc23, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc24")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc24, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc25")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc25, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc26")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc26, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc27")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc27, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc28")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc28, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc29")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc29, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc30")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc30, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc31")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc31, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc32")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc32, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc33")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc33, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc34")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc34, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc35")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc35, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc36")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc36, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc37")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc37, dat, dim*size));
-  }
-  else
-  if (!strcmp(name,"rc38")) {
-    cutilSafeCall(cudaMemcpyToSymbol(rc38, dat, dim*size));
   }
   else
   {

@@ -10,10 +10,8 @@ __device__
 void opensbliblock00Kernel076_gpu(const ACC<double> &wk2_B0,
   ACC<double> &wk23_B0)
 {
-    wk23_B0(0,0,0) = inv_2*((rc31)*wk2_B0(0,0,-4) - rc32*wk2_B0(0,0,-5) -
-      rc29*wk2_B0(0,0,2) + (rc33)*wk2_B0(0,0,1) + (rc32)*wk2_B0(0,0,5) -
-      rc33*wk2_B0(0,0,-1) - rc30*wk2_B0(0,0,-3) - rc31*wk2_B0(0,0,4) +
-      (rc29)*wk2_B0(0,0,-2) + (rc30)*wk2_B0(0,0,3));
+    wk23_B0(0,0,0) = inv_2*((rc8)*wk2_B0(0,0,1) - rc8*wk2_B0(0,0,-1) +
+      (rc7)*wk2_B0(0,0,-2) - rc7*wk2_B0(0,0,2));
 
 }
 

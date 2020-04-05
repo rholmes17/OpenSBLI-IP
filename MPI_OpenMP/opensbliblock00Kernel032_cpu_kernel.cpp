@@ -99,10 +99,8 @@ void ops_par_loop_opensbliblock00Kernel032_execute(ops_kernel_descriptor *desc) 
         const ACC<double> rhou1_B0(xdim0_opensbliblock00Kernel032, ydim0_opensbliblock00Kernel032, rhou1_B0_p + n_x*1 + n_y * xdim0_opensbliblock00Kernel032*1 + n_z * xdim0_opensbliblock00Kernel032 * ydim0_opensbliblock00Kernel032*1);
         ACC<double> wk21_B0(xdim1_opensbliblock00Kernel032, ydim1_opensbliblock00Kernel032, wk21_B0_p + n_x*1 + n_y * xdim1_opensbliblock00Kernel032*1 + n_z * xdim1_opensbliblock00Kernel032 * ydim1_opensbliblock00Kernel032*1);
         
-    wk21_B0(0,0,0) = inv_1*((rc32)*rhou1_B0(0,5,0) + (rc31)*rhou1_B0(0,-4,0) -
-      rc30*rhou1_B0(0,-3,0) + (rc33)*rhou1_B0(0,1,0) - rc33*rhou1_B0(0,-1,0) -
-      rc29*rhou1_B0(0,2,0) + (rc29)*rhou1_B0(0,-2,0) + (rc30)*rhou1_B0(0,3,0) -
-      rc31*rhou1_B0(0,4,0) - rc32*rhou1_B0(0,-5,0));
+    wk21_B0(0,0,0) = inv_1*(-rc7*rhou1_B0(0,2,0) + (rc7)*rhou1_B0(0,-2,0) -
+      rc8*rhou1_B0(0,-1,0) + (rc8)*rhou1_B0(0,1,0));
 
 
       }

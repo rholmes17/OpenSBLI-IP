@@ -14,10 +14,8 @@ inline
 void opensbliblock00Kernel034(const ptr_double rho_B0,
   ptr_double wk23_B0)
 {
-    OPS_ACC(wk23_B0, 0,0,0) = inv_1*((rc33)*OPS_ACC(rho_B0, 0,1,0) - rc29*OPS_ACC(rho_B0, 0,2,0) -
-      rc31*OPS_ACC(rho_B0, 0,4,0) + (rc30)*OPS_ACC(rho_B0, 0,3,0) + (rc32)*OPS_ACC(rho_B0, 0,5,0) +
-      (rc31)*OPS_ACC(rho_B0, 0,-4,0) - rc32*OPS_ACC(rho_B0, 0,-5,0) - rc30*OPS_ACC(rho_B0, 0,-3,0) -
-      rc33*OPS_ACC(rho_B0, 0,-1,0) + (rc29)*OPS_ACC(rho_B0, 0,-2,0));
+    OPS_ACC(wk23_B0, 0,0,0) = inv_1*((rc8)*OPS_ACC(rho_B0, 0,1,0) - rc8*OPS_ACC(rho_B0, 0,-1,0) +
+      (rc7)*OPS_ACC(rho_B0, 0,-2,0) - rc7*OPS_ACC(rho_B0, 0,2,0));
 
 }
 

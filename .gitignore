@@ -2,7 +2,6 @@
 *.cu
 *.cpp
 *.h5
-*.csv
 CUDA/
 latex_output/
 MPI_inline/
@@ -12,7 +11,7 @@ OpenCL/
 bc_exchanges.h
 opensbli.cpp
 opensbliblock00_kernels.h
-opensbli_mpi
+opensbli_mpi*
 opensbli_ops.cpp
 
 # Byte-compiled / optimized / DLL files

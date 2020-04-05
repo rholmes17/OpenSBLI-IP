@@ -47,12 +47,10 @@
 //user function
 
 void opensbliblock00Kernel073(const ptr_double u1_B0,
-  ptr_double wk20_B0, const double inv_4, const double rc29, const double rc34, const double rc35, const double rc36, const double rc37, const double rc38)
+  ptr_double wk20_B0, const double inv_4, const double rc7, const double rc9, const double rc10)
 {
-    OPS_ACCS(wk20_B0, 0,0,0) = inv_4*((rc34)*OPS_ACCS(u1_B0, 0,-1,0) - rc35*OPS_ACCS(u1_B0, 0,0,0) +
-      (rc36)*OPS_ACCS(u1_B0, 0,3,0) + (rc37)*OPS_ACCS(u1_B0, 0,-5,0) + (rc34)*OPS_ACCS(u1_B0, 0,1,0) -
-      rc29*OPS_ACCS(u1_B0, 0,-2,0) - rc38*OPS_ACCS(u1_B0, 0,4,0) + (rc37)*OPS_ACCS(u1_B0, 0,5,0) -
-      rc38*OPS_ACCS(u1_B0, 0,-4,0) - rc29*OPS_ACCS(u1_B0, 0,2,0) + (rc36)*OPS_ACCS(u1_B0, 0,-3,0));
+    OPS_ACCS(wk20_B0, 0,0,0) = inv_4*(-rc7*OPS_ACCS(u1_B0, 0,-2,0) + (rc9)*OPS_ACCS(u1_B0, 0,-1,0) +
+      (rc9)*OPS_ACCS(u1_B0, 0,1,0) - rc7*OPS_ACCS(u1_B0, 0,2,0) - rc10*OPS_ACCS(u1_B0, 0,0,0));
 
 }
 
@@ -61,12 +59,9 @@ __kernel void ops_opensbliblock00Kernel073(
 __global const double* restrict arg0,
 __global double* restrict arg1,
 const double inv_4,
-const double rc29,
-const double rc34,
-const double rc35,
-const double rc36,
-const double rc37,
-const double rc38,
+const double rc7,
+const double rc9,
+const double rc10,
 const int base0,
 const int base1,
 const int size0,
@@ -84,12 +79,9 @@ const int size2 ){
     opensbliblock00Kernel073(ptr0,
                                   ptr1,
                                   inv_4,
-                                  rc29,
-                                  rc34,
-                                  rc35,
-                                  rc36,
-                                  rc37,
-                                  rc38);
+                                  rc7,
+                                  rc9,
+                                  rc10);
   }
 
 }
