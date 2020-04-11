@@ -107,12 +107,12 @@ def on_created(event):
             formattedTimeSinceRun = FormatTime(timeSinceRun)
 
             print(f"{(timeSinceStart): .2f}s",
-                  "since the start of the batch, ", end=" ")
+                  "since the start of the batch,", end=" ")
             print(f"{(timeSinceRun):.2f}s since the start of the current run")
 
-            print(f"{int(formattedTimeSinceStart[0])} days,", end=" ")
-            print(f"{int(formattedTimeSinceStart[1])} hours,", end=" ")
-            print(f"{int(formattedTimeSinceStart[2])} minutes,", end=" ")
+            print(f"{int(formattedTimeSinceStart[0])} days, ", end="")
+            print(f"{int(formattedTimeSinceStart[1])} hours, ", end="")
+            print(f"{int(formattedTimeSinceStart[2])} minutes, ", end="")
             print(f"and {formattedTimeSinceStart[3]: .2f} seconds",
                   "since the batch was started.")
 

@@ -39,13 +39,20 @@ def CollectBenchmarkData():
 
 
 # Valid error types: Self, BenchEnst, BenchKEDR, BenchdKE_dt
-def ProcessRunData(errorType="Self", makePlot=False, perfRun=False):
+def ProcessRunData(errorType="Self", makePlot=False, perfRun=False,
+                   plotOrders=[], plotGrid=0):
     time = []
     error = []
     order = []
     coreCount = []
     runId = []
     grid = []
+    timeTaken = 0
+
+    consecutivePlotTime = []
+    consecutivePlotKEDR = []
+    consecutivePlotDKE = []
+    consecutivePlotError = []
 
     currentRun = RunData()
 
@@ -102,6 +109,8 @@ def ProcessRunData(errorType="Self", makePlot=False, perfRun=False):
                                 coreCount.append(int(row[-4]))
                                 runId.append(int(row[0]))
 
+                                timeTaken += float(row[-1])
+
                 # Update list of wall times
                 time.append(currentRun.wallTime)
 
@@ -125,14 +134,23 @@ def ProcessRunData(errorType="Self", makePlot=False, perfRun=False):
                         enstBench,
                         errorType)
 
-                    # Plot error
-                    if errorType == "Self" and makePlot:
-                        plot.plot_error(currentRun.t, errorList,
-                                        currentRun.KEDR, dKE_dt)
-
                     error.append(errorsum)
+
                 order.append(int(currentRun.args[8]))
                 print(f"Order = {currentRun.args[8]}")
+
+                # Plot error
+                if errorType == "Self" and makePlot:
+                    plot.plot_error(currentRun.t, errorList,
+                                    currentRun.KEDR, dKE_dt)
+
+                if order[-1] in plotOrders and grid[-1] == plotGrid:
+                    # print(currentRun.t)
+                    consecutivePlotTime.append(currentRun.t[:])
+                    consecutivePlotKEDR.append(currentRun.KEDR[:])
+                    consecutivePlotDKE.append(dKE_dt[:])
+                    consecutivePlotError.append(errorList[:])
+                    print(consecutivePlotTime == currentRun.t)
 
                 currentRun.args = rowSettings
                 del currentRun.t[:]
@@ -148,15 +166,20 @@ def ProcessRunData(errorType="Self", makePlot=False, perfRun=False):
                     currentRun.Enstrophy.append(float(data_list[i][-3]))
                     currentRun.KE.append(float(data_list[i][-2]))
                     currentRun.KEDR.append(float(data_list[i][-1]))
+    # print(consecutivePlotTime)
+    plot.plot_consecutive_error(consecutivePlotTime, consecutivePlotError,
+                                consecutivePlotKEDR, consecutivePlotDKE,
+                                plotOrders)
+    print(f"Total wall clock time for this batch was {timeTaken}s")
     return time, error, order, coreCount, runId, grid
 
 
-# time, error, order, coreCount, runId, grid = ProcessRunData(
-#     makePlot=False, perfRun=False)
-time, error, order, coreCount, runId, grid = ProcessRunData("BenchEnst")
+time, error, order, coreCount, runId, grid = ProcessRunData(
+    makePlot=False, perfRun=False, plotOrders=[2, 4, 26, 28], plotGrid=17)
+# time, error, order, coreCount, runId, grid = ProcessRunData("BenchEnst")
 # time, error, order, coreCount, runId, grid = ProcessRunData("BenchKEDR")
 # time, error, order, coreCount, runId, grid = ProcessRunData("BenchdKE_dt")
 
 # plot.plot_cost(time, error, order)
-plot.plot_order(error, order, ylog=True, xlog=True)
+# plot.plot_order(error, order, grid, ylog=True, xlog=True)
 # plot.plot_cores(coreCount, time, order)

@@ -220,12 +220,33 @@ def calc_error(t, dKE_dtSelf, KEDRSelf, enstSelf=0,
 
 # Display error over time using matplotlib
 def plot_error(t, error, KEDR, dKE_dt):
-    plt.plot(t[1:-1], dKE_dt, label="dKE_dt")
-    plt.plot(t, KEDR, label="KEDR")
-    plt.plot(t[1:-1], error, label="error")
+    plt.plot(t[1:-1], dKE_dt, label=r"$\frac{dE_K}{dt}$")
+    plt.plot(t, KEDR, label=r"$\frac{dE_K}{dt}|_{Enst}$")
+    plt.plot(t[1:-1], error, label="Error")
     plt.xlabel('Time')
     plt.ylim(bottom=0)
     plt.legend()
+    plt.show()
+
+
+# Display error over time using matplotlib
+def plot_consecutive_error(t, error, KEDR, dKE_dt, order):
+    fig, axs = plt.subplots(1, len(order), figsize=(14, 6),
+                            facecolor='w', edgecolor='k')
+
+    for i, o in enumerate(order):
+        axs[i].plot(t[i][1:-1], dKE_dt[i], label=r"$\frac{dE_K}{dt}$")
+        axs[i].plot(t[i], KEDR[i], label=r"$\frac{dE_K}{dt}|_{Enst}$")
+        axs[i].plot(t[i][1:-1], error[i], label="Error")
+        axs[i].set_ylim(0, 0.014)
+        axs[i].set_xlabel('Time')
+        if o % 10 == 2:
+            axs[i].set_title(str(o)+r"$^{nd}$ order")
+        else:
+            axs[i].set_title(str(o)+r"$^{th}$ order")
+        axs[i].grid(True)
+    fig.tight_layout()
+    axs[0].legend(loc=2)
     plt.show()
 
 
@@ -327,12 +348,27 @@ def plot_cost(t, error, order, ylog=False, xlog=False):
 
 
 # Plot error against order
-def plot_order(error, order, ylog=False, xlog=False):
-    plt.scatter(order, error)
+def plot_order(error, order, grid, ylog=False, xlog=False):
+    colour = {17: "k", 33: "w", 65: "red"}
+    if len(set(grid)) == 1:
+        plt.scatter(order, error)
+
+    else:
+        for g in sorted(set(grid)):
+            x = []
+            y = []
+            for i, e in enumerate(error):
+                if grid[i] == g:
+                    x.append(order[i])
+                    y.append(e)
+            plt.scatter(x, y, c=colour[g], label=f"{g}$^3$ grid")
 
     if ylog:
         plt.yscale("log")
+        plt.ylim(top=0.0001)
+        # plt.ylim(bottom=0.001)
     else:
+        # plt.ylim(top=0.0005)
         plt.ylim(bottom=0)
 
     if xlog:
@@ -342,6 +378,7 @@ def plot_order(error, order, ylog=False, xlog=False):
     plt.xlabel("Order")
     plt.ylabel("Error")
     plt.grid(True)
+    plt.legend()
     plt.show()
 
 
