@@ -20,14 +20,14 @@ class SimulationArguments:
         self.Minf = 0.1         # 0.1
         self.Pr = 0.71          # 0.71
 
-        self.order = 28          # 4
+        self.order = 4          # 4
         self.grid = 65          # Odd number (17, 33, 65)
 
-        self.CFL = 0.05          # Not the actual CFL number
-        self.runCount = 20       # Number of runs in batch
+        self.CFL = 0.1          # Not the actual CFL number
+        self.runCount = 1       # Number of runs in batch
 
         # Choose name for the files where data will be stored
-        fileEnding = "Order"
+        fileEnding = "138"
         self.timingLog = "Timings"+fileEnding+".csv"
         self.dataLog = "Data"+fileEnding+".csv"
 
@@ -55,7 +55,7 @@ class SimulationArguments:
     # Use CFL condition to calculate time step and number of iterations
     def useCFL(self):
         endTime = 20        # 20  Non-dimensionalised time when simulation ends
-        numberOfPoints = 80  # 80  Used for calculating save frequency
+        numberOfPoints = 160  # 80  Used for calculating save frequency
 
         # Using max v=2.1 determined empirically (not the right velocity)
         self.dt = self.CFL * (pi/(self.grid-1)) / 2.1

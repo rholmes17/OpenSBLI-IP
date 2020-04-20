@@ -18,16 +18,6 @@ import matplotlib.pyplot as plt
 arguments = settings.getSimArgs()
 
 
-def FormatTime(seconds):
-    days = seconds // (24 * 3600)
-    seconds %= (24*3600)
-    hours = seconds // 3600
-    seconds %= 3600
-    minutes = seconds // 60
-    seconds %= 60
-    return days, hours, minutes, seconds
-
-
 # Create file to store data if it does not already exist
 if (not os.path.exists(arguments.dataLog)):
     with open(arguments.dataLog, 'w') as f:
@@ -103,8 +93,8 @@ def on_created(event):
             timeSinceStart = perf_counter() - startTime
             timeSinceRun = perf_counter() - currentRunTime
 
-            formattedTimeSinceStart = FormatTime(timeSinceStart)
-            formattedTimeSinceRun = FormatTime(timeSinceRun)
+            formattedTimeSinceStart = plot.FormatTime(timeSinceStart)
+            formattedTimeSinceRun = plot.FormatTime(timeSinceRun)
 
             print(f"{(timeSinceStart): .2f}s",
                   "since the start of the batch,", end=" ")

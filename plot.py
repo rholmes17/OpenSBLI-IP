@@ -324,22 +324,28 @@ def plot_cost(t, error, order, ylog=False, xlog=False):
             colour[o] = cmap(np.random.rand(1))
 
         if o % 10 == 2:
-            plt.scatter(x, y, c=colour[o], label=f"{o}nd order")
+            plt.scatter(x, y, c=colour[o], label=f"{o}nd order", edgecolors='face')
         else:
-            plt.scatter(x, y, c=colour[o], label=f"{o}th order")
-
+            plt.scatter(x, y, c=colour[o], label=f"{o}th order", edgecolors='face')
+    
     if ylog:
         plt.yscale("log")
+        plt.ylim(top=0.01)
+        plt.ylim(bottom=0.000001)
     else:
+        plt.ylim(top=0.003)
         plt.ylim(bottom=0)
 
     if xlog:
         plt.xscale("log")
+        plt.xlim(left=10)
+        plt.xlim(right=10000)
     else:
+        plt.xlim(right=80)
         plt.xlim(left=0)
 
-    plt.title("Error against grid size for different "
-              "orders of central difference scheme")
+    # plt.title("Error against grid size for different "
+    #           "orders of central difference scheme")
     plt.xlabel("Wall Time (s)")
     plt.ylabel("Error")
     plt.legend()
@@ -349,7 +355,7 @@ def plot_cost(t, error, order, ylog=False, xlog=False):
 
 # Plot error against order
 def plot_order(error, order, grid, ylog=False, xlog=False):
-    colour = {17: "k", 33: "w", 65: "red"}
+    colour = {17: "m", 33: "r", 65: "c"}
     if len(set(grid)) == 1:
         plt.scatter(order, error)
 
@@ -361,12 +367,13 @@ def plot_order(error, order, grid, ylog=False, xlog=False):
                 if grid[i] == g:
                     x.append(order[i])
                     y.append(e)
-            plt.scatter(x, y, c=colour[g], label=f"{g}$^3$ grid")
+            plt.scatter(x, y, c=colour[g],
+                        edgecolors='face', label=f"{g}$^3$ grid")
 
     if ylog:
         plt.yscale("log")
-        plt.ylim(top=0.0001)
-        # plt.ylim(bottom=0.001)
+        plt.ylim(top=0.01)
+        plt.ylim(bottom=0.0000001)
     else:
         # plt.ylim(top=0.0005)
         plt.ylim(bottom=0)
@@ -408,3 +415,13 @@ def plot_cores(cores, t, order):
     plt.legend(loc=0)
     plt.grid(True)
     plt.show()
+
+
+def FormatTime(seconds):
+    days = seconds // (24 * 3600)
+    seconds %= (24*3600)
+    hours = seconds // 3600
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+    return days, hours, minutes, seconds

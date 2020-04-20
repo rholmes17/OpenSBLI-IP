@@ -144,8 +144,8 @@ def ProcessRunData(errorType="Self", makePlot=False, perfRun=False,
                     plot.plot_error(currentRun.t, errorList,
                                     currentRun.KEDR, dKE_dt)
 
+                # check whether data is wanted to plot side-by-side orders
                 if order[-1] in plotOrders and grid[-1] == plotGrid:
-                    # print(currentRun.t)
                     consecutivePlotTime.append(currentRun.t[:])
                     consecutivePlotKEDR.append(currentRun.KEDR[:])
                     consecutivePlotDKE.append(dKE_dt[:])
@@ -166,20 +166,31 @@ def ProcessRunData(errorType="Self", makePlot=False, perfRun=False,
                     currentRun.Enstrophy.append(float(data_list[i][-3]))
                     currentRun.KE.append(float(data_list[i][-2]))
                     currentRun.KEDR.append(float(data_list[i][-1]))
-    # print(consecutivePlotTime)
-    plot.plot_consecutive_error(consecutivePlotTime, consecutivePlotError,
-                                consecutivePlotKEDR, consecutivePlotDKE,
-                                plotOrders)
+
+    # Check if data has been stored to generate plots
+    if consecutivePlotTime:
+        plot.plot_consecutive_error(consecutivePlotTime, consecutivePlotError,
+                                    consecutivePlotKEDR, consecutivePlotDKE,
+                                    plotOrders)
+
+    
+    formattedTime = plot.FormatTime(timeTaken)
+
     print(f"Total wall clock time for this batch was {timeTaken}s")
+
+    print(f"{int(formattedTime[0])} days, ", end="")
+    print(f"{int(formattedTime[1])} hours, ", end="")
+    print(f"{int(formattedTime[2])} minutes, ", end="")
+    print(f"and {formattedTime[3]: .2f} seconds")
     return time, error, order, coreCount, runId, grid
 
 
-time, error, order, coreCount, runId, grid = ProcessRunData(
-    makePlot=False, perfRun=False, plotOrders=[2, 4, 26, 28], plotGrid=17)
+# time, error, order, coreCount, runId, grid = ProcessRunData(
+#     makePlot=False, perfRun=False, plotOrders=[2, 4, 26, 28], plotGrid=0)
 # time, error, order, coreCount, runId, grid = ProcessRunData("BenchEnst")
 # time, error, order, coreCount, runId, grid = ProcessRunData("BenchKEDR")
-# time, error, order, coreCount, runId, grid = ProcessRunData("BenchdKE_dt")
+time, error, order, coreCount, runId, grid = ProcessRunData("BenchdKE_dt")
 
-# plot.plot_cost(time, error, order)
-# plot.plot_order(error, order, grid, ylog=True, xlog=True)
+plot.plot_cost(time, error, order, xlog=True, ylog=True)
+# plot.plot_order(error, order, grid, ylog=True, xlog=False)
 # plot.plot_cores(coreCount, time, order)
